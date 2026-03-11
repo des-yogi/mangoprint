@@ -1,0 +1,64 @@
+<!--DEV
+@ @include('blocks/top-bar/top-bar.html')
+-->
+
+<div class="top-bar">
+
+  <div class="alert  alert--top" role="alert">
+    <div class="alert__img">
+      <picture>
+        <source srcset="img/top-bar-img.webp,
+                        img/top-bar-img.webp 2x" type="image/webp">
+        <img src="img/top-bar-img.png"
+             srcset="img/top-bar-img.png,
+                     img/top-bar-img.png 2x"
+             width="77"
+             height="32"
+             alt=""
+             loading="eager"
+             decoding="sync"
+             fetchpriority="high">
+        <!-- 77x32, 116x48 2x -->
+      </picture>
+    </div>
+
+    <a href="#" class="alert__text">Спеціальні ціни на корпоративний мерч</a>
+
+    <button class="alert__close" type="button" aria-label="Close alert">
+      <svg width="20" height="20" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#close-20"></use></svg>
+    </button>
+  </div>
+
+  <span></span>
+
+  <section class="top-bar__service">
+    <div class="dropdown  lang-switcher">
+      <button class="top-bar__btn  dropdown-toggle"
+              id="lang-switcher"
+              type="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+              aria-label="Змінити мову">
+        <span>Укр</span>
+      </button>
+      <ul class="dropdown-menu">
+        <li><a class="dropdown-item" href="#">Укр</a></li>
+        <li><a class="dropdown-item" href="#">Eng</a></li>
+      </ul>
+    </div>
+
+    <a href="#" class="top-bar__btn">
+      <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#user-circle"></use></svg>
+      <span>Особистий кабінет</span>
+    </a>
+    <a href="#" class="top-bar__btn">
+      <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#shop"></use></svg>
+      <span>Магазин</span>
+    </a>
+    <a href="#" class="top-bar__btn">
+      <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#basket"></use></svg>
+      <span>Кошик <span>(2)</span></span>
+    </a>
+  </section>
+
+</div>

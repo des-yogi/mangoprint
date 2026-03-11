@@ -1,0 +1,22 @@
+<!--DEV
+@ @include('blocks/link-card/link-card.html', {
+  "title": "Шовкотрафаретний друк",
+  "descr": "Ідеальний для великих тиражів і насичених кольорів. Довговічно та вигідно",
+  "icon": "merchandise-26"
+})
+-->
+
+<a href="#" class="link-card">
+  <div class="link-card__text">
+    <p class="h4  link-card__title">@@title</p>
+    <p class="link-card__descr">@@descr</p>
+  </div>
+  <div class="link-card__footer">
+    <svg width="26" height="26" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#merchandise-26"></use></svg>
+
+    <span class="link-card__more">
+      <span>Детальніше</span>
+      <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#arrow-right"></use></svg>
+    </span>
+  </div>
+</a>

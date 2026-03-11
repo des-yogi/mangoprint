@@ -1,0 +1,23 @@
+.print-technologies {
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__header-col {
+    @include col(xs, 12);
+    @include col-offset(xl, 2);
+    @include col(xl, 8);
+  }
+
+  &__header {
+    margin-bottom: 24px;
+    text-align: center;
+  }
+
+  &__intro {
+
+    * {
+      text-wrap: balance;
+      hyphens: none;
+    }
+  }
+}

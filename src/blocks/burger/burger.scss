@@ -1,0 +1,81 @@
+.burger {
+  $block-name:                &; // #{$block-name}__element
+
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  background-color: var(--orange-400);
+  border-radius: $border-radius;
+  border: none;
+  user-select: none;
+  cursor: pointer;
+  transition: $transition;
+
+  @media (min-width: $screen-md) {
+    width: 56px;
+    height: 56px;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: var(--orange-600);
+  }
+
+  > span {
+    display: inline-block;
+    width: 18px;
+    height: $toggler-part-height;
+    background: $white;
+    position: relative;
+    border-radius: 2px;
+    transition: background $transition-time $transition-time;
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      width: 100%;
+      height: $toggler-part-height;
+      background: $white;
+      transform-origin: 50% 50%;
+      transition: top $transition-time $transition-time, transform $transition-time;
+      border-radius: 2px;
+    }
+
+    &::before {
+      top: -6px;
+    }
+
+    &::after {
+      top: 6px;
+    }
+  }
+
+  &--close {
+
+    > span {
+      transition: background $transition-time 0s;
+      background: transparent;
+
+      &::before,
+      &::after {
+        transition: top $transition-time, transform $transition-time $transition-time;
+        top: 0;
+      }
+
+      &::before {
+        transform: rotate3d(0, 0, 1, 45deg);
+      }
+
+      &::after {
+        transform: rotate3d(0, 0, 1, -45deg);
+      }
+    }
+  }
+}

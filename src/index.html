@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html class="no-js  page" lang="uk" prefix="og: https://ogp.me/ns#">
+
+<head>
+  <meta charset="utf-8">
+  <title>Home page</title>
+  @@include('_include/page_head.html')
+</head>
+
+<body>
+<noscript>У вас вимкнено JavaScript. Приносимо свої вибачення, але це ускладнює використання даного сайту.</noscript>
+
+  <div class="page__inner">
+
+    <div class="page__content">
+      @@include('blocks/page-header/page-header.html')
+
+      <main class="main">
+
+        <section class="container  margin-y  feature-card__wrapper">
+          <h2>Переваги роботи з нами</h2>
+
+          <ul class="list-nostyled  row">
+            <li class="col-1-2-3">
+              @@include('blocks/feature-card/feature-card.html', {
+                "title": "Власне потужне виробництво",
+                "text": "Повний контроль якості та дотримання термінів завдяки власному цеху в Києві без посередників",
+                "icon": "merchandise-26"
+              })
+            </li>
+
+            <li class="col-1-2-3">
+              @@include('blocks/feature-card/feature-card.html', {
+                "title": "Професійне обладнання",
+                "text": "Сучасні верстати для друку та вишивки, що гарантують стійкість принтів і високу деталізацію",
+                "icon": "merchandise-26"
+              })
+            </li>
+
+            <li class="col-1-2-3">
+              @@include('blocks/feature-card/feature-card.html', {
+                "title": "Працюємо з ПДВ",
+                "text": "Офіційна співпраця, прозорі розрахунки та повний пакет документів для вашого бізнесу",
+                "icon": "merchandise-26"
+              })
+            </li>
+
+            <li class="col-1-2-3">
+              @@include('blocks/feature-card/feature-card.html', {
+                "title": "Індивідуальне пошиття",
+                "text": "Розробка лекал та пошив мерчу за вашим дизайном — створюємо унікальний корпоративний стиль",
+                "icon": "merchandise-26"
+              })
+            </li>
+
+            <li class="col-1-2-3">
+              @@include('blocks/feature-card/feature-card.html', {
+                "title": "Дизайнерські принти",
+                "text": "Професійна адаптація логотипів та створення ексклюзивних дизайнів для вашого бренду",
+                "icon": "merchandise-26"
+              })
+            </li>
+
+            <li class="col-1-2-3">
+              @@include('blocks/feature-card/feature-card.html', {
+                "title": "Друк та вишивка на всьому",
+                "text": "Брендуємо будь-який текстиль: футболки, худі, кепки та шопери. Обираємо найкращий метод під ваш запит",
+                "icon": "merchandise-26"
+              })
+            </li>
+          </ul>
+        </section>
+
+        @@include('blocks/print-technologies/print-technologies.html')
+
+        @@include('blocks/gallery-marquee/gallery-marquee.html')
+
+      </main>
+
+    </div>
+
+    <div class="page__footer-wrapper">
+      @@include('blocks/page-footer/page-footer.html')
+    </div>
+
+  </div>
+
+  @@include('_include/page_bottom.html')
+
+</body>
+</html>

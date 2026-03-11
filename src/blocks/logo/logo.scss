@@ -1,0 +1,39 @@
+.logo {
+
+  $block-name:                &; // #{$block-name}__element
+
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+  }
+
+  &--header {
+    width: 184px;
+    height: 44px;
+
+    @media (max-width: 355px) {
+      flex: 0 1;
+      flex-basis: clamp(150px, 48vw, 180px);
+      //width: 175px;
+      //height: 42px;
+    }
+
+    @media (min-width: $screen-md) {
+      width: 259px;
+      height: 62px;
+    }
+
+    @media (min-width: $screen-xl) {
+      width: 175px;
+      height: 42px;
+    }
+  }
+}

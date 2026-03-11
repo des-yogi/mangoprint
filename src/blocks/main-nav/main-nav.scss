@@ -1,0 +1,47 @@
+.main-nav {
+  $block-name:                &; // #{$block-name}__element
+
+  display: flex;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+
+  @media (max-width: ($menu-desktop-width - 1)) {
+    display: none;
+  }
+
+  &__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    // настольный вид списка
+    @media (min-width: $menu-desktop-width) {
+      display: flex;
+    }
+  }
+
+  &__item {
+    position: relative;
+
+    &--active {
+
+      & > #{$block-name}__link {
+        color: red;
+      }
+    }
+  }
+
+  &__link {
+    display: block;
+    padding: 0.5em;
+    text-decoration: none;
+    background-color: #fff;
+
+    &:hover,
+    &:focus {
+      text-decoration: none;
+      background-color: aquamarine;
+    }
+  }
+}

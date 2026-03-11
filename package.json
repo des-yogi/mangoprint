@@ -1,0 +1,82 @@
+{
+  "name": "mangoprint",
+  "version": "4.0.0",
+  "description": "The Markup and technical solutions for Mangoprint site",
+  "author": "Igor Beliakovski",
+  "license": "WTFPL",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/des-yogi/mangoprint"
+  },
+  "scripts": {
+    "deps:guard": "node deps-guard.js",
+    "postinstall": "npm run deps:guard",
+    "postupdate": "npm run deps:guard",
+    "start": "gulp",
+    "build": "cross-env NODE_ENV=production npm start build"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions"
+  ],
+  "devDependencies": {
+    "@babel/core": "^7.20.7",
+    "autoprefixer": "^10.2.1",
+    "browser-sync": "^3.0.2",
+    "const": "^1.0.0",
+    "cross-env": "^7.0.0",
+    "css-mqpacker": "^7.0.0",
+    "del": "^6.1.1",
+    "gulp": "^4.0.2",
+    "gulp-babel": "^8.0.0",
+    "gulp-cheerio": "^1.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-csso": "^4.0.1",
+    "gulp-debug": "^4.0.0",
+    "gulp-file-include": "^2.1.0",
+    "gulp-gh-pages": "^0.5.4",
+    "gulp-if": "^3.0.0",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-newer": "^1.4.0",
+    "gulp-notify": "^5.0.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-postcss": "^10.0.0",
+    "gulp-real-favicon": "^0.3.1",
+    "gulp-rename": "^2.0.0",
+    "gulp-replace": "^1.1.4",
+    "gulp-sass": "^5.1.0",
+    "gulp-sequence": "^1.0.0",
+    "gulp-size": "^4.0.1",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-svgmin": "^3.0.0",
+    "gulp-svgstore": "^9.0.0",
+    "gulp-uglify": "^3.0.2",
+    "gulp-wait": "0.0.2",
+    "gulp.spritesmith": "^6.9.0",
+    "husky": "^9.1.6",
+    "imagemin-pngquant": "^9.0.1",
+    "lint-staged": "^15.2.10",
+    "merge-stream": "^2.0.0",
+    "mkdirp": "^3.0.0",
+    "node-sass": "^9.0.0",
+    "postcss": "^8.4.45",
+    "postcss-discard-comments": "^7.0.3",
+    "postcss-import": "^16.1.0",
+    "postcss-inline-svg": "^6.0.0",
+    "postcss-object-fit-images": "^1.1.2",
+    "stylelint": "^16.9.0",
+    "vinyl-buffer": "^1.0.1",
+    "yaspeller": "^8.0.0"
+  },
+  "overrides": {
+    "cheerio": "1.0.0"
+  },
+  "dependencies": {
+    "@fancyapps/ui": "^6.1.13",
+    "bootstrap": "^5.3.8",
+    "swiper": "^12.0.3",
+    "autosize": "^6.0.1",
+    "focus-visible": "^5.2.1",
+    "svg4everybody": "^2.1.9"
+  }
+}

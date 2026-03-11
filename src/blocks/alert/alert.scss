@@ -1,0 +1,86 @@
+.alert {
+  $block-name:                &; // #{$block-name}__element
+
+  flex: 1 1 100%;
+  display: flex;
+  //align-items: flex-end;
+  justify-content: space-between;
+  gap: 0 8px;
+  //margin-bottom: 8px;
+  background-color: var(--orange-200);
+  border-bottom-left-radius: $border-radius--30;
+  border-bottom-right-radius: $border-radius--30;
+  overflow: hidden;
+
+  @media (min-width: $screen-xl) {
+    flex: 0 1 auto;
+    display: inline-flex;
+  }
+
+  &__img {
+    flex: 0 0 77px;
+    align-self: flex-end;
+    display: block;
+    width: 77px;
+    height: 32px;
+    overflow: hidden;
+  }
+
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center bottom;
+  }
+
+  &__text {
+    flex: 1 1 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4px 0;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 1.35;
+    text-align: center;
+    text-wrap: balance;
+    color: var(--orange-900);
+
+    &:hover,
+    &:focus {
+      text-decoration: none;
+    }
+  }
+
+  &__close {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 56px;
+    //height: 100%;
+    padding: 0 8px;
+    color: var(--orange-500);
+    background-color: var(--orange-50);
+    border: none;
+    border-top-left-radius: $border-radius--30;
+    border-bottom-left-radius: $border-radius--30;
+    cursor: pointer;
+    user-select: none;
+    transition: $transition;
+
+    @media (min-width: $screen-md) {
+      min-width: 68px;
+    }
+
+    &:hover,
+    &:focus {
+      color: var(--orange-600);
+      background-color: var(--orange-200);
+    }
+  }
+
+  &--top {
+
+  }
+}

@@ -1,0 +1,174 @@
+<!--DEV
+@ @include('blocks/print-technologies/print-technologies.html')
+-->
+
+<article class="container  margin-y  print-technologies">
+
+  <div class="row  print-technologies__header">
+    <div class="print-technologies__header-col">
+      <h2 class="print-technologies__title">Технології друку та продукція для брендів</h2>
+      <div class="print-technologies__intro">
+        <p>Використовуємо сучасні методи друку для текстилю, аксесуарів і техніки. Допомагаємо реалізувати брендування будь-якої складності — від малих партій до великих тиражів.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="nav-tabs__wrapper">
+    <ul class="nav nav-tabs" id="printTab" role="tablist">
+      <li class="nav-item" role="presentation">
+        <button class="nav-link  active" id="printTab-1" data-bs-toggle="tab" data-bs-target="#printTabPane-1" type="button" role="tab" aria-controls="printTabPane-1" aria-selected="true">Друк</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="printTab-2" data-bs-toggle="tab" data-bs-target="#printTabPane-2" type="button" role="tab" aria-controls="printTabPane-2" aria-selected="false">Вишивка</button>
+      </li>
+    </ul>
+  </div>
+
+  <div class="tab-content" id="printTabContent">
+
+    <div class="tab-pane fade show active" id="printTabPane-1" role="tabpanel" aria-labelledby="printTab-1" tabindex="0">
+
+      <section class="nav-tabs__category">
+        <h3 class="nav-tabs__category-caption">Технології друку</h3>
+
+        <ul class="list-nostyled  row  nav-tabs__category-list">
+          <li class="col-1-2-3">
+            @@include('../../blocks/link-card/link-card.html', {
+              "title": "Шовкотрафаретний друк",
+              "descr": "Ідеальний для великих тиражів і насичених кольорів. Довговічно та вигідно",
+              "icon": "merchandise-26"
+            })
+          </li>
+
+          <li class="col-1-2-3">
+            @@include('../../blocks/link-card/link-card.html', {
+              "title": "Термоперенесення (DTF друк)",
+              "descr": "Гнучка технологія для складних дизайнів і невеликих тиражів",
+              "icon": "merchandise-26"
+            })
+          </li>
+
+          <li class="col-1-2-3">
+            @@include('../../blocks/link-card/link-card.html', {
+              "title": "УФ DTF друк",
+              "descr": "Стійкий друк для твердих поверхонь з преміальним виглядом",
+              "icon": "merchandise-26"
+            })
+          </li>
+        </ul>
+      </section>
+
+      <section class="nav-tabs__category">
+        <h3 class="nav-tabs__category-caption">Друк на одязі</h3>
+
+        <ul class="list-nostyled  row  nav-tabs__category-list">
+          <li class="col-1-2-4">
+            @@include('../../blocks/link-card/link-card.html', {
+              "title": "Друк на футболках",
+              "descr": "Класичне рішення для команд, івентів та промо",
+              "icon": "merchandise-26"
+            })
+          </li>
+
+          <li class="col-1-2-4">
+            @@include('../../blocks/link-card/link-card.html', {
+              "title": "Друк на худі",
+              "descr": "Комфортний брендований одяг для щоденного використання",
+              "icon": "merchandise-26"
+            })
+          </li>
+
+          <li class="col-1-2-4">
+            @@include('../../blocks/link-card/link-card.html', {
+              "title": "Друк на світшотах",
+              "descr": "Стильний варіант для корпоративного мерчу та команд",
+              "icon": "merchandise-26"
+            })
+          </li>
+
+          <li class="col-1-2-4">
+            @@include('../../blocks/link-card/link-card.html', {
+              "title": "Друк на лонгслівах",
+              "descr": "Практичний одяг для міжсезоння та офісного формату",
+              "icon": "merchandise-26"
+            })
+          </li>
+        </ul>
+      </section>
+
+    </div>
+
+    <div class="tab-pane fade" id="printTabPane-2" role="tabpanel" aria-labelledby="printTab-2" tabindex="0">
+
+      <section class="nav-tabs__category">
+        <h3 class="nav-tabs__category-caption">Друк на одязі</h3>
+
+        <ul class="list-nostyled  row  nav-tabs__category-list">
+          <li class="col-1-2-4">
+            @@include('../../blocks/link-card/link-card.html', {
+              "title": "Друк на футболках",
+              "descr": "Класичне рішення для команд, івентів та промо",
+              "icon": "merchandise-26"
+            })
+          </li>
+
+          <li class="col-1-2-4">
+            @@include('../../blocks/link-card/link-card.html', {
+              "title": "Друк на худі",
+              "descr": "Комфортний брендований одяг для щоденного використання",
+              "icon": "merchandise-26"
+            })
+          </li>
+
+          <li class="col-1-2-4">
+            @@include('../../blocks/link-card/link-card.html', {
+              "title": "Друк на світшотах",
+              "descr": "Стильний варіант для корпоративного мерчу та команд",
+              "icon": "merchandise-26"
+            })
+          </li>
+
+          <li class="col-1-2-4">
+            @@include('../../blocks/link-card/link-card.html', {
+              "title": "Друк на лонгслівах",
+              "descr": "Практичний одяг для міжсезоння та офісного формату",
+              "icon": "merchandise-26"
+            })
+          </li>
+        </ul>
+      </section>
+
+      <section class="nav-tabs__category">
+        <h3 class="nav-tabs__category-caption">Технології друку</h3>
+
+        <ul class="list-nostyled  row  nav-tabs__category-list">
+          <li class="col-1-2-3">
+            @@include('../../blocks/link-card/link-card.html', {
+              "title": "Шовкотрафаретний друк",
+              "descr": "Ідеальний для великих тиражів і насичених кольорів. Довговічно та вигідно",
+              "icon": "merchandise-26"
+            })
+          </li>
+
+          <li class="col-1-2-3">
+            @@include('../../blocks/link-card/link-card.html', {
+              "title": "Термоперенесення (DTF друк)",
+              "descr": "Гнучка технологія для складних дизайнів і невеликих тиражів",
+              "icon": "merchandise-26"
+            })
+          </li>
+
+          <li class="col-1-2-3">
+            @@include('../../blocks/link-card/link-card.html', {
+              "title": "УФ DTF друк",
+              "descr": "Стійкий друк для твердих поверхонь з преміальним виглядом",
+              "icon": "merchandise-26"
+            })
+          </li>
+        </ul>
+      </section>
+    </div>
+
+  </div>
+
+</article>
