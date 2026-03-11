@@ -1,0 +1,39 @@
+.lang-switcher {
+  $block-name:                &; // #{$block-name}__element
+
+  display: inline-flex;
+
+  .dropdown-toggle {
+    padding-left: 8px;
+  }
+
+  .dropdown-menu {
+    min-width: 100%;
+  }
+
+  li.active {
+
+    .dropdown-item {
+      color: $link-color;
+      pointer-events: none;
+    }
+  }
+
+  .dropdown-item {
+    padding: 10px 8px;
+    font-family: inherit;
+    font-size: $font-size-sm;
+    color: inherit;
+
+    &:hover,
+    &:focus {
+      text-decoration: none;
+      color: $link-color--hover;
+    }
+
+    &:active {
+      color: $link-color--hover;
+      background-color: transparent;
+    }
+  }
+}

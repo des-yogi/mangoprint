@@ -1,0 +1,44 @@
+.phone-selector {
+  $block-name:                &; // #{$block-name}__element
+
+  color: var(--gray-900);
+
+  &__toggler {
+    display: inline-flex;
+    align-items: center;
+    gap: 0 8px;
+    font-family: $font-family;
+    font-size: $font-size;
+    background: none;
+    border: none;
+    cursor: pointer;
+    user-select: none;
+  }
+
+  &__icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    color: var(--orange-500);
+    background: var(--orange-50);
+    border-radius: 16px;
+  }
+
+  &__menu {
+    min-width: 100%;
+  }
+
+  &__link {
+    padding: 8px 30px;
+    text-align: right;
+    text-decoration: none !important;
+    color: inherit;
+
+    &:hover,
+    &:focus {
+      color: var(--orange-600);
+    }
+  }
+}

@@ -1,0 +1,50 @@
+.feature-card {
+  $block-name:                &; // #{$block-name}__element
+
+  height: 100%;
+  padding: 24px;
+  background: var(--white);
+  border-radius: $border-radius--30;
+
+  &__wrapper {
+
+    h2,
+    .h2 {
+      text-align: center;
+
+      @media (min-width: $screen-xl) {
+        text-align: initial;
+      }
+    }
+
+    .row {
+      gap: 8px 0;
+    }
+  }
+
+  &__header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 0 16px;
+
+    & > *:first-child {
+      flex: 1 1 auto;
+      margin: 0;
+    }
+
+    & > svg {
+      flex: 0 0 26px;
+      stroke: var(--orange-400);
+    }
+  }
+
+  &__body {
+    margin-top: 12px;
+    font-size: $font-size-sm;
+
+    @media (min-width: $screen-xl) {
+      font-size: $font-size;
+    }
+  }
+}

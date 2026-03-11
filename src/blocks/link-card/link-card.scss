@@ -1,0 +1,65 @@
+.link-card {
+  $block-name:                &; // #{$block-name}__element
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  padding: 24px;
+  color: inherit;
+  background: var(--white);
+  border-radius: $border-radius--30;
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+  }
+
+  &__text {
+
+  }
+
+  &__title {
+    margin: 0;
+  }
+
+  &__descr {
+    margin-top: 12px;
+    font-size: $font-size-sm;
+    color: var(--gray-700);
+
+    @media (min-width: $screen-xl) {
+      font-size: $font-size;
+    }
+  }
+
+  &__footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    margin-top: 12px;
+
+    & > svg {
+      order: -1;
+      stroke: var(--orange-400);
+    }
+
+    &:last-child::before {
+      content: "";
+      display: block;
+    }
+  }
+
+  &__more {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    font-size: $font-size;
+    font-weight: 500;
+
+    & > svg {
+      stroke: var(--orange-400);
+    }
+  }
+}

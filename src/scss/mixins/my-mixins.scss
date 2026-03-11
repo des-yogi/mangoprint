@@ -1,0 +1,90 @@
+@mixin text-hide {
+  font-size: 0;
+  line-height: 0;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
+}
+
+@mixin list-decorated {
+  padding-left: 50px;
+  position: relative;
+  list-style-type: none;
+
+  &::before {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-2px);
+    left: 0;
+    content: "";
+    display: block;
+    width: 30px;
+    height: 2px;
+    background-color: $main-color;
+
+    @media (min-width: $screen-md) {
+      transform: translateY(-3px);
+    }
+  }
+}
+
+@mixin img-sharp {
+  image-rendering: pixelated;
+   image-rendering: -moz-crisp-edges; /* Firefox */
+   -ms-interpolation-mode: nearest-neighbor; /* IE */
+}
+
+@mixin scrollbar($thumb-color, $track-color) {
+  //Firefox only
+  /* «цвет ползунка» «цвет полосы скроллбара» */
+  scrollbar-color: $thumb-color $track-color;
+  // color1 (wdtn ползунка) color2 (цвет всего скролбара)
+  scrollbar-width: thin;  /* толщина */
+
+  /* полоса прокрутки (скроллбар) */
+  ::-webkit-scrollbar {
+    width: 8px; /* ширина для вертикального скролла */
+    height: 8px; /* высота для горизонтального скролла */
+    background-color: $track-color;
+  }
+
+  /* ползунок скроллбара */
+  ::-webkit-scrollbar-thumb {
+    background-color: $thumb-color;
+    border-radius: 8px;
+    box-shadow: none;
+    //box-shadow: inset 1px 1px 10px #f3faf7;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: var(--orange-700);
+  }
+}
+
+// stylelint-disable property-blacklist
+@mixin transition($transition...) {
+  @if $enable-transitions {
+    @if length($transition) == 0 {
+      transition: $transition-base;
+    } @else {
+      transition: $transition;
+    }
+  }
+
+  @if $enable-prefers-reduced-motion-media-query {
+    @media (prefers-reduced-motion: reduce) {
+      transition: none;
+    }
+  }
+}
+
+@mixin margin-y() {
+  margin-top: 72px;
+  margin-bottom: 72px;
+
+  @media (min-width: $screen-xl) {
+    margin-top: 96px;
+    margin-bottom: 96px;
+  }
+}

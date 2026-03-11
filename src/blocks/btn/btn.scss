@@ -1,0 +1,209 @@
+.btn {
+  $block-name:                &; // #{$block-name}__element
+
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0 12px;
+  height: 56px;
+  min-width: 56px;
+  max-width: 100% !important;
+  padding: 0 24px 0 0;
+  margin: 0;
+  white-space: nowrap;
+  text-align: center;
+  font-size: $font-size-lg;
+  font-family: inherit;
+  line-height: $line-height;
+  text-decoration: none;
+  text-transform: none;
+  color: var(--white);
+  background-color: var(--orange-400);
+  background-image: none;
+  border-radius: $border-radius;
+  border: none;
+  user-select: none;
+  cursor: pointer;
+  transition: $transition;
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+    color: var(--white);
+    background-color: var(--orange-600);
+
+    &__icon {
+
+      @media (min-width: $screen-xxl) {
+        color: var(--orange-600);
+      }
+    }
+  }
+
+  //&:active,
+  //&:focus {
+    // @include field-focus;
+  //}
+
+  &--disabled,
+  &:disabled {
+    // opacity: $opacity;
+    cursor: not-allowed;
+    color: var(--gray-500) !important;
+    background-color: var(--gray-150) !important;
+    //border-color: var(--gray-150);
+
+    #{$block-name}__icon {
+      color: var(--gray-500) !important;
+      background-color: var(--white) !important;
+      border-color: var(--gray-150) !important;
+    }
+
+    @at-root a.btn--disabled {
+      pointer-events: none;
+    }
+  }
+
+  &__text {
+    flex: 1 1 auto;
+    padding-left: 24px;
+    line-height: 1.8;
+  }
+
+  &__icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 56px;
+    height: 100%;
+    color: inherit;
+    background-color: inherit;
+    border-radius: $border-radius;
+    border: 2px solid transparent;
+    transition: $transition;
+
+    @media (min-width: $screen-xxl) {
+      color: var(--orange-400);
+      background-color: var(--white);
+      border: 2px solid var(--orange-400);
+    }
+  }
+
+  &:has(#{$block-name}__icon) {
+    padding-right: 0;
+  }
+
+  &:not(:has(#{$block-name}__icon)) {
+    padding-left: 24px;
+
+    #{$block-name}__text {
+      padding-left: 0;
+    }
+  }
+
+  &--light {
+    font-weight: 500;
+    color: var(--orange-500);
+    background-color: var(--orange-50);
+
+    &:hover,
+    &:focus {
+      color: var(--orange-600);
+      background-color: var(--orange-200);
+
+      #{$block-name}__icon {
+        color: currentColor;
+        background-color: var(--white);
+        border-color: var(--orange-200);
+      }
+    }
+
+    #{$block-name}__icon {
+      color: var(--orange-500);
+      background-color: var(--white);
+      border-color: var(--orange-100);
+    }
+
+    &.btn--adaptive {
+
+      &:hover,
+      &:focus {
+        color: var(--orange-600);
+        background-color: var(--orange-200);
+
+        #{$block-name}__icon {
+          color: currentColor;
+          background-color: var(--orange-200);
+          border-color: var(--orange-200);
+        }
+      }
+
+      #{$block-name}__icon {
+        color: var(--orange-500);
+        background-color: var(--orange-50);
+        border-color: var(--orange-50);
+
+        @media (min-width: $screen-xxl) {
+          color: var(--orange-500);
+          background-color: var(--orange-50);
+          border-color: var(--orange-50);
+        }
+      }
+    }
+  }
+
+  &--white {
+    color: var(--gray-900);
+    background-color: var(--white);
+
+    &:hover,
+    &:focus {
+      color: var(--orange-600);
+      background-color: var(--orange-100);
+
+      #{$block-name}__icon {
+        ccolor: var(--white);
+        background-color: var(--orange-400);
+        border-color: var(--white);
+      }
+    }
+
+    #{$block-name}__icon {
+      color: var(--white);
+      background-color: var(--orange-400);
+      border-color: var(--white);
+
+      // @media (min-width: $screen-xxl) {
+      //   color: var(--orange-500);
+      //   background-color: var(--orange-50);
+      //   border-color: var(--orange-50);
+      // }
+    }
+  }
+
+  &--adaptive {
+
+    @media (max-width: $screen-md - 1) {
+      height: 44px;
+      min-width: 44px;
+    }
+
+    #{$block-name}__text {
+
+      @media (max-width: $screen-xxl - 1) {
+        display: none;
+      }
+    }
+
+    #{$block-name}__icon {
+
+      @media (max-width: $screen-md - 1) {
+        height: 44px;
+        width: 44px;
+      }
+    }
+  }
+
+  &--small {}
+}

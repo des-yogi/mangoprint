@@ -1,0 +1,77 @@
+.hero {
+  $block-name:                &; // #{$block-name}__element
+
+  color: var(--white);
+
+  &__row {
+    gap: 40px 0;
+  }
+
+  &__text-col {
+    @include col(xs, 12);
+    @include col(xl, 6);
+
+    @media (min-width: $screen-xl) {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  &__img-col {
+    @include col(xs, 12);
+    @include col-offset(md, 2);
+    @include col(md, 8);
+    @include col-offset(xl, 0);
+    @include col(xl, 6);
+  }
+
+  &__text {
+
+    @media (min-width: $screen-xl) {
+      padding-bottom: 32px;
+    }
+  }
+
+  &__title,
+  &__intro {
+
+    @media (min-width: $screen-md) and (max-width: $screen-xl - 1) {
+      text-align: center;
+    }
+  }
+
+  &__title {
+    color: inherit;
+  }
+
+  &__intro {
+    text-wrap: balance;
+  }
+
+  &__ctrl {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-top: 40px;
+
+    @media (min-width: $screen-md) and (max-width: $screen-xl - 1) {
+      justify-content: center;
+    }
+
+    & > * {
+      flex: 0 1 auto;
+
+      @media (max-width: $screen-md - 1) {
+        min-width: 293px;
+      }
+    }
+  }
+
+  &__img {
+
+    img {
+      object-fit: cover;
+      object-position: bottom center;
+    }
+  }
+}

@@ -1,0 +1,54 @@
+<!--DEV
+@ @include('blocks/hero/hero.html')
+-->
+
+<div class="hero">
+  <div class="row  hero__row">
+    <div class="hero__text-col">
+      <div class="hero__text">
+        <h1 class="hero__title">Корпоративний мерч під ключ для вашої команди</h1>
+        <div class="hero__intro">
+          <p>Виготовляємо брендований одяг, welcome-packs та івент-набори для HR, маркетингу та бізнесу. Тиражі від 20 шт. Розрахунок за 10 хв.</p>
+        </div>
+        <div class="hero__ctrl">
+          <button class="btn  btn--white">
+            <span class="btn__text">Отримати консультацію</span>
+            <span class="btn__icon">
+              <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#arrow-right"></use></svg>
+            </span>
+          </button>
+
+          <a href="#" class="btn  btn--light">
+            <span class="btn__text">Переглянути кейси</span>
+
+            <span class="btn__icon">
+              <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#arrow-right"></use></svg>
+            </span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero__img-col">
+      <div class="embed-responsive  hero__img">
+        <picture>
+          <source srcset="img/hero.webp,
+                          img/hero.webp 2x" media="(min-width: 1280px)" type="image/webp">
+          <source srcset="img/hero.jpg,
+                          img/hero.jpg 2x" media="(min-width: 1280px)">
+          <!-- 800x450, 1200x675 2x -->
+          <source srcset="img/hero.webp" media="(min-width: 1024px)" type="image/webp">
+          <source srcset="img/hero.jpg" media="(min-width: 1024px)">
+          <!-- 1060x596 -->
+          <source srcset="img/hero.webp" media="(min-width: 480px)" type="image/webp">
+          <source srcset="img/hero.jpg" media="(min-width: 480px)">
+          <!-- 750x422 -->
+          <source srcset="img/hero.webp" media="(min-width: 300px)" type="image/webp">
+          <source srcset="img/hero.jpg" media="(min-width: 300px)">
+          <!-- 540x304 -->
+          <img src="img/hero.png" width="840" height="473" alt="Alt text" loading="eager" decoding="sync" fetchpriority="high">
+        </picture>
+      </div>
+    </div>
+  </div>
+</div>
