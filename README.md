@@ -1,2 +1,2 @@
-# mangoprint
+# Mango print
 Mango print
