@@ -1,0 +1,38 @@
+<!--DEV
+@ @include('blocks/video/video.html', {
+  "code": "AD1t-Sqyju0",
+  "poster": "video-placeholder"
+})
+-->
+
+<section class="video">
+  <h2 class="visually-hidden  video__title">Робочий процес в нашій компанії</h2>
+
+  <a href="#" role="button" class="embed-responsive  video__media  lazy-video" data-video="@@code" aria-label="Video name">
+    <picture>
+      <!-- соотношение сторон 16х9 -->
+      <source srcset="img/@@poster.webp,
+                      img/@@poster.webp 2x" media="(min-width: 1920px)" type="image/webp">
+      <source srcset="img/@@poster.jpg,
+                      img/@@poster.jpg 2x" media="(min-width: 1920px)">
+      <!-- 1064x599, 1600x900 2x -->
+      <source srcset="img/@@poster.webp,
+                      img/@@poster.webp 2x" media="(min-width: 1280px)" type="image/webp">
+      <source srcset="img/@@poster.jpg,
+                      img/@@poster.jpg 2x" media="(min-width: 1280px)">
+      <!-- 848x477, 1280x720 2x -->
+      <source srcset="img/@@poster.webp" media="(min-width: 1024px)" type="image/webp">
+      <source srcset="img/@@poster.jpg" media="(min-width: 1024px)">
+      <!-- 1080x608 -->
+      <source srcset="img/@@poster.webp" media="(min-width: 480px)" type="image/webp">
+      <source srcset="img/@@poster.jpg" media="(min-width: 480px)">
+      <!-- 670x377 -->
+      <source srcset="img/@@poster.webp" media="(min-width: 300px)" type="image/webp">
+      <source srcset="img/@@poster.jpg" media="(min-width: 300px)">
+      <!-- 585x329 -->
+      <img src="img/@@poster.jpg" alt="Alt" width="960" height="540" loading="lazy">
+    </picture>
+
+    <span class="ytb-btn" aria-hidden="true"></span>
+  </a>
+</section>

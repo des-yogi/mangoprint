@@ -1,0 +1,61 @@
+<!--DEV
+@ @include('blocks/how-we-work/how-we-work.html')
+-->
+
+<section class="container  margin-y  how-we-work">
+
+  <div class="row  how-we-work__header">
+    <div class="how-we-work__header-col">
+      <h2 class="how-we-work__title">Як ми працюємо?</h2>
+      <p  class="how-we-work__intro">Ми супроводжуємо замовлення на кожному етапі — від ідеї до готової продукції</p>
+    </div>
+  </div>
+
+  <ul class="list-nostyled  how-we-work__steps">
+    <li class="how-we-work__step">
+      <div class="h3  how-we-work__num"><span>1</span></div>
+      <div class="how-we-work__text">
+        <p class="h4  how-we-work__step-title">Запит і консультація</p>
+        <p class="how-we-work__step-descr">Ви залишаєте заявку або звертаєтесь до менеджера. Ми уточнюємо завдання та терміни</p>
+      </div>
+    </li>
+    <li class="how-we-work__step">
+      <div class="h3  how-we-work__num"><span>2</span></div>
+      <div class="how-we-work__text">
+        <p class="h4  how-we-work__step-title">Підбір рішення</p>
+        <p class="how-we-work__step-descr">Підбираємо оптимальну технологію друку, матеріали та формат продукції під ваші цілі</p>
+      </div>
+    </li>
+    <li class="how-we-work__step">
+      <div class="h3  how-we-work__num"><span>3</span></div>
+      <div class="how-we-work__text">
+        <p class="h4  how-we-work__step-title">Макет і погодження</p>
+        <p class="how-we-work__step-descr">Готуємо або перевіряємо макет, за потреби робимо тестовий зразок</p>
+      </div>
+    </li>
+    <li class="how-we-work__step">
+      <div class="h3  how-we-work__num"><span>4</span></div>
+      <div class="how-we-work__text">
+        <p class="h4  how-we-work__step-title">Виробництво</p>
+        <p class="how-we-work__step-descr">Готуємо або перевіряємо макет, за потреби робимо тестовий зразок</p>
+      </div>
+    </li>
+    <li class="how-we-work__step">
+      <div class="h3  how-we-work__num"><span>5</span></div>
+      <div class="how-we-work__text">
+        <p class="h4  how-we-work__step-title">Доставка</p>
+        <p class="how-we-work__step-descr">Запускаємо замовлення у виробництво з контролем якості на кожному етапі</p>
+      </div>
+    </li>
+  </ul>
+
+  <div class="row  how-we-work__video-wrapper">
+    <div class="how-we-work__video-col">
+      @@include('../../blocks/video/video.html', {
+        "code": "ObsiUdwiFhc",
+        "poster": "video-placeholder"
+      })
+    </div>
+  </div>
+
+</section>

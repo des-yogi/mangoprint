@@ -1,0 +1,61 @@
+<!--DEV
+@ @include('blocks/about-us/about-us.html')
+-->
+
+<section class="container  margin-y  about-us">
+  <div class="row about-us__row">
+
+    <div class="about-us__text-col">
+      <div class="about-us__text">
+        <h2 class="about-us__title">Хто ми?</h2>
+        <div class="about-us__intro">
+          <p>Студія MANGO PRINT – молода та творча команда професіоналів, які люблять свою справу та роблять її на високому рівні. Власну діяльність студія розпочала у 2019 році, і за весь період роботи ми виконали безліч проєктів, завоювали довіру та повагу великої кількості клієнтів. Кожний представник нашої команди має багаторічний досвід та високу кваліфікацію, що дозволяє…</p>
+        </div>
+        <div class="about-us__controls">
+          <a href="#" class="btn">
+            <span class="btn__text">Детальніше</span>
+          </a>
+          <a href="#" class="btn  btn--light">
+            <span class="btn__text">Вакансії</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="about-us__img-col">
+      <div class="embed-responsive embed-responsive--3-2  about-us__img">
+        <picture>
+          <source srcset="img/about-us-img.webp,
+                          img/about-us-img.webp 2x" media="(min-width: 1600px)" type="image/webp">
+          <source srcset="img/about-us-img.jpg,
+                          img/about-us-img.jpg 2x" media="(min-width: 1600px)">
+          <!-- 800x533, 1200x800 2x -->
+          <source srcset="img/about-us-img.webp,
+                          img/about-us-img.webp 2x" media="(min-width: 1366px)" type="image/webp">
+          <source srcset="img/about-us-img.jpg,
+                          img/about-us-img.jpg 2x" media="(min-width: 1366px)">
+          <!-- 690x460, 1035x690 2x -->
+          <source srcset="img/about-us-img.webp,
+                          img/about-us-img.webp 2x" media="(min-width: 1280px)" type="image/webp">
+          <source srcset="img/about-us-img.jpg,
+                          img/about-us-img.jpg 2x" media="(min-width: 1280px)">
+          <!-- 640x427, 960x640 2x -->
+          <source srcset="img/about-us-img.webp" media="(min-width: 1024px)" type="image/webp">
+          <source srcset="img/about-us-img.jpg" media="(min-width: 1024px)">
+          <!-- 1440x960 -->
+          <source srcset="img/about-us-img.webp" media="(min-width: 768px)" type="image/webp">
+          <source srcset="img/about-us-img.jpg" media="(min-width: 768px)">
+          <!-- 1035x690 -->
+          <source srcset="img/about-us-img.webp" media="(min-width: 480px)" type="image/webp">
+          <source srcset="img/about-us-img.jpg" media="(min-width: 480px)">
+          <!-- 690x460 -->
+          <source srcset="img/about-us-img.webp" media="(min-width: 300px)" type="image/webp">
+          <source srcset="img/about-us-img.jpg" media="(min-width: 300px)">
+          <!-- 585x390 -->
+          <img src="img/about-us-img.jpg" alt="Alt" width="800" height="533" loading="lazy">
+        </picture>
+      </div>
+    </div>
+
+  </div>
+</section>

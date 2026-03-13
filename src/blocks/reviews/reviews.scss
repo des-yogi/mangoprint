@@ -1,0 +1,64 @@
+.reviews {
+  $block-name:                &; // #{$block-name}__element
+
+  &__title {
+    margin-bottom: 40px;
+    text-align: center;
+  }
+
+  &__container {
+    position: relative;
+
+    @media (max-width: $screen-xl - 1) {
+      padding-left: 8px;
+      padding-right: 0;
+    }
+
+    @media (min-width: $screen-xl) and (max-width: $screen-xxl - 1) {
+      padding-left: 104px;
+      padding-right: 104px;
+    }
+  }
+
+  &__slide {
+    width: 312px;
+
+    @media (min-width: $screen-md) {
+      width: 340px;
+    }
+
+    @media (min-width: $screen-xl) {
+      width: auto;
+    }
+  }
+
+  .swiper-button-prev {
+
+    @media (min-width: $screen-xl) and (max-width: $screen-xxl - 1) {
+      left: 40px;
+    }
+
+    @media (min-width: $screen-xxl) {
+      $padding-min: 160px; // нужный отступ от краев экрана
+      $btn-width: 56px;
+      $offset: 16px;
+      $half-screen-xxl: $screen-xxl / 2 - $padding-min;
+      left: calc(50% - #{$half-screen-xxl} - #{$btn-width} - #{$offset});
+    }
+  }
+
+  .swiper-button-next {
+
+    @media (min-width: $screen-xl) and (max-width: $screen-xxl - 1) {
+      right: 40px;
+    }
+
+    @media (min-width: $screen-xxl) {
+      $padding-min: 160px; // нужный отступ от краев экрана
+      $btn-width: 56px;
+      $offset: 16px;
+      $half-screen-xxl: $screen-xxl / 2 - $padding-min;
+      right: calc(50% - #{$half-screen-xxl} - #{$btn-width} - #{$offset});
+    }
+  }
+}

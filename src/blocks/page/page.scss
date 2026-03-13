@@ -367,6 +367,34 @@ img {
   }
 }
 
+.tab-content {
+  position: relative;
+
+  &__footer {
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    height: 250px;
+    background: linear-gradient(180deg, rgba(248, 248, 248, 0) 0%, #F8F8F8 100%);
+    pointer-events: none;
+
+    & > .btn {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      z-index: 1;
+      transform: translateX(-50%);
+      pointer-events: auto;
+    }
+  }
+}
+
+.js-collapser {
+  /* важно: чтобы max-height “резал” содержимое */
+  overflow: hidden;
+}
+
 // bs5 nav-tabs end
 
 .col-1-2-3 {
@@ -380,6 +408,47 @@ img {
   @include col(md, 6);
   @include col(xl, 3);
 }
+
+[hidden] { display: none !important; }
+
+.swiper-wrapper,
+.swiper-slide {
+  box-sizing: border-box;
+}
+
+.swiper-slide {
+  height: auto;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  width: 56px;
+  height: 56px;
+  background-color: var(--white);
+  border-radius: $border-radius;
+
+  &:hover,
+  &:focus {
+    background-color: var(--orange-50);
+  }
+
+  .swiper-navigation-icon {
+    width: 10px;
+    height: 18px;
+    stroke-width: 0.8px;
+    stroke: var(--orange-400);
+  }
+
+  &.swiper-button-disabled {
+    opacity: 1;
+    background-color: var(--gray-50);
+
+    .swiper-navigation-icon {
+      stroke: var(--gray-500);
+    }
+  }
+}
+
 
 // background: svg-load('../blocks/phones-modal/bg-img/phone.svg', fill=$main-color, stroke=rgba(255, 255, 255, 0));
 // background-image: svg-load('../blocks/phones-modal/bg-img/phone.svg', fill=$main-color);

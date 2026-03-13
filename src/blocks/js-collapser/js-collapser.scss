@@ -1,0 +1,7 @@
+.js-collapser {
+  $block-name:                &; // #{$block-name}__element
+
+  /* важно: чтобы max-height “резал” содержимое */
+  transition: max-height 0.5s ease;
+  overflow: hidden;
+}
