@@ -36,7 +36,22 @@
     "feature-card": [],
     "print-technologies": [],
     "link-card": [],
-    "gallery-marquee": []
+    "gallery-marquee": [],
+    "js-collapser": [],
+    "statistics": [],
+    "how-we-work": [],
+    "video": [],
+    "reviews": [],
+    "about-us": [],
+    "biz-solutions": [],
+    "biz-solutions-card": [],
+    "service-card": [],
+    "blog-card": [],
+    "faq": [],
+    "write-us": [],
+    "copyrights": [],
+    "social-links": [],
+    "review-card": []
   },
   "addCssBefore": [
     "../../node_modules/bootstrap/scss/_functions",
@@ -70,8 +85,7 @@
     "./src/img/*.{jpg,jpeg,gif,png,svg,ico,webp}"
   ],
   "copiedCss": [],
-  "copiedJs": [
-  ],
+  "copiedJs": [],
   "dirs": {
     "srcPath": "./src/",
     "buildPath": "./build/",

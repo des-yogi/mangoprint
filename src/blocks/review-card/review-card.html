@@ -1,0 +1,45 @@
+<!--DEV
+@ @include('blocks/review-card/review-card.html', {
+  "logo": "review-logo-1",
+  "author": "Андрій Марченко",
+  "position": "COO, TechStream Solutions",
+  "text": "<p>Ми тривалий час шукали надійного партнера для створення унікального корпоративного стилю нашої команди, оскільки для нас було критично важливо поєднати комфорт та естетику. Результат співпраці перевершив усі наші найсміливіші очікування!</p><p>Якість тканини надзвичайно приємна до тіла, а стійкість принту залишається на висоті навіть після багатьох циклів прання. Окремо хочемо подякувати команді за неймовірну оперативність та швидку доставку великого тиражу прямо до нашого офісу.</p><p>Професіоналізм менеджерів та увага до деталей роблять цей сервіс найкращим на ринку.</p>"
+})
+-->
+
+<article class="review-card">
+
+  <div class="review-card__header">
+    <div class="review-card__logo">
+      <picture>
+        <source srcset="img/@@logo.webp" type="image/webp">
+        <img src="img/@@logo.png" alt="Alt text" width="230" height="57" loading="lazy">
+      </picture>
+    </div>
+    <div class="review-card__quote"></div>
+  </div>
+
+  <div class="review-card__body">
+    <header class="review-card__title">
+      <h3 class="h4  review-card__author">@@author</h3>
+      <p class="review-card__position">@@position</p>
+    </header>
+
+    <div class="js-collapser  review-card__text"
+         data-height="140"
+         data-collapser-scope="closest:.review-card">
+      @@text
+    </div>
+
+    <div class="js-collapser-footer  review-card__more-wrapper">
+      <button class="js-collapser-toggle  review-card__more" type="button">
+        <span class="js-collapser-toggle-text"
+              data-show-text="Розгорнути відгук"
+              data-hide-text="Згорнути відгук">
+          Розгорнути відгук
+        </span>
+      </button>
+    </div>
+  </div>
+
+</article>

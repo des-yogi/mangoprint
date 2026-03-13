@@ -1,0 +1,106 @@
+.review-card {
+  $block-name:                &; // #{$block-name}__element
+
+  padding: 24px;
+  background: var(--white);
+  border-radius: $border-radius--30;
+
+  &__header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 16px;
+  }
+
+  &__logo {
+    flex: 1 1;
+    flex-basis: 75%;
+    width: auto;
+    height: 90px;
+    overflow: hidden;
+
+    img {
+      display: block;
+      max-height: 100%;
+      //object-fit: contain;
+      //object-position: center;
+    }
+  }
+
+  &__quote {
+    flex: 0 0;
+    flex-basis: 56px;
+  }
+
+  &__body {
+
+  }
+
+  &__title {
+    margin-bottom: 24px;
+  }
+
+  &__author {
+    margin: 0 0 8px;
+  }
+
+  &__position,
+  &__text {
+    font-size: $font-size-sm;
+
+    @media (min-width: $screen-md) {
+      font-size: $font-size;
+    }
+  }
+
+  &__text {
+    overflow: hidden;
+  }
+
+  &__more-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: 16px;
+  }
+
+  &__more {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 6px 0 0;
+    font-family: $font-family;
+    font-size: $font-size;
+    font-weight: 500;
+    color: var(--gray-900);
+    background: none;
+    border: none;
+    cursor: pointer;
+    user-select: none;
+    transition: $transition;
+
+    &::after {
+      display: block;
+      content: "";
+      width: 26px;
+      height: 26px;
+      background-color: transparent;
+      background-position: center;
+      background-size: 24px;
+      background-image: svg-load('../blocks/review-card/bg-img/caret-down.svg', fill=#F1471D);
+    }
+
+    &:hover,
+    &:focus {
+      color: var(--orange-600);
+    }
+
+    &.is-expanded {
+
+      &::after {
+        transform: scale(1, -1);
+      }
+    }
+  }
+}

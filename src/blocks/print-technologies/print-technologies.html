@@ -24,7 +24,10 @@
     </ul>
   </div>
 
-  <div class="tab-content" id="printTabContent">
+  <div id="printTabContent" class="tab-content  js-collapser"
+       data-height="500"
+       data-speed-animation="450"
+       data-speed-opacity="400">
 
     <div class="tab-pane fade show active" id="printTabPane-1" role="tabpanel" aria-labelledby="printTab-1" tabindex="0">
 
@@ -62,6 +65,38 @@
         <h3 class="nav-tabs__category-caption">Друк на одязі</h3>
 
         <ul class="list-nostyled  row  nav-tabs__category-list">
+          <li class="col-1-2-4">
+            @@include('../../blocks/link-card/link-card.html', {
+              "title": "Друк на футболках",
+              "descr": "Класичне рішення для команд, івентів та промо",
+              "icon": "merchandise-26"
+            })
+          </li>
+
+          <li class="col-1-2-4">
+            @@include('../../blocks/link-card/link-card.html', {
+              "title": "Друк на худі",
+              "descr": "Комфортний брендований одяг для щоденного використання",
+              "icon": "merchandise-26"
+            })
+          </li>
+
+          <li class="col-1-2-4">
+            @@include('../../blocks/link-card/link-card.html', {
+              "title": "Друк на світшотах",
+              "descr": "Стильний варіант для корпоративного мерчу та команд",
+              "icon": "merchandise-26"
+            })
+          </li>
+
+          <li class="col-1-2-4">
+            @@include('../../blocks/link-card/link-card.html', {
+              "title": "Друк на лонгслівах",
+              "descr": "Практичний одяг для міжсезоння та офісного формату",
+              "icon": "merchandise-26"
+            })
+          </li>
+
           <li class="col-1-2-4">
             @@include('../../blocks/link-card/link-card.html', {
               "title": "Друк на футболках",
@@ -167,6 +202,16 @@
           </li>
         </ul>
       </section>
+    </div>
+
+    <div class="tab-content__footer  js-collapser-footer">
+      <button class="btn  btn--light  js-collapser-toggle" type="button">
+        <span class="btn__text  js-collapser-toggle-text"
+              data-show-text="Показати все"
+              data-hide-text="Згорнути">
+          Показати все
+        </span>
+      </button>
     </div>
 
   </div>
