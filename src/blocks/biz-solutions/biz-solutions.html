@@ -1,14 +1,68 @@
 <!--DEV
-
-Для использования этого файла как шаблона:
-
 @ @include('blocks/biz-solutions/biz-solutions.html')
-
-(Нужно убрать пробел между символами @)
-Подробнее: https://www.npmjs.com/package/gulp-file-include
-
-
-
-<div class="biz-solutions">content</div>
-
 -->
+
+<section class="container  margin-y  biz-solutions">
+  <div class="row  biz-solutions__row">
+
+    <div class="biz-solutions__intro-col">
+      <div class="biz-solutions__header">
+        <h2 class="biz-solutions__title">Готові рішення для вашого бізнесу</h2>
+        <p class="biz-solutions__intro">Ми створюємо брендований мерч і одяг, що працює на ваш бренд, команду та бізнес-задачі — від ідеї до готового продукту.</p>
+        <button class="btn" type="button">
+          <span class="btn__text">Отримати консультацію</span>
+          <span class="btn__icon">
+            <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#arrow-right"></use></svg>
+          </span>
+        </button>
+      </div>
+    </div>
+
+    <div class="biz-solutions__card-wrapper-col">
+      <ul class="list-nostyled  biz-solutions__list">
+        @@include('../../blocks/biz-solutions-card/biz-solutions-card.html', {
+          "icon": "merchandise-26",
+          "title": "Корпоративний мерч",
+          "text": "Брендований мерч для компаній: команди, клієнтів та партнерів. Ідеально для маркетингу та впізнаваності бренду."
+        })
+
+        @@include('../../blocks/biz-solutions-card/biz-solutions-card.html', {
+          "icon": "merchandise-26",
+          "title": "Брендований одяг",
+          "text": "Футболки, худі, поло та інший одяг з вашим логотипом. Для команд, офісів та щоденного використання."
+        })
+
+        @@include('../../blocks/biz-solutions-card/biz-solutions-card.html', {
+          "icon": "merchandise-26",
+          "title": "Welcome packs для HR",
+          "text": "Готові welcome-набори для онбордингу нових співробітників. Підсилюють перше враження та корпоративну культуру."
+        })
+
+        @@include('../../blocks/biz-solutions-card/biz-solutions-card.html', {
+          "icon": "merchandise-26",
+          "title": "Мерч для подій",
+          "text": "Мерч для конференцій, івентів та промо-кампаній. Допомагає виділитись і залишитись у памʼяті."
+        })
+
+        @@include('../../blocks/biz-solutions-card/biz-solutions-card.html', {
+          "icon": "merchandise-26",
+          "title": "Уніформа для персоналу",
+          "text": "Брендована уніформа для персоналу, яка виглядає професійно та працює на імідж компанії."
+        })
+
+        @@include('../../blocks/biz-solutions-card/biz-solutions-card.html', {
+          "icon": "merchandise-26",
+          "title": "Рішення для HR",
+          "text": "Мерч для мотивації, внутрішніх програм та корпоративних ініціатив. Підтримка команд і лояльності співробітників."
+        })
+      </ul>
+
+      <div class="biz-solutions__all-solutions">
+        <a href="#" class="btn btn--light">
+          <span class="btn__text">Всі пакетні рішення</span>
+        </a>
+      </div>
+    </div>
+
+  </div>
+</section>

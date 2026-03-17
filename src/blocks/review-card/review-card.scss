@@ -9,7 +9,7 @@
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
-    gap: 16px;
+    gap: 24px;
     margin-bottom: 16px;
   }
 
@@ -30,7 +30,11 @@
 
   &__quote {
     flex: 0 0;
-    flex-basis: 56px;
+    flex-basis: 26px;
+
+    svg {
+      stroke: var(--gray-300);
+    }
   }
 
   &__body {

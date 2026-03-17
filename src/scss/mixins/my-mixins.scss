@@ -88,3 +88,11 @@
     margin-bottom: 96px;
   }
 }
+
+@mixin block-ellipsis($line: 3) {
+  display: -webkit-box;       /* Необходимый тип контейнера */
+  -webkit-line-clamp: $line;      /* Количество строк перед обрезкой */
+  -webkit-box-orient: vertical; /* Вертикальная ориентация */
+  overflow: hidden;           /* Скрывает выходящий текст */
+  text-overflow: ellipsis;    /* Добавляет многоточие */
+}

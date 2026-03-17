@@ -1,9 +1,42 @@
-// В этом файле должны быть стили для БЭМ-блока service-card, его элементов, 
-// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
-// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
-
 .service-card {
-
   $block-name:                &; // #{$block-name}__element
 
+  height: 100%;
+  padding: 24px;
+  background: linear-gradient(to top, var(--gray-0), var(--orange-50) 100%);
+  border-radius: $border-radius--30;
+
+
+  @media (min-width: $screen-xxl) {
+    padding: 40px;
+  }
+
+  &__wrapper {
+
+    .row {
+      gap: 8px 0;
+    }
+  }
+
+  &__outer-col {
+    @include col(xs, 12);
+    @include col(md, 6);
+    @include col(xl, 3);
+  }
+
+  &__block-title {
+    text-align: center;
+  }
+
+  &__title {
+    margin: 0 0 12px;
+  }
+
+  &__descr {
+    font-size: $font-size-sm;
+
+    @media (min-width: $screen-md) {
+      font-size: $font-size;
+    }
+  }
 }

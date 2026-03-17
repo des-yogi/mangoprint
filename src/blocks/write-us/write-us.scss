@@ -1,9 +1,145 @@
-// В этом файле должны быть стили для БЭМ-блока write-us, его элементов, 
-// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
-// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
-
 .write-us {
-
   $block-name:                &; // #{$block-name}__element
 
+  position: relative;
+  padding: 40px 16px;
+  margin: 8px;
+  color: var(--white);
+  background-color: var(--orange-400);
+  border-radius: $border-radius--30;
+  overflow: hidden;
+
+  @media (min-width: $screen-md) {
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+
+  &::before,
+  &::after {
+    display: block;
+    content: "";
+    position: absolute;
+    width: 105px;
+    height: 17px;
+    background-color: transparent;
+    background-position: center;
+    background-size: 105px 17px;
+    background-image: svg-load('../blocks/write-us/bg-img/zigzag.svg');
+  }
+
+  &::before {
+    left: -26px;
+    bottom: 65px;
+    transform: rotate(-90deg);
+
+    @media (min-width: $screen-md) {
+      left: -5px;
+      bottom: 115px;
+    }
+
+    @media (min-width: $screen-xl) {
+      left: 0;
+      bottom: 70px;
+    }
+  }
+
+  &::after {
+    right: 24px;
+    top: 20px;
+
+    @media (min-width: $screen-md) {
+      top: 40px;
+      right: 40px;
+    }
+
+    @media (min-width: $screen-xl) {}
+  }
+
+  // &__container {
+  // }
+
+  // &__row {
+  // }
+
+  &__col {
+    @include col(xs, 12);
+    @include col-offset(md, 1);
+    @include col(md, 10);
+    @include col-offset(xl, 2);
+    @include col(xl, 8);
+    @include col-offset(xxl, 3);
+    @include col(xxl, 6);
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+    position: relative;
+
+    @media (min-width: $screen-xl) {
+      padding: 0 48px;
+    }
+
+    &::before,
+    &::after {
+      display: block;
+      content: "";
+      position: absolute;
+      width: 148px;
+      height: 148px;
+      background-size: 24px;
+      background-color: transparent;
+      background-repeat: repeat;
+      background-image: svg-load('../blocks/write-us/bg-img/dot-tile.svg', fill=#FEEDEC); // --orange-50
+      opacity: 0.3;
+    }
+
+    &::before {
+      left: -22px;
+      bottom: -65px;
+
+      @media (min-width: $screen-md) {
+        left: -74px;
+        bottom: -60px;
+      }
+
+      @media (min-width: $screen-xl) {
+        left: 54px;
+        bottom: 12px;
+      }
+
+      @media (min-width: $screen-xxl) {
+        left: 62px;
+        bottom: 12px;
+      }
+    }
+
+    &::after {
+      top: -100px;
+      right: -88px;
+
+      @media (min-width: $screen-md) {
+        top: -110px;
+        right: 60px;
+      }
+
+      @media (min-width: $screen-xl) {
+        top: -60px;
+        right: -75px;
+      }
+
+      @media (min-width: $screen-xxl) {
+        top: -60px;
+        right: 0;
+      }
+    }
+  }
+
+  &__title {
+    margin: 0;
+    text-align: center;
+    color: inherit;
+  }
 }

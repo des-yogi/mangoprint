@@ -1,14 +1,11 @@
 <!--DEV
-
-Для использования этого файла как шаблона:
-
-@ @include('blocks/service-card/service-card.html')
-
-(Нужно убрать пробел между символами @)
-Подробнее: https://www.npmjs.com/package/gulp-file-include
-
-
-
-<div class="service-card">content</div>
-
+@ @include('blocks/service-card/service-card.html', {
+  "title": "HR-менеджер",
+  "descr": "Welcome-пакети та мерч для онбордингу нових співробітників"
+})
 -->
+
+<div class="service-card">
+  <p class="h4  service-card__title">@@title</p>
+  <p class="service-card__descr">@@descr</p>
+</div>

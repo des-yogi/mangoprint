@@ -23,16 +23,28 @@
       <div class="page-header__service">
         <!-- phone-selector -->
         <div class="dropdown  phone-selector  mob-hidden">
-          <button class="dropdown-toggle  phone-selector__toggler" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <button class="dropdown-toggle  phone-selector__toggler" type="button" data-bs-toggle="dropdown" data-bs-offset="6,18" aria-expanded="false">
             <span class="phone-selector__icon">
               <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#phone"></use></svg>
             </span>
             <span>+ 38 063 453 55 64</span>
           </button>
           <ul class="dropdown-menu  phone-selector__menu">
-            <li><a href="tel:+380634535564" class="dropdown-item  phone-selector__link">+ 38 063 453 55 64</a></li>
-            <li><a href="tel:+380634535564" class="dropdown-item  phone-selector__link">+ 38 063 453 55 64</a></li>
-            <li><a href="tel:+380634535564" class="dropdown-item  phone-selector__link">+ 38 063 453 55 64</a></li>
+            <li>
+              <a href="tel:+380634535564" class="dropdown-item  phone-selector__link">
+                <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#phone"></use></svg>
+                <span>+ 38 063 453 55 64</span>
+              </a>
+            </li>
+            <li>
+              <a href="mailto:mangoprintua@gmail.com" class="dropdown-item  phone-selector__link">
+                <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#at"></use></svg>
+                <span>mangoprintua@gmail.com</span>
+              </a>
+            </li>
+            <li>
+              @@include('../../blocks/social-links/social-links.html')
+            </li>
           </ul>
         </div>
 

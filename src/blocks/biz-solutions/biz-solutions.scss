@@ -1,9 +1,52 @@
-// В этом файле должны быть стили для БЭМ-блока biz-solutions, его элементов, 
-// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
-// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
-
 .biz-solutions {
-
   $block-name:                &; // #{$block-name}__element
 
+  &__row {
+    gap: 40px 0;
+  }
+
+  &__intro-col {
+    @include col(xs, 12);
+    @include col(xl, 4);
+  }
+
+  &__card-wrapper-col {
+    @include col(xs, 12);
+    @include col(xl, 8);
+  }
+
+  //&__header {
+  //}
+
+  &__title {
+    margin-top: 0;
+  }
+
+  &__intro {
+    margin-bottom: 40px;
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 8px;
+
+    & > * {
+      flex: 1 1 100%;
+
+      @media (min-width: $screen-md) {
+        flex-grow: 0;
+        flex-basis: calc(50% - 4px);
+      }
+    }
+  }
+
+  &__all-solutions {
+    margin-top: 9px;
+
+    a {
+      width: 100%;
+    }
+  }
 }
