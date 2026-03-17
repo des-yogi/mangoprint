@@ -28,17 +28,39 @@
 
   &__menu {
     min-width: 100%;
+    padding: 16px;
+    border-radius: $border-radius;
+    border: 2px solid var(--gray-150);
+
+    & > li + li {
+      margin-top: 8px;
+    }
+
+    & > li:has(.social-links) {
+      margin-top: 12px;
+    }
   }
 
   &__link {
-    padding: 8px 30px;
-    text-align: right;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 4px 0;
     text-decoration: none !important;
     color: inherit;
 
     &:hover,
     &:focus {
       color: var(--orange-600);
+
+      // svg {
+      //   stroke: var(--orange-600);
+      // }
+    }
+
+    svg {
+      stroke: var(--orange-400);
+      //transition: $transition;
     }
   }
 }

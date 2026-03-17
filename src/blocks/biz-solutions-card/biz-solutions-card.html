@@ -1,14 +1,27 @@
 <!--DEV
+@ @include('blocks/biz-solutions-card/biz-solutions-card.html', {
+  "icon": "merchandise-26",
+  "title": "Корпоративний мерч",
+  "text": "Брендований мерч для компаній: команди, клієнтів та партнерів. Ідеально для маркетингу та впізнаваності бренду."
+})
 
-Для использования этого файла как шаблона:
-
-@ @include('blocks/biz-solutions-card/biz-solutions-card.html')
-
-(Нужно убрать пробел между символами @)
-Подробнее: https://www.npmjs.com/package/gulp-file-include
-
-
-
-<div class="biz-solutions-card">content</div>
-
+div / li / a
 -->
+
+<li class="biz-solutions-card">
+  <a href="#" class="biz-solutions-card__inner">
+    <div class="biz-solutions-card__icon">
+      <svg width="26" height="26" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#@@icon"></use></svg>
+    </div>
+
+    <div class="biz-solutions-card__text">
+      <p class="h4  biz-solutions-card__card-title">@@title</p>
+      <p>@@text</p>
+
+      <span class="text-link">
+        <span>Детальніше</span>
+        <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#arrow-right"></use></svg>
+      </span>
+    </div>
+  </a>
+</li>

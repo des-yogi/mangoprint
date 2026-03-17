@@ -1,14 +1,52 @@
 <!--DEV
-
-Для использования этого файла как шаблона:
-
 @ @include('blocks/faq/faq.html')
-
-(Нужно убрать пробел между символами @)
-Подробнее: https://www.npmjs.com/package/gulp-file-include
-
-
-
-<div class="faq">content</div>
-
 -->
+
+<section class="margin-y  faq" style="margin-bottom: 8px;">
+  <div class="container  faq__container">
+    <div class="row  faq__row">
+      <div class="faq__header-col">
+        <h2 class="faq__title">Часті питання</h2>
+        <p class="faq__intro">Тут ми зібрали відповіді на найпопулярніші запитання про друк, вишивку та корпоративний мерч.</p>
+      </div>
+
+      <div class="faq__content-col">
+        <div class="accordion" id="accordionFaq">
+          <section class="accordion-item">
+            <h3 class="h4  accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-1" aria-expanded="false" aria-controls="collapse-1">
+                <span>Який мінімальний тираж для замовлення?</span>
+                <span class="accordion__icon"></span>
+              </button>
+            </h3>
+            <div id="collapse-1" class="accordion-collapse collapse" data-bs-parent="#accordionFaq">
+              <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the first item’s accordion body.</div>
+            </div>
+          </section>
+          <section class="accordion-item">
+            <h3 class="h4  accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-2" aria-expanded="false" aria-controls="collapse-2">
+                <span>Яку технологію краще обрати: друк чи вишивку?</span>
+                <span class="accordion__icon"></span>
+              </button>
+            </h3>
+            <div id="collapse-2" class="accordion-collapse collapse" data-bs-parent="#accordionFaq">
+              <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the second item’s accordion body. Let’s imagine this being filled with some actual content.</div>
+            </div>
+          </section>
+          <section class="accordion-item">
+            <h3 class="h4  accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-3" aria-expanded="false" aria-controls="collapse-3">
+                <span>Чи допомагаєте з дизайном та адаптацією логотипу?</span>
+                <span class="accordion__icon"></span>
+              </button>
+            </h3>
+            <div id="collapse-3" class="accordion-collapse collapse" data-bs-parent="#accordionFaq">
+              <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item’s accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

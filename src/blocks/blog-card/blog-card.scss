@@ -1,9 +1,81 @@
-// В этом файле должны быть стили для БЭМ-блока blog-card, его элементов, 
-// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
-// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
-
 .blog-card {
-
   $block-name:                &; // #{$block-name}__element
 
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 24px 0;
+  position: relative;
+  height: 100%;
+  padding: 24px;
+  background-color: var(--white);
+  border-radius: $border-radius--30;
+
+  @media (min-width: $screen-xxl) {
+    padding: 40px;
+  }
+
+  &:has(a:hover),
+  &:has(a:focus) {
+
+    .text-link {
+      color: var(--orange-600);
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    //justify-content: space-between;
+    gap: 12px 0;
+  }
+
+  &__tags {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+
+    & > * {
+      flex: 0;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    color: var(--gray-900);
+
+    a {
+      color: inherit;
+
+      &:hover,
+      &:focus {
+        text-decoration: none;
+      }
+
+      &::before {
+        display: block;
+        content: "";
+        position: absolute;
+        inset: 0;
+        z-index: 1;
+      }
+    }
+  }
+
+  &__text {
+    @include block-ellipsis(4);
+    font-size: $font-size-sm;
+
+    @media (min-width: $screen-md) {
+      font-size: $font-size;
+    }
+  }
+
+  &__footer {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 16px;
+  }
 }

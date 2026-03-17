@@ -51,7 +51,8 @@
     "write-us": [],
     "copyrights": [],
     "social-links": [],
-    "review-card": []
+    "review-card": [],
+    "blog-slider": []
   },
   "addCssBefore": [
     "../../node_modules/bootstrap/scss/_functions",

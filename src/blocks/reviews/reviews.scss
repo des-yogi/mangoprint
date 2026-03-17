@@ -32,6 +32,14 @@
     }
   }
 
+  .swiper-button-prev,
+  .swiper-button-next {
+
+    @media (max-width: $screen-xl - 1) {
+      display: none !important;
+    }
+  }
+
   .swiper-button-prev {
 
     @media (min-width: $screen-xl) and (max-width: $screen-xxl - 1) {

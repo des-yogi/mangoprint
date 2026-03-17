@@ -1,0 +1,10 @@
+.blog-slider {
+  $block-name:                &; // #{$block-name}__element
+
+  padding: 0 8px;
+
+  &__title {
+    margin-top: 0;
+    text-align: center;
+  }
+}

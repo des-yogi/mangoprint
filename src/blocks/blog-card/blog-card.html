@@ -1,14 +1,35 @@
 <!--DEV
-
-Для использования этого файла как шаблона:
-
-@ @include('blocks/blog-card/blog-card.html')
-
-(Нужно убрать пробел между символами @)
-Подробнее: https://www.npmjs.com/package/gulp-file-include
-
-
-
-<div class="blog-card">content</div>
-
+@ @include('blocks/blog-card/blog-card.html', {
+  "title": "Як обрати технологію друку для корпоративного одягу?",
+  "text": "<p>Корпоративний одяг — це не просто футболки з логотипом, а інструмент бренду та впізнаваності. Вибір технології друку напряму впливає на вигляд виробу, його зносостійкість і бюджет. Шовкотрафарет чудово підходить для великих тиражів і простих дизайнів, DTF — для яскравих повноколірних зображень та малих партій, а УФ-друк найчастіше використовують для аксесуарів і сувенірної продукції. У статті розбираємо, яку технологію обрати залежно від задач бізнесу, типу тканини та умов використання одягу, з прикладами реальних кейсів.</p>"
+})
 -->
+
+<article class="blog-card">
+
+  <div class="blog-card__content">
+    <div class="blog-card__tags">
+      <span class="tag">Корпоративний одяг</span>
+      <span class="tag">Друк на логотипі</span>
+    </div>
+
+    <h3 class="h4  blog-card__title">
+      <a href="#">@@title</a>
+    </h3>
+
+    <div class="blog-card__text">
+      @@text
+    </div>
+
+  </div>
+
+  <div class="blog-card__footer">
+    <time class="publishedon" datetime="2026-01-01">01.01.2026</time>
+
+    <span class="text-link">
+      <span>Детальніше</span>
+      <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#arrow-right"></use></svg>
+    </span>
+  </div>
+
+</article>

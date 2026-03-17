@@ -83,6 +83,48 @@
 
         @@include('blocks/about-us/about-us.html')
 
+        @@include('blocks/biz-solutions/biz-solutions.html')
+
+        <section class="container  margin-y  service-card__wrapper">
+          <h2 class="service-card__block-title">Кому підійдуть наші послуги?</h2>
+
+          <ul class="list-nostyled  row">
+            <li class="service-card__outer-col">
+              @@include('blocks/service-card/service-card.html', {
+                "title": "HR-менеджер",
+                "descr": "Welcome-пакети та мерч для онбордингу нових співробітників"
+              })
+            </li>
+
+            <li class="service-card__outer-col">
+              @@include('blocks/service-card/service-card.html', {
+                "title": "Маркетолог",
+                "descr": "Промо-продукція та branded мерч для підвищення впізнаваності"
+              })
+            </li>
+
+            <li class="service-card__outer-col">
+              @@include('blocks/service-card/service-card.html', {
+                "title": "Event-менеджер",
+                "descr": "Комплексні рішення для корпоративних івентів та конференцій"
+              })
+            </li>
+
+            <li class="service-card__outer-col">
+              @@include('blocks/service-card/service-card.html', {
+                "title": "Власник бізнесу",
+                "descr": "Ексклюзивні лінійки для підсилення бренду компанії"
+              })
+            </li>
+          </ul>
+        </section>
+
+        @@include('blocks/blog-slider/blog-slider.html')
+
+        @@include('blocks/faq/faq.html')
+
+        @@include('blocks/write-us/write-us.html')
+
       </main>
 
     </div>

@@ -1,9 +1,81 @@
-// В этом файле должны быть стили для БЭМ-блока faq, его элементов, 
-// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
-// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
-
 .faq {
-
   $block-name:                &; // #{$block-name}__element
 
+  position: relative;
+  padding: 40px 0;
+  margin-right: 8px;
+  margin-left: 8px;
+  background-color: var(--orange-50);
+  border-radius: $border-radius--30;
+  overflow: hidden;
+
+  @media (min-width: $screen-md) {
+    padding: 48px 0;
+  }
+
+  &::before,
+  &::after {
+    display: block;
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    z-index: 0;
+    width: 224px;
+    height: 100%;
+    background-repeat: repeat;
+    background-size: auto 42px !important; // 65% от 64px
+    opacity: 0.85;
+
+    @media (min-width: $screen-xxl) {
+      width: 300px;
+    }
+  }
+
+  &::before {
+    left: 0;
+    background:
+      linear-gradient(to right, rgba(254, 237, 236, 0) 0%, #FEEDEC 100%),
+      url('../img/tile-faq.png');
+  }
+
+  &::after {
+    right: 0;
+    background:
+      linear-gradient(to left, rgba(254, 237, 236, 0) 0%, #FEEDEC 100%),
+      url('../img/tile-faq.png');
+  }
+
+  &__container {
+    position: relative;
+    z-index: 1;
+  }
+
+  &__row {
+    gap: 40px 0;
+  }
+
+  &__header-col {
+    @include col(xs, 12);
+    @include col-offset(md, 1);
+    @include col(md, 10);
+    @include col-offset(xl, 2);
+    @include col(xl, 8);
+
+    text-align: center;
+  }
+
+  &__content-col {
+    @include col(xs, 12);
+    @include col-offset(md, 1);
+    @include col(md, 10);
+    @include col-offset(xl, 2);
+    @include col(xl, 8);
+    @include col-offset(xxl, 1);
+    @include col(xxl, 10);
+  }
+
+  &__title {
+    margin-top: 0;
+  }
 }
