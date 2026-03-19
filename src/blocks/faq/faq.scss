@@ -21,11 +21,19 @@
     top: 0;
     bottom: 0;
     z-index: 0;
-    width: 224px;
+    width: 64px;
     height: 100%;
     background-repeat: repeat;
     background-size: auto 42px !important; // 65% от 64px
-    opacity: 0.85;
+    opacity: 0.8;
+
+    @media (min-width: $screen-md) {
+      width: 140px;
+    }
+
+    @media (min-width: $screen-xl) {
+      width: 224px;
+    }
 
     @media (min-width: $screen-xxl) {
       width: 300px;

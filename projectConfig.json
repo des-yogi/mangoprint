@@ -52,7 +52,8 @@
     "copyrights": [],
     "social-links": [],
     "review-card": [],
-    "blog-slider": []
+    "blog-slider": [],
+    "mob-nav": []
   },
   "addCssBefore": [
     "../../node_modules/bootstrap/scss/_functions",

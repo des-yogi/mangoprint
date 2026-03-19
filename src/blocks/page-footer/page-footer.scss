@@ -2,8 +2,9 @@
   $block-name:                &; // #{$block-name}__element
 
   position: relative;
+  padding-top: 24px;
   margin: 0 8px 8px;
-  min-height: 250px;
+  min-height: 150px;
   color: var(--white);
   background-color: var(--gray-800);
   border-radius: $border-radius--30;
@@ -17,13 +18,21 @@
     top: 0;
     bottom: 0;
     z-index: 0;
-    width: 224px;
+    width: 64px;
     height: 100%;
     background-repeat: repeat;
     background-size: auto 42px !important; // 65% от 64px
     opacity: 0.3;
 
-    @media (min-width: $screen-xl) {
+    @media (min-width: $screen-md) {
+      //width: 100px;
+      width: 140px;
+    }
+
+    // @media (min-width: $screen-xl) {
+    // }
+
+    @media (min-width: $screen-xxl) {
       width: 300px;
     }
   }
@@ -40,5 +49,198 @@
     background:
       linear-gradient(to left, rgba(44, 44, 44, 0) 0%, #2C2C2C 100%),
       url('../img/tile-statistic.png');
+  }
+
+  * {
+    color: inherit;
+  }
+
+  a:not(.social-links__link) {
+
+    &:hover,
+    &:focus {
+      text-decoration: none;
+      color: var(--orange-400);
+    }
+  }
+
+  &__container {
+    position: relative;
+    z-index: 1;
+  }
+
+  &__main-row {
+    gap: 24px 0;
+  }
+
+  &__contacts-col {
+    @include col(xs, 12);
+    @include col(md, 6);
+    @include col(xl, 3);
+  }
+
+  &__nav-col {
+    @include col(xs, 12);
+    @include col(md, 6);
+    @include col(xl, 9);
+  }
+
+  &__contacts {
+    display: flex;
+    flex-direction: column;
+    gap: 24px 0;
+  }
+
+  &__contact-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px 0;
+
+    @media (min-width: $screen-md) {
+      gap: 16px 0;
+    }
+  }
+
+  //&__contact-item {
+  //}
+
+  &__contact-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    color: var(--gray-150);
+
+    @media (max-width: $screen-xxl - 1) {
+      font-size: $font-size;
+    }
+  }
+
+  &__contact-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    color: var(--orange-400);
+    background-color: var(--gray-900);
+    border-radius: $border-radius--16;
+  }
+
+  &__nav {
+
+    @media (min-width: $screen-md) {
+      padding-top: 14px;
+    }
+  }
+
+  &__nav-list {
+    display: flex;
+    align-items: baseline;
+    //justify-content: space-between;
+    gap: 16px;
+
+    @media (min-width: $screen-md) and (max-width: $screen-xl - 1) {
+      flex-wrap: wrap;
+    }
+  }
+
+  &__nav-item {
+    flex: 1 1 auto;
+
+    @media (min-width: $screen-md) and (max-width: $screen-xl - 1) {
+      flex-basis: 100%;
+    }
+
+    @media (min-width: $screen-xl) {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 24px 0;
+    }
+  }
+
+  &__nav-link {
+
+    &.h3 {
+      display: inline-flex;
+      margin: 0;
+      color: var(--gray-50);
+    }
+  }
+
+  &__nav-list-lvl2 {
+    display: none;
+
+    @media (min-width: $screen-xl) {
+      display: flex;
+      flex-direction: column;
+      gap: 12px 0;
+    }
+  }
+
+  //&__nav-item-lvl2 {
+  //}
+
+  &__nav-link-lvl2 {
+    font-size: $font-size;
+    color: var(--gray-150);
+  }
+
+  &__bottom {
+    position: relative;
+    padding-top: 24px;
+    margin-top: 24px;
+    font-size: $font-size-sm;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background-color: var(--gray-900);
+    }
+  }
+
+  &__service-links {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 24px;
+  }
+
+  //&__service-item {
+  //}
+
+  &__service-link {
+    color: var(--gray-200);
+  }
+
+  &__copyrights {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    padding: 24px 0;
+    color: var(--gray-50);
+
+    @media (min-width: $screen-xl) {
+      padding-top: 16px;
+    }
+  }
+
+  &__owner {
+    flex: 1;
+    margin: 0;
+  }
+
+  &__dev {
+    flex: 0 0 auto;
+
+    img {
+      display: block;
+    }
   }
 }

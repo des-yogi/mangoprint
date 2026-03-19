@@ -25,11 +25,16 @@
   </div>
 
   <div id="printTabContent" class="tab-content  js-collapser"
-       data-height="500"
+       data-height="540"
        data-speed-animation="450"
-       data-speed-opacity="400">
+       data-speed-opacity="400"
+       data-collapser-scope="closest:article">
 
-    <div class="tab-pane fade show active" id="printTabPane-1" role="tabpanel" aria-labelledby="printTab-1" tabindex="0">
+    <div class="tab-pane fade show active"
+         id="printTabPane-1"
+         role="tabpanel"
+         aria-labelledby="printTab-1"
+         tabindex="0">
 
       <section class="nav-tabs__category">
         <h3 class="nav-tabs__category-caption">Технології друку</h3>
@@ -204,16 +209,16 @@
       </section>
     </div>
 
-    <div class="tab-content__footer  js-collapser-footer">
-      <button class="btn  btn--light  js-collapser-toggle" type="button">
-        <span class="btn__text  js-collapser-toggle-text"
-              data-show-text="Показати все"
-              data-hide-text="Згорнути">
-          Показати все
-        </span>
-      </button>
-    </div>
+  </div>
 
+  <div class="tab-content__footer  js-collapser-footer">
+    <button class="btn  btn--light  js-collapser-toggle" type="button">
+      <span class="btn__text  js-collapser-toggle-text"
+            data-show-text="Показати все"
+            data-hide-text="Згорнути">
+        Показати все
+      </span>
+    </button>
   </div>
 
 </article>
