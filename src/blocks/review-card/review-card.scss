@@ -37,9 +37,8 @@
     }
   }
 
-  &__body {
-
-  }
+  //&__body {
+  //}
 
   &__title {
     margin-bottom: 24px;
@@ -107,4 +106,22 @@
       }
     }
   }
+}
+
+/* Свернутое состояние: multi-line ellipsis */
+.js-review-clamp.is-collapsed {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  /* -webkit-line-clamp выставляется инлайном через JS */
+}
+
+/* Если надо легкая плавность “появления” при переключении */
+.js-review-clamp.is-fading {
+  transition: opacity 160ms ease;
+}
+
+/* Футер гарантированно скрывается атрибутом hidden (на случай flex) */
+.js-collapser-footer[hidden] {
+  display: none !important;
 }

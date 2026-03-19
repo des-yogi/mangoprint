@@ -331,6 +331,8 @@ img {
     font-size: $font-size;
     color: var(--gray-900);
     border-radius: 32px;
+    cursor: pointer;
+    user-select: none;
 
     &:hover,
     &:focus {
@@ -370,21 +372,44 @@ img {
 .tab-content {
   position: relative;
 
-  &__footer {
+  &::after {
+    content: "";
     position: absolute;
     right: 0;
     left: 0;
     bottom: 0;
     height: 250px;
     background: linear-gradient(180deg, rgba(248, 248, 248, 0) 0%, #F8F8F8 100%);
+    opacity: 0;
+    transition: $transition;
+    pointer-events: none;
+  }
+
+  &.is-collapsed {
+
+    &::after {
+      opacity: 1;
+    }
+  }
+
+  &__footer {
+    display: flex;
+    justify-content: center;
+    margin-top: 24px;
+    //position: absolute;
+    //right: 0;
+    //left: 0;
+    //bottom: 0;
+    //height: 250px;
+    background: linear-gradient(180deg, rgba(248, 248, 248, 0) 0%, #F8F8F8 100%);
     pointer-events: none;
 
     & > .btn {
-      position: absolute;
-      bottom: 0;
-      left: 50%;
-      z-index: 1;
-      transform: translateX(-50%);
+      //position: absolute;
+      //bottom: 0;
+      //left: 50%;
+      //z-index: 1;
+      //transform: translateX(-50%);
       pointer-events: auto;
     }
   }
@@ -444,8 +469,15 @@ img {
     background-color: var(--gray-50);
 
     .swiper-navigation-icon {
-      stroke: var(--gray-500);
+      stroke: var(--gray-500) !important;
     }
+  }
+}
+
+.swiper-button-prev {
+
+  .swiper-navigation-icon {
+    transform: rotate(180deg) !important;
   }
 }
 
