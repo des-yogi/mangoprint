@@ -1,0 +1,7 @@
+.blog {
+  $block-name:                &; // #{$block-name}__element
+
+  &__row {
+    gap: 8px 0;
+  }
+}

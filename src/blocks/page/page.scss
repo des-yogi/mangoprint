@@ -434,6 +434,13 @@ img {
   @include col(xl, 3);
 }
 
+.col-2-3-6 {
+  @include col(xs, 6);
+  @include col(md, 4);
+  @include col(lg, 3);
+  @include col(xl, 2);
+}
+
 [hidden] { display: none !important; }
 
 .swiper-wrapper,
@@ -489,6 +496,12 @@ img {
   font-weight: 500;
   color: var(--gray-900);
   transition: $transition;
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+    color: var(--orange-600);
+  }
 
   & > svg {
     stroke: var(--orange-400);

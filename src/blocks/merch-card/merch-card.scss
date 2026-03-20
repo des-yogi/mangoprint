@@ -1,0 +1,76 @@
+.merch-card {
+  $block-name:                &; // #{$block-name}__element
+
+  display: flex;
+  flex-direction: column;
+  gap: 16px 0;
+  height: 100%;
+  padding: 16px;
+  background-color: var(--white);
+  border-radius: $border-radius--30;
+  overflow: hidden;
+
+  &:has(#{$block-name}__img:hover, #{$block-name}__img:focus) {
+
+    #{$block-name}__title > a {
+      color: var(--orange-600);
+    }
+  }
+
+  &__img {
+    background-color: var(--gray-0);
+
+    img {
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+
+  &__colors {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 4px;
+  }
+
+  &__color {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    border: 1px solid var(--gray-100);
+  }
+
+  &__color-circle {
+    display: block;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+  }
+
+  //&__text {
+  //}
+
+  &__title {
+    margin: 0 0 4px;
+    font-size: $font-size !important;
+
+    a {
+      color: inherit;
+
+      &:hover,
+      &:focus {
+        text-decoration: none;
+        color: var(--orange-600);
+      }
+    }
+  }
+
+  &__descr {
+    font-size: $font-size-sm;
+    line-height: 1.5;
+    text-wrap: pretty;
+  }
+}

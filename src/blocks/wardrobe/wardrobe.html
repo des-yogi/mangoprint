@@ -1,0 +1,65 @@
+<!--DEV
+@ @include('blocks/wardrobe/wardrobe.html')
+-->
+
+<section class="container  margin-y  wardrobe">
+
+  <div class="row  wardrobe__header">
+    <div class="wardrobe__col">
+      <h2 class="wardrobe__title">Базовий гардероб вашого бренду</h2>
+      <p class="wardrobe__intro">Оберіть ідеальну основу для вашого бренду. Ми підібрали найбільш популярні моделі текстилю, які ідеально підходять для всіх видів нанесення — від яскравих принтів до преміальної вишивки.</p>
+    </div>
+  </div>
+
+  <div class="row  wardrobe__row">
+
+    <div class="col-2-3-6">
+      @@include('../../blocks/merch-card/merch-card.html', {
+        "img": "merch-1",
+        "title": "Футболка Classic",
+        "descr": "Ідеальний варіант для масових івентів та промо-акцій"
+      })
+    </div>
+
+    <div class="col-2-3-6">
+      @@include('../../blocks/merch-card/merch-card.html', {
+        "img": "merch-2",
+        "title": "Худі Premium",
+        "descr": "Щільний текстиль для створення ексклюзивного корпоративного стилю"
+      })
+    </div>
+
+    <div class="col-2-3-6">
+      @@include('../../blocks/merch-card/merch-card.html', {
+        "img": "merch-3",
+        "title": "Світшоти",
+        "descr": "Універсальна база для повсякденного офісного стилю та комфорту команди"
+      })
+    </div>
+
+    <div class="col-2-3-6">
+      @@include('../../blocks/merch-card/merch-card.html', {
+        "img": "merch-4",
+        "title": "Лонгсліви",
+        "descr": "Трендовий крій для сучасних IT-команд та креативних брендів"
+      })
+    </div>
+
+    <div class="col-2-3-6">
+      @@include('../../blocks/merch-card/merch-card.html', {
+        "img": "merch-5",
+        "title": "Поло",
+        "descr": "Елегантне рішення для  персоналу та створення охайного ділового образу"
+      })
+    </div>
+
+    <div class="col-2-3-6">
+      @@include('../../blocks/merch-card/merch-card.html', {
+        "img": "merch-6",
+        "title": "Еко-шопери",
+        "descr": "Стильний та екологічний аксесуар для вашого бренду"
+      })
+    </div>
+
+  </div>
+</section>

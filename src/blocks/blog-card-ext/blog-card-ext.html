@@ -1,0 +1,54 @@
+<!--DEV
+@ @include('blocks/blog-card-ext/blog-card-ext.html', {
+  "img": "image-16x9-1",
+  "title": "Як обрати технологію друку для корпоративного одягу",
+  "text": "<p>Корпоративний одяг — це не просто футболки з логотипом, а інструмент бренду та впізнаваності. Вибір технології друку напряму впливає на вигляд виробу, його зносостійкість і бюджет. Шовкотрафарет чудово підходить для великих тиражів і простих дизайнів, DTF — для яскравих повноколірних зображень та малих партій, а УФ-друк найчастіше використовують для аксесуарів і сувенірної продукції. У статті розбираємо, яку технологію обрати залежно від задач бізнесу, типу тканини та умов використання одягу, з прикладами реальних кейсів.</p>"
+})
+-->
+
+<article class="blog-card-ext">
+  <a href="#" class="embed-responsive  blog-card-ext__img" tabindex="-1" aria-hidden="true">
+    <picture>
+      <source srcset="img/@@img.webp,
+                      img/@@img.webp 2x" media="(min-width: 1280px)" type="image/webp">
+      <source srcset="img/@@img.jpg,
+                      img/@@img.jpg 2x" media="(min-width: 1280px)">
+      <!-- 448x252, 672x378 2x -->
+      <source srcset="img/@@img.webp" media="(min-width: 1024px)" type="image/webp">
+      <source srcset="img/@@img.jpg" media="(min-width: 1024px)">
+      <!-- 786x442 -->
+      <source srcset="img/@@img.webp" media="(min-width: 480px)" type="image/webp">
+      <source srcset="img/@@img.jpg" media="(min-width: 480px)">
+      <!-- 650x366 -->
+      <source srcset="img/@@img.webp" media="(min-width: 300px)" type="image/webp">
+      <source srcset="img/@@img.jpg" media="(min-width: 300px)">
+      <!-- 540x304 -->
+      <img src="img/@@img.jpg" alt="Alt text" width="672" height="378" loading="lazy">
+    </picture>
+  </a>
+
+  <div class="blog-card-ext__content">
+    <div class="blog-card-ext__tags">
+      <span class="tag">Корпоративний одяг</span>
+      <span class="tag">Друк на логотипі</span>
+    </div>
+
+    <h2 class="h4  blog-card-ext__title">
+      <!-- Проверять уровень заголовка при шаблонизации -->
+      <a href="#">@@title</a>
+    </h2>
+
+    <div class="blog-card-ext__text">
+      @@text
+    </div>
+  </div>
+
+  <div class="blog-card-ext__footer">
+    <time class="publishedon" datetime="2026-01-01">01.01.2026</time>
+
+    <a href="#" class="text-link" tabindex="-1" aria-hidden="true">
+      <span>Детальніше</span>
+      <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#arrow-right"></use></svg>
+    </a>
+  </div>
+</article>

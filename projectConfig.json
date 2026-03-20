@@ -53,7 +53,16 @@
     "social-links": [],
     "review-card": [],
     "blog-slider": [],
-    "mob-nav": []
+    "mob-nav": [],
+    "page-header-inner": [],
+    "media-card": [],
+    "print": [],
+    "text-2-col": [],
+    "text-2-block": [],
+    "blog-card-ext": [],
+    "blog": [],
+    "wardrobe": [],
+    "merch-card": []
   },
   "addCssBefore": [
     "../../node_modules/bootstrap/scss/_functions",

@@ -15,8 +15,16 @@
     @include col(xl, 8);
   }
 
-  //&__header {
-  //}
+  &__header {
+
+    @media (min-width: $screen-xl) {
+      margin-right: 24px;
+    }
+
+    @media (min-width: $screen-xxl) {
+      margin-right: 96px;
+    }
+  }
 
   &__title {
     margin-top: 0;
