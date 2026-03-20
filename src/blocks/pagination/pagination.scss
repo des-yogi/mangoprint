@@ -1,17 +1,13 @@
-$line-height:                 1.375em !default;
-$text-color:                  hsl(0, 0%, 10%) !default;
-$border-color:                hsl(0, 0%, 60%) !default;
-
 .pagination {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  margin-top: 18px;
+  //justify-content: center;
+  margin-top: 72px;
   //margin-bottom: 60px;
 
-  @media (min-width: $screen-md) {
+  @media (min-width: $screen-xl) {
     //justify-content: flex-start;
-    margin-top: 20px;
+    margin-top: 96px;
   }
 
   $block-name:                &; // #{$block-name}__element
@@ -19,23 +15,25 @@ $border-color:                hsl(0, 0%, 60%) !default;
   &__list {
     display: flex;
     flex-wrap: wrap;
+    gap: 8px;
     list-style: none;
     margin: 0;
     padding-left: 0;
   }
 
   &__item {
-    margin-right: 0.5em;
+    //margin-right: 0.5em;
 
-    &:last-child {
-      margin-right: 0;
-    }
+    // &:last-child {
+    //   margin-right: 0;
+    // }
 
     &.active {
 
       a {
-        color: $main-color;
-        pointer-events: none;
+        text-decoration: none;
+        color: var(--orange-600);
+        background-color: var(--orange-100);
       }
     }
 
@@ -54,15 +52,15 @@ $border-color:                hsl(0, 0%, 60%) !default;
 
       #{$block-name}__link {
         transform: scale(-1, 1);
-        background-image: svg-load('../blocks/pagination/bg-img/right-arrow-icon.svg', fill=$text-color);
+        background-image: svg-load('../blocks/pagination/bg-img/right-arrow-icon.svg', fill=#3C0B02);
 
         &:hover,
         &:focus {
-          background-image: svg-load('../blocks/pagination/bg-img/right-arrow-icon.svg', fill=$white);
+          background-image: svg-load('../blocks/pagination/bg-img/right-arrow-icon.svg', fill=#B33213);
         }
 
         &--disabled {
-          background-image: svg-load('../blocks/pagination/bg-img/right-arrow-icon.svg', fill=$text-muted);
+          background-image: svg-load('../blocks/pagination/bg-img/right-arrow-icon.svg', fill=#898989);
         }
       }
     }
@@ -71,15 +69,15 @@ $border-color:                hsl(0, 0%, 60%) !default;
       //margin-left: 20px;
 
       #{$block-name}__link {
-        background-image: svg-load('../blocks/pagination/bg-img/right-arrow-icon.svg', fill=$text-color);
+        background-image: svg-load('../blocks/pagination/bg-img/right-arrow-icon.svg', fill=#3C0B02);
 
         &:hover,
         &:focus {
-          background-image: svg-load('../blocks/pagination/bg-img/right-arrow-icon.svg', fill=$white);
+          background-image: svg-load('../blocks/pagination/bg-img/right-arrow-icon.svg', fill=#B33213);
         }
 
         &--disabled {
-          background-image: svg-load('../blocks/pagination/bg-img/right-arrow-icon.svg', fill=$text-muted);
+          background-image: svg-load('../blocks/pagination/bg-img/right-arrow-icon.svg', fill=#898989);
         }
       }
     }
@@ -89,29 +87,37 @@ $border-color:                hsl(0, 0%, 60%) !default;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 32px;
-    height: 32px;
-    font-size: 16px;
-    font-weight: 500;
+    width: 44px;
+    height: 44px;
+    font-size: $font-size-sm;
+    font-weight: 400;
     line-height: 1;
     text-align: center;
     text-decoration: none;
     white-space: nowrap;
-    color: $text-muted;
-    background-color: $white;
-    border-radius: 0;
-    transition: all 0.2s ease-out;
+    color: var(--orange-900);
+    background-color: var(--white);
+    border-radius: $border-radius--16;
+    transition: $transition;
+    user-select: none;
+
+    @media (min-width: $screen-md) {
+      width: 56px;
+      height: 56px;
+      font-size: $font-size;
+      border-radius: $border-radius;
+    }
 
     &:hover,
     &:focus {
       text-decoration: none;
-      color: $white;
-      background-color: $main-color;
+      color: var(--orange-600);
+      background-color: var(--orange-100);
     }
 
     &--disabled,
     &:disabled {
-      //background-color: $light-bg;
+      background-color: var(--gray-150);
       pointer-events: none;
     }
   }

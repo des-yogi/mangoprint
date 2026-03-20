@@ -1,0 +1,46 @@
+<!--DEV
+@ @include('blocks/media-card/media-card.html', {
+  "img": "image-16x9-1",
+  "title": "Шовкотрафаретний друк",
+  "text": "<p>Надійний спосіб друку для великих тиражів. Забезпечує яскраві кольори, високу зносостійкість і вигідну ціну для корпоративних замовлень.</p>"
+})
+-->
+
+<a href="#" class="media-card">
+  <div class="media-card__inner">
+
+    <div class="media-card__img-wrapper">
+      <div class="media-card__img">
+        <picture>
+          <source srcset="img/@@img.webp,
+                          img/@@img.webp 2x" media="(min-width: 1280px)" type="image/webp">
+          <source srcset="img/@@img.jpg,
+                          img/@@img.jpg 2x" media="(min-width: 1280px)">
+          <!-- 284x160, 426x240 2x -->
+          <source srcset="img/@@img.webp" media="(min-width: 1024px)" type="image/webp">
+          <source srcset="img/@@img.jpg" media="(min-width: 1024px)">
+          <!-- 786x442 -->
+          <source srcset="img/@@img.webp" media="(min-width: 768px)" type="image/webp">
+          <source srcset="img/@@img.jpg" media="(min-width: 768px)">
+          <!-- 620x349 -->
+          <img src="img/@@img.jpg" alt="Alt text" width="620" height="349" loading="lazy" decoding="async">
+        </picture>
+      </div>
+    </div>
+
+    <div class="media-card__text-wrapper">
+      <div class="media-card__text">
+        <h3 class="h4  media-card__title">@@title</h3>
+        @@text
+      </div>
+      <div class="media-card__footer" role="presentation">
+        <svg width="26" height="26" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#merchandise-26"></use></svg>
+        <span class="media-card__more">
+          <span>Детальніше</span>
+          <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#arrow-right"></use></svg>
+        </span>
+      </div>
+    </div>
+
+  </div>
+</a>

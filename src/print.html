@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html class="no-js  page" lang="uk" prefix="og: https://ogp.me/ns#">
+
+<head>
+  <meta charset="utf-8">
+  <title>Друк</title>
+  @@include('_include/page_head.html')
+</head>
+
+<body>
+<noscript>У вас вимкнено JavaScript. Приносимо свої вибачення, але це ускладнює використання даного сайту.</noscript>
+
+  <div class="page__inner">
+
+    <div class="page__content">
+      @@include('blocks/page-header-inner/page-header-inner.html', {
+        "pageTitle": "Друк",
+        "intro": "Професійний друк на одязі та аксесуарах: від 1 одиниці до опту"
+      })
+
+      <main class="main">
+
+        @@include('blocks/print/print.html')
+
+        @@include('blocks/faq/faq.html')
+
+        @@include('blocks/text-2-col/text-2-col.html', {
+          "title": "Якісний друк на одязі та аксесуарах — від ідеї до готового мерчу"
+        })
+
+        @@include('blocks/text-2-block/text-2-block.html')
+
+        @@include('blocks/write-us/write-us.html')
+
+      </main>
+
+    </div>
+
+    <div class="page__footer-wrapper">
+      @@include('blocks/page-footer/page-footer.html')
+    </div>
+
+  </div>
+
+  @@include('_include/page_bottom.html')
+
+</body>
+</html>

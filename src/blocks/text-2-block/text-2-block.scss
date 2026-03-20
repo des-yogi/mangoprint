@@ -1,0 +1,47 @@
+.text-2-block {
+  $block-name:                &; // #{$block-name}__element
+
+  padding: 40px 0;
+  margin: 8px;
+  border: 2px solid var(--orange-400);
+  border-radius: $border-radius--30;
+
+  @media (min-width: $screen-xl) {
+    padding: 72px 0;
+  }
+
+  @media (min-width: $screen-xxl) {
+    padding: 96px 0;
+  }
+
+  &__row {
+    gap: 40px 0;
+  }
+
+  &__text-col {
+    @include col(xs, 12);
+    @include col(md, 10.5);
+    @include col(xl, 6);
+
+    &:nth-child(odd) {
+
+      @media (min-width: $screen-xl) {
+        padding-right: 24px;
+      }
+    }
+
+    &:nth-child(even) {
+
+      @media (min-width: $screen-xl) {
+        padding-left: 24px;
+      }
+    }
+  }
+
+  //&__text {
+  //}
+
+  &__title {
+    margin-top: 0;
+  }
+}

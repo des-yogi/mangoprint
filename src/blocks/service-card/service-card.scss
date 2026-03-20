@@ -24,8 +24,19 @@
     @include col(xl, 3);
   }
 
-  &__block-title {
+  &__block-header {
+    max-width: 800px;
+    margin: 0 auto 24px;
     text-align: center;
+  }
+
+  &__block-title {
+    margin-top: 0;
+    text-align: center;
+  }
+
+  &__block-intro {
+    text-wrap: balance;
   }
 
   &__title {

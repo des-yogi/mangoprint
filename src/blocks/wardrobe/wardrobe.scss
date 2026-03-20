@@ -1,0 +1,23 @@
+.wardrobe {
+  $block-name:                &; // #{$block-name}__element
+
+  &__row {
+    gap: 8px 0;
+  }
+
+  &__col {
+    @include col(xs, 12);
+    //@include col(md, 6);
+    @include col-offset(xl, 2);
+    @include col(xl, 8);
+  }
+
+  &__header {
+    margin-bottom: 40px;
+    text-align: center;
+  }
+
+  &__title {
+    margin-top: 0;
+  }
+}

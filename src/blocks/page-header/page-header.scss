@@ -18,7 +18,7 @@
     z-index: 1;
     height: 56px;
     padding: 6px 8px 6px 16px;
-    margin-bottom: 16px;
+    margin-bottom: 20px;
     background-color: var(--white);
     border-radius: $border-radius--30;
 
@@ -57,6 +57,21 @@
     gap: 0 8px;
   }
 
+  &__hero {
+
+    &--inner {
+      padding-bottom: 24px;
+    }
+  }
+
+  &__title {
+    margin-top: 0;
+  }
+
+  &__intro {
+    color: var(--gray-900);
+  }
+
   &--index {
     background-color: var(--orange-400);
     background-repeat: repeat;
@@ -64,5 +79,14 @@
     background-image:
       linear-gradient(180deg, rgba(241, 71, 29, 0) 0%, var(--orange-400) 100%),
       url('../img/tile-index.png');
+  }
+
+  &--inner-pink {
+    background-color: var(--orange-100);
+    background-repeat: repeat;
+    background-size: 42px; // 65% от 64px
+    background-image:
+      linear-gradient(180deg, rgba(241, 71, 29, 0) 0%, var(--orange-100) 100%),
+      url('../img/tile-index-inner.png');
   }
 }

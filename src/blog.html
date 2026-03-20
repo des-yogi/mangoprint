@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html class="no-js  page" lang="uk" prefix="og: https://ogp.me/ns#">
+
+<head>
+  <meta charset="utf-8">
+  <title>Блог</title>
+  @@include('_include/page_head.html')
+</head>
+
+<body>
+<noscript>У вас вимкнено JavaScript. Приносимо свої вибачення, але це ускладнює використання даного сайту.</noscript>
+
+  <div class="page__inner">
+
+    <div class="page__content">
+      @@include('blocks/page-header-inner/page-header-inner.html', {
+        "pageTitle": "Блог",
+        "intro": "Корисні статті для бізнесу про друк, мерч і ефективні бренд-рішення"
+      })
+
+      <main class="main">
+
+        @@include('blocks/blog/blog.html')
+
+        @@include('blocks/write-us/write-us.html')
+
+      </main>
+
+    </div>
+
+    <div class="page__footer-wrapper">
+      @@include('blocks/page-footer/page-footer.html')
+    </div>
+
+  </div>
+
+  @@include('_include/page_bottom.html')
+
+</body>
+</html>

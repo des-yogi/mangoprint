@@ -1,0 +1,53 @@
+<!--DEV
+@ @include('blocks/merch-card/merch-card.html', {
+  "img": "merch-1",
+  "title": "Футболка Classic",
+  "descr": "Ідеальний варіант для масових івентів та промо-акцій"
+})
+-->
+
+<article class="merch-card">
+  <a href="#" class="embed-responsive  embed-responsive--2-3  merch-card__img" tabindex="-1" aria-hidden="true">
+    <picture>
+      <source srcset="img/@@img.webp,
+                      img/@@img.webp 2x" media="(min-width: 1280px)" type="image/webp">
+      <source srcset="img/@@img.jpg,
+                      img/@@img.jpg 2x" media="(min-width: 1280px)">
+      <!-- 228x342, 345x518 2x -->
+      <source srcset="img/@@img.webp" media="(min-width: 768px)" type="image/webp">
+      <source srcset="img/@@img.jpg" media="(min-width: 768px)">
+      <!-- 405x608 -->
+      <source srcset="img/@@img.webp" media="(min-width: 480px)" type="image/webp">
+      <source srcset="img/@@img.jpg" media="(min-width: 480px)">
+      <!-- 300x450 -->
+      <source srcset="img/@@img.webp" media="(min-width: 300px)" type="image/webp">
+      <source srcset="img/@@img.jpg" media="(min-width: 300px)">
+      <!-- 240x360 -->
+      <img src="img/@@img.jpg" alt="Alt text" width="228" height="342" loading="lazy">
+    </picture>
+  </a>
+
+  <ul class="list-nostyled  merch-card__colors" aria-label="Доступні кольори">
+    <li class="merch-card__color">
+      <span class="visually-hidden">Білий</span>
+      <span class="merch-card__color-circle" style="background-color: #fff;"></span>
+    </li>
+    <li class="merch-card__color">
+      <span class="visually-hidden">Cірий</span>
+      <span class="merch-card__color-circle" style="background-color: #8F8F8F;"></span>
+    </li>
+    <li class="merch-card__color">
+      <span class="visually-hidden">Графіт</span>
+      <span class="merch-card__color-circle" style="background-color: #6B6B6B;"></span>
+    </li>
+    <li class="merch-card__color">
+      <span class="visually-hidden">Чорний</span>
+      <span class="merch-card__color-circle" style="background-color: #1D1D1D;"></span>
+    </li>
+  </ul>
+
+  <div class="merch-card__text">
+    <h3 class="merch-card__title"><a href="#">@@title</a></h3>
+    <p class="merch-card__descr">@@descr</p>
+  </div>
+</article>

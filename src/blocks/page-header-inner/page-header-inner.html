@@ -1,0 +1,80 @@
+<!--DEV
+@ @include('blocks/page-header-inner/page-header-inner.html', {
+  "pageTitle": "Друк",
+  "intro": "Професійний друк на одязі та аксесуарах: від 1 одиниці до опту"
+})
+-->
+
+<div class="page-header__wrapper">
+  @@include('../../blocks/top-bar/top-bar.html')
+
+  <header class="page-header  page-header--inner-pink"
+          style="">
+
+    <div class="page-header__main"
+         data-scroll="500"
+         data-sticky-duration="500"
+         data-sticky-top="8"
+         data-sticky-side="16">
+
+      @@include('../../blocks/logo/logo.html', {
+        "addClass": "logo--header"
+      })
+
+      @@include('../../blocks/main-nav/main-nav.html')
+
+      <div class="page-header__service">
+        <!-- phone-selector -->
+        <div class="dropdown  phone-selector  mob-hidden">
+          <button class="dropdown-toggle  phone-selector__toggler" type="button" data-bs-toggle="dropdown" data-bs-offset="2,18" aria-expanded="false">
+            <span class="phone-selector__icon">
+              <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#phone"></use></svg>
+            </span>
+            <span>+ 38 063 453 55 64</span>
+          </button>
+          <ul class="dropdown-menu  phone-selector__menu">
+            <li>
+              <a href="tel:+380634535564" class="dropdown-item  phone-selector__link">
+                <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#phone"></use></svg>
+                <span>+ 38 063 453 55 64</span>
+              </a>
+            </li>
+            <li>
+              <a href="mailto:mangoprintua@gmail.com" class="dropdown-item  phone-selector__link">
+                <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#at"></use></svg>
+                <span>mangoprintua@gmail.com</span>
+              </a>
+            </li>
+            <li>
+              @@include('../../blocks/social-links/social-links.html')
+            </li>
+          </ul>
+        </div>
+
+        <button class="btn  btn--light  btn--adaptive" aria-label="Пошук по сайту">
+          <span class="btn__icon">
+            <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#lens"></use></svg>
+          </span>
+        </button>
+
+        <button class="btn  btn--adaptive  mob-hidden" aria-label="Отримати консультацію">
+          <span class="btn__text">Консультація</span>
+          <span class="btn__icon">
+            <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#message"></use></svg>
+          </span>
+        </button>
+
+        @@include('../../blocks/burger/burger.html')
+
+      </div>
+    </div>
+
+    <div class="container  page-header__hero  page-header__hero--inner">
+      @@include('../../blocks/breadcrumbs/breadcrumbs.html')
+
+      <h1 class="page-header__title">@@pageTitle</h1>
+      <p class="page-header__intro">@@intro</p>
+
+    </div>
+  </header>
+</div>

@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html class="no-js  page" lang="uk" prefix="og: https://ogp.me/ns#">
+
+<head>
+  <meta charset="utf-8">
+  <title>Мерч</title>
+  @@include('_include/page_head.html')
+</head>
+
+<body>
+<noscript>У вас вимкнено JavaScript. Приносимо свої вибачення, але це ускладнює використання даного сайту.</noscript>
+
+  <div class="page__inner">
+
+    <div class="page__content">
+      @@include('blocks/page-header-inner/page-header-inner.html', {
+        "pageTitle": "Мерч",
+        "intro": "Створення брендованої продукції: від розробки дизайну та підбору преміум-тканин до подарункового пакування"
+      })
+
+      <main class="main">
+
+        <section class="container  margin-y  about-us">
+          <div class="row about-us__row">
+
+            <div class="about-us__text-col">
+              <div class="about-us__text">
+                <h2 class="about-us__title">Корпоративний мерч, який стає стилем життя вашої команди</h2>
+                <div class="about-us__intro">
+                  <p>Комплексне створення брендованої продукції: від розробки дизайну та підбору преміум-тканин до подарункового пакування.</p>
+                  <p>Візуал: Якісне відео на фоні (люди в офісі в худі) або круте фото "Welcome Pack" (коробка, пляшка, худі, стікери).</p>
+                </div>
+                <div class="about-us__controls">
+                  <button class="btn" type="button">
+                    <span class="btn__text">Розрахувати проєкт</span>
+                    <span class="btn__icon">
+                      <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#arrow-right"></use></svg>
+                    </span>
+                  </button>
+                  <a href="#" class="btn  btn--light">
+                    <span class="btn__text">Дивитися кейси</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="about-us__img-col">
+              <div class="embed-responsive embed-responsive--3-2  about-us__img">
+                <picture>
+                  <source srcset="img/about-us-img.webp,
+                                  img/about-us-img.webp 2x" media="(min-width: 1600px)" type="image/webp">
+                  <source srcset="img/about-us-img.jpg,
+                                  img/about-us-img.jpg 2x" media="(min-width: 1600px)">
+                  <!-- 800x533, 1200x800 2x -->
+                  <source srcset="img/about-us-img.webp,
+                                  img/about-us-img.webp 2x" media="(min-width: 1366px)" type="image/webp">
+                  <source srcset="img/about-us-img.jpg,
+                                  img/about-us-img.jpg 2x" media="(min-width: 1366px)">
+                  <!-- 690x460, 1035x690 2x -->
+                  <source srcset="img/about-us-img.webp,
+                                  img/about-us-img.webp 2x" media="(min-width: 1280px)" type="image/webp">
+                  <source srcset="img/about-us-img.jpg,
+                                  img/about-us-img.jpg 2x" media="(min-width: 1280px)">
+                  <!-- 640x427, 960x640 2x -->
+                  <source srcset="img/about-us-img.webp" media="(min-width: 1024px)" type="image/webp">
+                  <source srcset="img/about-us-img.jpg" media="(min-width: 1024px)">
+                  <!-- 1440x960 -->
+                  <source srcset="img/about-us-img.webp" media="(min-width: 768px)" type="image/webp">
+                  <source srcset="img/about-us-img.jpg" media="(min-width: 768px)">
+                  <!-- 1035x690 -->
+                  <source srcset="img/about-us-img.webp" media="(min-width: 480px)" type="image/webp">
+                  <source srcset="img/about-us-img.jpg" media="(min-width: 480px)">
+                  <!-- 690x460 -->
+                  <source srcset="img/about-us-img.webp" media="(min-width: 300px)" type="image/webp">
+                  <source srcset="img/about-us-img.jpg" media="(min-width: 300px)">
+                  <!-- 585x390 -->
+                  <img src="img/about-us-img.jpg" alt="Alt" width="800" height="533" loading="lazy">
+                </picture>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+        <section class="container  margin-y  service-card__wrapper">
+          <div class="service-card__block-header">
+            <h2 class="service-card__block-title">Технології, що стоять за якістю</h2>
+            <p class="service-card__block-intro">Ми не посередники. Все виробництво знаходиться в Києві, що дозволяє нам контролювати якість на 100%.</p>
+          </div>
+
+          <ul class="list-nostyled  row">
+            <li class="service-card__outer-col">
+              @@include('blocks/service-card/service-card.html', {
+                "title": "Машинна вишивка",
+                "descr": "Парк японських машин Tajima та Brother. Точність до 0.1 мм, 3D-вишивки та роботи з металізованими нитками"
+              })
+            </li>
+
+            <li class="service-card__outer-col">
+              @@include('blocks/service-card/service-card.html', {
+                "title": "DTF-друк (Direct To Film)",
+                "descr": "Сучасні принтери для повноколірного нанесення. Яскраві принти, які не тріскаються і витримують 50+ прань"
+              })
+            </li>
+
+            <li class="service-card__outer-col">
+              @@include('blocks/service-card/service-card.html', {
+                "title": "Шовкографія",
+                "descr": "Промисловий метод для великих тиражів. Найкраща собівартість при замовленні від 50 одиниць"
+              })
+            </li>
+
+            <li class="service-card__outer-col">
+              @@include('blocks/service-card/service-card.html', {
+                "title": "Власний склад текстилю",
+                "descr": "Ми офіційні партнери Fruit of the Loom, Gildan, JHK. Вам не потрібно шукати одяг — він вже у нас"
+              })
+            </li>
+          </ul>
+        </section>
+
+        @@include('blocks/wardrobe/wardrobe.html')
+
+        <section class="container  margin-y  feature-card__wrapper">
+          <h2>Переваги роботи з нами</h2>
+
+          <ul class="list-nostyled  row">
+            <li class="col-1-2-3">
+              @@include('blocks/feature-card/feature-card.html', {
+                "title": "Власне потужне виробництво",
+                "text": "Повний контроль якості та дотримання термінів завдяки власному цеху в Києві без посередників",
+                "icon": "merchandise-26"
+              })
+            </li>
+
+            <li class="col-1-2-3">
+              @@include('blocks/feature-card/feature-card.html', {
+                "title": "Професійне обладнання",
+                "text": "Сучасні верстати для друку та вишивки, що гарантують стійкість принтів і високу деталізацію",
+                "icon": "merchandise-26"
+              })
+            </li>
+
+            <li class="col-1-2-3">
+              @@include('blocks/feature-card/feature-card.html', {
+                "title": "Працюємо з ПДВ",
+                "text": "Офіційна співпраця, прозорі розрахунки та повний пакет документів для вашого бізнесу",
+                "icon": "merchandise-26"
+              })
+            </li>
+
+            <li class="col-1-2-3">
+              @@include('blocks/feature-card/feature-card.html', {
+                "title": "Індивідуальне пошиття",
+                "text": "Розробка лекал та пошив мерчу за вашим дизайном — створюємо унікальний корпоративний стиль",
+                "icon": "merchandise-26"
+              })
+            </li>
+
+            <li class="col-1-2-3">
+              @@include('blocks/feature-card/feature-card.html', {
+                "title": "Дизайнерські принти",
+                "text": "Професійна адаптація логотипів та створення ексклюзивних дизайнів для вашого бренду",
+                "icon": "merchandise-26"
+              })
+            </li>
+
+            <li class="col-1-2-3">
+              @@include('blocks/feature-card/feature-card.html', {
+                "title": "Друк та вишивка на всьому",
+                "text": "Брендуємо будь-який текстиль: футболки, худі, кепки та шопери. Обираємо найкращий метод під ваш запит",
+                "icon": "merchandise-26"
+              })
+            </li>
+          </ul>
+        </section>
+
+        <section class="container  margin-y  about-us  about-us--flip">
+          <div class="row about-us__row">
+
+            <div class="about-us__text-col">
+              <div class="about-us__text">
+                <h2 class="about-us__title">Рішення для будь-яких задач бізнесу</h2>
+                <div class="about-us__intro">
+                  <ul>
+                    <li>HR & Onboarding: Welcome-набори для новачків, щоб вони відчули себе частиною сім'ї з першого дня.</li>
+                    <li>Promo & Events: Яскравий мерч для конференцій, виставок та промо-акцій, який не викинуть після івенту.</li>
+                    <li>Корпоративний стиль: Повсякденна уніформа для офісу, кав'ярні чи складу, що об'єднує команду.</li>
+                    <li>VIP подарунки: Ексклюзивні набори для партнерів та клієнтів (преміум худі, пледи, термоси).</li>
+                  </ul>
+                </div>
+                <div class="about-us__controls">
+                  <button class="btn" type="button">
+                    <span class="btn__text">Розрахувати проєкт</span>
+                    <span class="btn__icon">
+                      <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#arrow-right"></use></svg>
+                    </span>
+                  </button>
+                  <!-- <a href="#" class="btn  btn--light">
+                    <span class="btn__text">Дивитися кейси</span>
+                  </a> -->
+                </div>
+              </div>
+            </div>
+
+            <div class="about-us__img-col">
+              <div class="embed-responsive embed-responsive--3-2  about-us__img">
+                <picture>
+                  <source srcset="img/about-us-img.webp,
+                                  img/about-us-img.webp 2x" media="(min-width: 1600px)" type="image/webp">
+                  <source srcset="img/about-us-img.jpg,
+                                  img/about-us-img.jpg 2x" media="(min-width: 1600px)">
+                  <!-- 800x533, 1200x800 2x -->
+                  <source srcset="img/about-us-img.webp,
+                                  img/about-us-img.webp 2x" media="(min-width: 1366px)" type="image/webp">
+                  <source srcset="img/about-us-img.jpg,
+                                  img/about-us-img.jpg 2x" media="(min-width: 1366px)">
+                  <!-- 690x460, 1035x690 2x -->
+                  <source srcset="img/about-us-img.webp,
+                                  img/about-us-img.webp 2x" media="(min-width: 1280px)" type="image/webp">
+                  <source srcset="img/about-us-img.jpg,
+                                  img/about-us-img.jpg 2x" media="(min-width: 1280px)">
+                  <!-- 640x427, 960x640 2x -->
+                  <source srcset="img/about-us-img.webp" media="(min-width: 1024px)" type="image/webp">
+                  <source srcset="img/about-us-img.jpg" media="(min-width: 1024px)">
+                  <!-- 1440x960 -->
+                  <source srcset="img/about-us-img.webp" media="(min-width: 768px)" type="image/webp">
+                  <source srcset="img/about-us-img.jpg" media="(min-width: 768px)">
+                  <!-- 1035x690 -->
+                  <source srcset="img/about-us-img.webp" media="(min-width: 480px)" type="image/webp">
+                  <source srcset="img/about-us-img.jpg" media="(min-width: 480px)">
+                  <!-- 690x460 -->
+                  <source srcset="img/about-us-img.webp" media="(min-width: 300px)" type="image/webp">
+                  <source srcset="img/about-us-img.jpg" media="(min-width: 300px)">
+                  <!-- 585x390 -->
+                  <img src="img/about-us-img.jpg" alt="Alt" width="800" height="533" loading="lazy">
+                </picture>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+        @@include('blocks/gallery-marquee/gallery-marquee.html')
+
+        @@include('blocks/write-us/write-us.html')
+
+        @@include('blocks/statistics/statistics.html')
+
+        <!-- Ефективні рішення для вашого бренду -->
+
+        @@include('blocks/reviews/reviews.html')
+
+        @@include('blocks/how-we-work/how-we-work.html')
+
+        @@include('blocks/faq/faq.html')
+
+        @@include('blocks/text-2-col/text-2-col.html', {
+          "title": "Створюємо мерч, який стає частиною життя вашої команди"
+        })
+
+        @@include('blocks/write-us/write-us.html')
+
+      </main>
+
+    </div>
+
+    <div class="page__footer-wrapper">
+      @@include('blocks/page-footer/page-footer.html')
+    </div>
+
+  </div>
+
+  @@include('_include/page_bottom.html')
+
+</body>
+</html>

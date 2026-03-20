@@ -1,0 +1,41 @@
+.text-2-col {
+  $block-name:                &; // #{$block-name}__element
+
+  padding: 40px 0;
+  margin: 8px;
+  border: 2px solid var(--orange-400);
+  border-radius: $border-radius--30;
+
+  @media (min-width: $screen-xl) {
+    padding: 72px 0;
+  }
+
+  @media (min-width: $screen-xxl) {
+    padding: 96px 0;
+  }
+
+  &__title-col {
+    @include col(xs, 12);
+    @include col(md, 10);
+    @include col(xl, 6);
+  }
+
+  &__text-col {
+    @include col(xs, 12);
+    @include col(md, 10.5);
+    @include col(xl, 12);
+  }
+
+  &__title {
+    margin-top: 0;
+  }
+
+  &__text {
+
+    @media (min-width: $screen-xl) {
+      column-count: 2;
+      column-gap: 48px;
+      column-fill: balance;
+    }
+  }
+}
