@@ -62,7 +62,17 @@
     "blog-card-ext": [],
     "blog": [],
     "wardrobe": [],
-    "merch-card": []
+    "merch-card": [],
+    "solutions-img-card": [],
+    "solutions-slider": [],
+    "portfolio": [],
+    "get-advice": [],
+    "sizes": [],
+    "size-card": [],
+    "print-samples": [],
+    "price": [],
+    "how-it-works": [],
+    "implementation": []
   },
   "addCssBefore": [
     "../../node_modules/bootstrap/scss/_functions",

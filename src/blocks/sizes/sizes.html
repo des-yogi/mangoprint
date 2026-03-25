@@ -1,0 +1,153 @@
+<!--DEV
+@ @include('blocks/sizes/sizes.html')
+-->
+
+<section class="container  margin-y  sizes">
+
+  <div class="row sizes__header">
+    <div class="sizes__header-col">
+      <h2 class="sizes__title">Втілюємо ваші ідеї в будь-якому розмірі</h2>
+      <p class="sizes__intro">Оберіть бажану площу друку для вашого зображення. Ми виконуємо нанесення на будь-яку частину футболки (спереду, ззаду, на рукавах) у наступних форматах:</p>
+    </div>
+  </div>
+
+  <ul class="list-nostyled  sizes__list">
+    <li class="sizes__list-item">
+      <div class="embed-responsive  embed-responsive--1-1  sizes__img">
+        <picture>
+          <source srcset="img/size-1.webp,
+                          img/size-1.webp 2x" media="(min-width: 1440px)" type="image/webp">
+          <source srcset="img/size-1.jpg,
+                          img/size-1.jpg 2x" media="(min-width: 1440px)">
+          <!-- 394x394, 600x600 2x -->
+          <source srcset="img/size-1.webp,
+                          img/size-1.webp 2x" media="(min-width: 1366px)" type="image/webp">
+          <source srcset="img/size-1.jpg,
+                          img/size-1.jpg 2x" media="(min-width: 1366px)">
+          <!-- 334x334, 502x502 2x -->
+          <source srcset="img/size-1.webp" media="(min-width: 1024px)" type="image/webp">
+          <source srcset="img/size-1.jpg" media="(min-width: 1024px)">
+          <!-- 432x432 -->
+          <source srcset="img/size-1.webp" media="(min-width: 480px)" type="image/webp">
+          <source srcset="img/size-1.jpg" media="(min-width: 480px)">
+          <!-- 345x345 -->
+          <source srcset="img/size-1.webp" media="(min-width: 300px)" type="image/webp">
+          <source srcset="img/size-1.jpg" media="(min-width: 300px)">
+          <!-- 290x290 -->
+          <img src="img/size-1.png" alt="Alt text" width="394" height="430" loading="lazy">
+        </picture>
+      </div>
+      <p class="h4  sizes__descr">
+        <span class="sizes__format">A6</span>
+        <span>(105 х 149 мм)</span>
+      </p>
+    </li>
+
+    <li class="sizes__list-item">
+      <div class="embed-responsive  embed-responsive--1-1  sizes__img">
+        <picture>
+          <source srcset="img/size-2.webp" media="(min-width: 300px)" type="image/webp">
+          <source srcset="img/size-2.jpg">
+          <img src="img/size-2.png" alt="Alt text" width="394" height="430" loading="lazy">
+        </picture>
+      </div>
+      <p class="h4  sizes__descr">
+        <span class="sizes__format">A4</span>
+        <span>(210 х 297 мм)</span>
+      </p>
+    </li>
+
+    <li class="sizes__list-item">
+      <div class="embed-responsive  embed-responsive--1-1  sizes__img">
+        <picture>
+          <source srcset="img/size-2.webp" media="(min-width: 300px)" type="image/webp">
+          <source srcset="img/size-2.jpg">
+          <img src="img/size-2.png" alt="Alt text" width="394" height="430" loading="lazy">
+        </picture>
+      </div>
+      <p class="h4  sizes__descr">
+        <span class="sizes__format">A3</span>
+        <span>(297 х 420 мм)</span>
+      </p>
+    </li>
+
+    <li class="sizes__list-item">
+      <div class="embed-responsive  embed-responsive--1-1  sizes__img">
+        <picture>
+          <source srcset="img/size-2.webp" media="(min-width: 300px)" type="image/webp">
+          <source srcset="img/size-2.jpg">
+          <img src="img/size-2.png" alt="Alt text" width="394" height="430" loading="lazy">
+        </picture>
+      </div>
+      <p class="h4  sizes__descr">
+        <span class="sizes__format">A2</span>
+        <span>(420 х 594 мм)</span>
+      </p>
+    </li>
+
+  </ul>
+
+  <div class="row  sizes__view">
+    <div class="sizes__view-text-col">
+      <div class="sizes__view-text">
+        <p>Не обмежуйте свою фантазію. В Mango Print ви можете обрати ідеальний розмір нанесення для вашого дизайну.</p>
+        <p>Ми друкуємо на будь-якій деталі футболки — чи то класичне розміщення на грудях, чи нестандартний принт на рукаві або внизу спини.</p>
+      </div>
+    </div>
+
+    <div class="sizes__view-images-col">
+      <div class="sizes__view-images">
+        <div class="row sizes__view-images-row">
+
+          <div class="sizes__view-img-col">
+            <div class="sizes__view-img">
+              <div class="embed-responsive  embed-responsive--1-1  sizes__img">
+                <picture>
+                  <source srcset="img/view-1.webp" media="(min-width: 300px)" type="image/webp">
+                  <source srcset="img/view-1.jpg">
+                  <img src="img/view-1.png" alt="Alt text" width="394" height="430" loading="lazy">
+                </picture>
+              </div>
+              <p class="h4  sizes__descr">
+                <span class="sizes__format">Спереду</span>
+              </p>
+            </div>
+          </div>
+
+          <div class="sizes__view-img-col">
+            <div class="sizes__view-img">
+              <div class="embed-responsive  embed-responsive--1-1  sizes__img">
+                <picture>
+                  <source srcset="img/view-2.webp" media="(min-width: 300px)" type="image/webp">
+                  <source srcset="img/view-2.jpg">
+                  <img src="img/view-2.png" alt="Alt text" width="394" height="430" loading="lazy">
+                </picture>
+              </div>
+              <p class="h4  sizes__descr">
+                <span class="sizes__format">На спині</span>
+              </p>
+            </div>
+          </div>
+
+          <div class="sizes__view-img-col">
+            <div class="sizes__view-img">
+              <div class="embed-responsive  embed-responsive--1-1  sizes__img">
+                <picture>
+                  <source srcset="img/view-3.webp" media="(min-width: 300px)" type="image/webp">
+                  <source srcset="img/view-3.jpg">
+                  <img src="img/view-3.png" alt="Alt text" width="394" height="430" loading="lazy">
+                </picture>
+              </div>
+              <p class="h4  sizes__descr">
+                <span class="sizes__format">На рукаві</span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>

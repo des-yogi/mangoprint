@@ -1,0 +1,260 @@
+.how-it-works {
+  $block-name:                &; // #{$block-name}__element
+
+  margin-right: 8px;
+  margin-left: 8px;
+
+  &__container {
+    position: relative;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    background-color: var(--orange-50);
+    border-radius: $border-radius--30;
+    overflow: hidden;
+
+    @media (min-width: $screen-xxl) {
+      padding-top: 48px;
+      padding-bottom: 48px;
+    }
+
+    &::before,
+    &::after {
+      display: block;
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      z-index: 0;
+      height: 100%;
+      background-repeat: repeat;
+      background-size: auto 42px !important; // 65% от 64px
+      opacity: 0.8;
+    }
+
+    &::before {
+      left: 0;
+      width: 125px;
+      background:
+        linear-gradient(to right, rgba(254, 237, 236, 0) 0%, #FEEDEC 100%),
+        url('../img/tile-faq.png');
+
+      @media (min-width: $screen-xxl) {
+        width: 300px;
+      }
+    }
+
+    &::after {
+      right: 0;
+      width: 326px;
+      background:
+        linear-gradient(to left, rgba(254, 237, 236, 0) 0%, #FEEDEC 100%),
+        url('../img/tile-faq.png');
+
+      @media (min-width: $screen-xxl) {
+        width: 546px;
+      }
+    }
+  }
+
+  &__grid {
+    position: relative;
+    z-index: 1;
+
+    @media (min-width: $screen-md) {
+      display: grid;
+      grid-template-columns: 7fr 5fr;
+      grid-template-rows: auto;
+      gap: 8px 8px;
+      grid-template-areas:
+      "Header Header"
+      "Options Video";
+    }
+
+    @media (min-width: $screen-xl) {
+      grid-template-columns: 9fr 3fr;
+      gap: 40px 8px;
+      grid-template-areas:
+      "Header Video"
+      "Options Video";
+      //grid-auto-flow: dense;
+      align-items: flex-start;
+    }
+  }
+
+  &__header {
+    margin-bottom: 32px;
+
+    @media (min-width: $screen-md) {
+      grid-area: Header;
+    }
+
+    @media (min-width: $screen-xl) {
+      padding-right: 15.5%;
+      margin-bottom: 0;
+    }
+
+    @media (min-width: $screen-xxl) {
+      padding-right: 25.15%;
+      padding-left: 11.19%;
+      margin-top: 24px;
+    }
+  }
+
+  &__features {
+    margin-bottom: 24px;
+
+    @media (min-width: $screen-md) {
+      grid-area: Options;
+      padding-right: 14%; //54px
+    }
+
+    @media (min-width: $screen-xl) {
+      align-self: flex-start;
+      padding-right: 15.5%;
+      margin-bottom: 0;
+      align-self: flex-start;
+      margin-bottom: 7%;
+    }
+
+    @media (min-width: $screen-xxl) {
+      padding-right: 25.15%;
+      padding-left: 11.19%;
+    }
+  }
+
+  &__video-wrapper {
+
+    @media (min-width: $screen-md) {
+      grid-area: Video;
+      //max-width: 300px;
+    }
+
+    //@media (min-width: $screen-xl) {
+    //}
+  }
+
+  &__title {
+    margin-top: 0;
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    gap: 24px 0;
+
+    & > * {
+      margin: 0;
+      text-wrap: balance;
+    }
+  }
+
+  &__lead {
+    font-size: $font-size-lg;
+    color: var(--gray-900);
+
+    @media (min-width: $screen-xxl) {
+      font-size: 24px;
+    }
+  }
+
+  &__info {
+    font-size: $font-size;
+  }
+
+  &__list {
+
+  }
+
+  &__item {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px 24px;
+
+    & + & {
+      margin-top: 32px;
+    }
+  }
+
+  &__icon {
+    flex: 0 0 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    background-color: var(--white);
+    border-radius: $border-radius--16;
+
+    @media (min-width: $screen-md) {
+      flex: 0 0 64px;
+      width: 64px;
+      height: 64px;
+    }
+
+    svg {
+      stroke: var(--orange-400);
+    }
+  }
+
+  &__item-text {
+    flex: 1;
+
+    p:not(.h3) {
+      font-size: $font-size;
+      text-wrap: balance;
+    }
+  }
+
+  &__item-title {
+    margin: 0 0 12px;
+  }
+
+  &__video {
+    display: block;
+    position: relative;
+    border-radius: $border-radius--30;
+    user-select: none;
+
+    &:hover,
+    &:focus {
+
+      .ytb-btn {
+        background-image: svg-load('../blocks/video/bg-img/play.svg', fill=#D73E19);
+      }
+    }
+
+    &:not([data-loaded]) {
+
+      &::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.5);
+        pointer-events: none;
+      }
+    }
+
+    img {
+      object-fit: cover;
+      object-position: center;
+    }
+
+    .ytb-btn {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 1;
+      width: 72px;
+      height: 72px;
+      background-color: var(--white);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 32px;
+      background-image: svg-load('../blocks/video/bg-img/play.svg', fill=$secondary-color);
+      border-radius: 50%;
+      transition: $transition;
+      //pointer-events: auto;
+    }
+  }
+}

@@ -28,6 +28,10 @@
     max-width: 800px;
     margin: 0 auto 24px;
     text-align: center;
+
+    p {
+      text-wrap: balance;
+    }
   }
 
   &__block-title {
