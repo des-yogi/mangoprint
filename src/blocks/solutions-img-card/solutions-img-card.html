@@ -1,0 +1,42 @@
+<!--DEV
+@ @include('blocks/solutions-img-card/solutions-img-card.html', {
+  "img": "image-16x9-1",
+  "title": "Корпоративний мерч",
+  "descr": "Комплексні рішення для брендування бізнесу. Мерч для команди, клієнтів, подій та внутрішніх комунікацій"
+})
+-->
+
+<a href="#" class="solutions-img-card">
+  <div class=" embed-responsive  solutions-img-card__img">
+    <picture>
+      <source srcset="img/@@img.webp,
+                      img/@@img.webp 2x" media="(min-width: 1920px)" type="image/webp">
+      <source srcset="img/@@img.jpg,
+                      img/@@img.jpg 2x" media="(min-width: 1920px)">
+      <!-- 346x195, 533x300 2x -->
+      <source srcset="img/@@img.webp,
+                      img/@@img.webp 2x" media="(min-width: 1280px)" type="image/webp">
+      <source srcset="img/@@img.jpg,
+                      img/@@img.jpg 2x" media="(min-width: 1280px)">
+      <!-- 533x300, 800x450 -->
+      <source srcset="img/@@img.webp" media="(min-width: 300px)" type="image/webp">
+      <source srcset="img/@@img.jpg" media="(min-width: 300px)">
+      <!-- 480x270 -->
+      <img src="img/@@img.jpg" alt="Alt text" width="720" height="405" loading="lazy">
+    </picture>
+  </div>
+
+  <div class="solutions-img-card__text">
+    <div class="solutions-img-card__main">
+      <h3 class="h4  solutions-img-card__title">@@title</h3>
+      <p class="solutions-img-card__descr">@@descr</p>
+    </div>
+    <div class="solutions-img-card__footer" role="presentation">
+      <svg width="26" height="26" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#merchandise-26"></use></svg>
+      <span class="text-link">
+        <span>Детальніше</span>
+        <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#arrow-right"></use></svg>
+      </span>
+    </div>
+  </div>
+</a>

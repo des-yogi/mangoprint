@@ -1,0 +1,98 @@
+.price {
+  $block-name:                &; // #{$block-name}__element
+
+  &__outer-row {
+    gap: 8px 0;
+  }
+
+  &__header-col {
+    @include col(xs, 12);
+    @include col(xl, 4);
+  }
+
+  &__table-col {
+    @include col(xs, 12);
+    @include col(xl, 8);
+    display: flex;
+    flex-direction: column;
+    gap: 8px 0;
+  }
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+    gap: 30px 40px;
+
+    @media (min-width: $screen-md) and (max-width: $screen-xl - 1) {
+      flex-direction: initial;
+    }
+
+    @media (min-width: $screen-xl) {
+      padding-right: 30px;
+    }
+
+    @media (min-width: $screen-xxl) {
+      padding-right: 96px;
+    }
+  }
+
+  //&__header-text {
+  //}
+
+  &__title {
+    margin-top: 0;
+  }
+
+  &__intro {
+    margin-bottom: 40px;
+  }
+
+  &__header-img {
+    max-width: 282px;
+    margin-right: auto;
+
+    @media (min-width: $screen-xl) {
+      max-width: 370px;
+    }
+
+    @media (min-width: $screen-xxl) {
+      max-width: 400px;
+    }
+  }
+
+  &__table-wrapper {
+    padding: 8px 16px;
+    margin: 0;
+    background-color: var(--white);
+    border-radius: $border-radius;
+
+    @media (min-width: $screen-xl) {
+      padding: 24px 40px;
+    }
+
+    #{$block-name}__table {
+
+      td,
+      th {
+        white-space: nowrap;
+      }
+    }
+
+    &--long {
+
+      #{$block-name}__table {
+        table-layout: fixed !important;
+
+        td,
+        th {
+          width: 50%;
+          min-width: 150px;
+          white-space: normal;
+        }
+      }
+    }
+  }
+
+  //&__table {
+  //}
+}

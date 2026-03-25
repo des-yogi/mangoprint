@@ -1,0 +1,91 @@
+<!--DEV
+@ @include('blocks/solutions-slider/solutions-slider.html')
+-->
+
+<section class="margin-y  solutions-slider">
+
+  <div class="container  solutions-slider__header-container">
+    <div class="row  solutions-slider__header">
+      <div class="solutions-slider__col">
+        <h2 class="solutions-slider__title">Ефективні рішення для вашого бренду</h2>
+        <p class="solutions-slider__intro">Ми пропонуємо не просто нанесення логотипа, а комплексний підхід до створення корпоративного стилю. Наші рішення допомагають компаніям посилювати HR-бренд, залучати нових клієнтів на подіях та створювати унікальні подарунки, які дійсно цінують. Оберіть напрямок, що відповідає вашим поточним задачам.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="container  solutions-slider__container">
+    <div class="swiper  solutions-slider__swiper">
+      <div class="swiper-wrapper">
+
+        <div class="swiper-slide  solutions-slider__slide">
+          @@include('../../blocks/solutions-img-card/solutions-img-card.html', {
+            "img": "image-16x9-1",
+            "title": "Корпоративний мерч",
+            "descr": "Комплексні рішення для брендування бізнесу. Мерч для команди, клієнтів, подій та внутрішніх комунікацій"
+          })
+        </div>
+
+        <div class="swiper-slide  solutions-slider__slide">
+          @@include('../../blocks/solutions-img-card/solutions-img-card.html', {
+            "img": "image-16x9-2",
+            "title": "Брендований одяг",
+            "descr": "Одяг з логотипом для команд і компаній. Поєднання стилю, якості та ефективного брендингу"
+          })
+        </div>
+
+        <div class="swiper-slide  solutions-slider__slide">
+          @@include('../../blocks/solutions-img-card/solutions-img-card.html', {
+            "img": "image-16x9-3",
+            "title": "Welcome packs для HR",
+            "descr": "Готові набори для адаптації нових співробітників. Посилюють бренд роботодавця та лояльність команди"
+          })
+        </div>
+
+        <div class="swiper-slide  solutions-slider__slide">
+          @@include('../../blocks/solutions-img-card/solutions-img-card.html', {
+            "img": "image-16x9-4",
+            "title": "Мерч для подій",
+            "descr": "Ефективні рішення для івентів і конференцій. Допомагає бренду виділитися та залишити враження"
+          })
+        </div>
+
+        <div class="swiper-slide  solutions-slider__slide">
+          @@include('../../blocks/solutions-img-card/solutions-img-card.html', {
+            "img": "image-16x9-1",
+            "title": "Корпоративний мерч",
+            "descr": "Комплексні рішення для брендування бізнесу. Мерч для команди, клієнтів, подій та внутрішніх комунікацій"
+          })
+        </div>
+
+        <div class="swiper-slide  solutions-slider__slide">
+          @@include('../../blocks/solutions-img-card/solutions-img-card.html', {
+            "img": "image-16x9-2",
+            "title": "Брендований одяг",
+            "descr": "Одяг з логотипом для команд і компаній. Поєднання стилю, якості та ефективного брендингу"
+          })
+        </div>
+
+        <div class="swiper-slide  solutions-slider__slide">
+          @@include('../../blocks/solutions-img-card/solutions-img-card.html', {
+            "img": "image-16x9-3",
+            "title": "Welcome packs для HR",
+            "descr": "Готові набори для адаптації нових співробітників. Посилюють бренд роботодавця та лояльність команди"
+          })
+        </div>
+
+        <div class="swiper-slide  solutions-slider__slide">
+          @@include('../../blocks/solutions-img-card/solutions-img-card.html', {
+            "img": "image-16x9-4",
+            "title": "Мерч для подій",
+            "descr": "Ефективні рішення для івентів і конференцій. Допомагає бренду виділитися та залишити враження"
+          })
+        </div>
+
+      </div>
+    </div>
+
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+  </div>
+
+</section>

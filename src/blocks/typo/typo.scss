@@ -30,7 +30,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  @media (min-width: $screen-md) {
+  @media (min-width: $screen-xl) {
     font-size: $font-size-lg;
     line-height: $line-height--dt;
   }
@@ -142,7 +142,7 @@ figure {
   margin-top: 0;
   margin-bottom: 12px;
 
-  @media (min-width: $screen-md) {
+  @media (min-width: $screen-xl) {
     margin-bottom: 16px;
   }
 
@@ -206,7 +206,8 @@ sup {
 
 b,
 strong {
-  font-weight: bolder;
+  font-weight: 500;
+  color: var(--gray-800);
 }
 
 abbr[title] {

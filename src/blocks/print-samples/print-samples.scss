@@ -1,0 +1,78 @@
+.print-samples {
+  $block-name:                &; // #{$block-name}__element
+
+  &__header {
+    text-align: center;
+
+    &:has(p) {
+      margin-bottom: 24px;
+    }
+  }
+
+  &__title {
+    margin-top: 0;
+  }
+
+  &__grid {
+    display: grid;
+    gap: 8px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, minmax(160px, 220px));
+    grid-auto-flow: dense;
+    //grid-auto-rows: auto;
+
+
+    @media (min-width: $screen-md) {
+      grid-template-rows: repeat(4, minmax(240px, 260px));
+    }
+
+    @media (min-width: $screen-xl) {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      grid-template-rows: repeat(2, minmax(240px, 280px));
+      //grid-template-rows: repeat(2, 1fr);
+    }
+
+    @media (min-width: $screen-xxl) {
+      grid-template-rows: repeat(2, minmax(280px, 320px));
+    }
+
+    #{$block-name}__item {
+      background: var(--gray-0);
+      border-radius: $border-radius--30;
+      overflow: hidden;
+
+      img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+      }
+    }
+  }
+
+  &__item {
+    user-select: none;
+
+    /* Базовые размеры */
+    &--1x1 {
+      grid-column: span 1;
+      grid-row: span 1;
+      //height: clamp(160px, 240px, 320px);
+    }
+
+    &--1x2 {
+      grid-column: span 1;
+      grid-row: span 2;
+    }
+
+    &--2x1 {
+      grid-column: span 2;
+      grid-row: span 1;
+
+      @media (min-width: $screen-md) {
+        height: 100%;
+      }
+    }
+  }
+}

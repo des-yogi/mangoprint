@@ -1,0 +1,124 @@
+.sizes {
+  $block-name:                &; // #{$block-name}__element
+
+  &__header {
+    margin-bottom: 24px;
+  }
+
+  &__header-col {
+    @include col(xs, 12);
+    @include col(md, 10);
+    @include col(xl, 8);
+    @include col(xxl, 7);
+  }
+
+  &__title {
+    margin-top: 0;
+  }
+
+  //&__intro {
+  //}
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 8px;
+    margin: 8px 0;
+  }
+
+  &__list-item {
+    flex: 1 1;
+    flex-basis: clamp(40%, 48%, 50%);
+    background-color: var(--white);
+    border-radius: $border-radius--30;
+    overflow: hidden;
+
+    @media (min-width: $screen-md) {
+      flex-basis: clamp(20%, 24%, 25%);
+    }
+  }
+
+  &__img {
+
+    img {
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+
+  &__descr {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: center;
+    gap: 10px;
+    padding: 16px;
+    margin: 0;
+    text-align: center;
+
+    & > *:last-child {
+      font-weight: 400;
+      color: var(--gray-700);
+    }
+  }
+
+  &__format {
+    flex: 0 0 auto;
+  }
+
+  &__view {
+    gap: 8px 0;
+  }
+
+  &__view-text-col {
+    @include col(xs, 12);
+    //@include col(md, 6);
+    @include col(xl, 4);
+    @include col(xxl, 3);
+  }
+
+  &__view-images-col {
+    @include col(xs, 12);
+    @include col(xl, 8);
+    @include col(xxl, 9);
+  }
+
+  &__view-images-row {
+    gap: 8px 0;
+    justify-content: center;
+  }
+
+  &__view-img-col {
+    @include col(xs, 6);
+    @include col(md, 4);
+  }
+
+  &__view-img {
+    padding: 40px 40px 0;
+    background-color: var(--white);
+    border-radius: $border-radius--30;
+
+    & > #{$block-name}__descr {
+      padding-right: 0;
+      padding-left: 0;
+    }
+  }
+
+  &__view-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 100%;
+    padding: 24px;
+    font-size: $font-size;
+    color: var(--gray-900);
+    background-color: var(--orange-50);
+    background-repeat: repeat;
+    background-size: cover, 42px;
+    background-image:
+      linear-gradient(to right, rgba(254, 237, 236, 0) 0%, var(--orange-50) 100%),
+      url('../img/tile-index-inner.png');
+    border-radius: $border-radius--30;
+  }
+}

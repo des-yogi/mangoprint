@@ -1,0 +1,88 @@
+.portfolio {
+  $block-name:                &; // #{$block-name}__element
+
+  &__grid-top,
+  &__grid-bottom {
+    display: grid;
+    gap: 8px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-flow: dense;
+    grid-auto-rows: auto;
+
+    @media (min-width: $screen-md) {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    #{$block-name}__item {
+      background: var(--gray-0);
+      border-radius: $border-radius--30;
+      overflow: hidden;
+
+      img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+      }
+    }
+  }
+
+  &__grid-top {
+
+    #{$block-name}__item {
+
+      &--1,
+      &--2 {
+        //height: 100%;
+
+        @media (max-width: $screen-md - 1) {
+          aspect-ratio: 1 / 2;
+        }
+      }
+
+      &--7,
+      &--10 {
+
+        @media (min-width: $screen-md) {
+          order: 1;
+        }
+      }
+    }
+  }
+
+  //&__grid-bottom {
+  //}
+
+  &__item {
+    user-select: none;
+
+    /* Базовые размеры */
+    &--1x1 {
+      grid-column: span 1;
+      grid-row: span 1;
+      aspect-ratio: 1 / 1;
+    }
+
+    &--1x2 {
+      grid-column: span 1;
+      grid-row: span 2;
+    }
+
+    &--2x1 {
+      grid-column: span 2;
+      grid-row: span 1;
+      aspect-ratio: 2.047 / 1;
+
+      @media (min-width: $screen-md) {
+        height: 100%;
+      }
+    }
+
+    &--2x2 {
+      grid-column: span 2;
+      grid-row: span 2;
+      aspect-ratio: 1 / 1;
+    }
+  }
+}

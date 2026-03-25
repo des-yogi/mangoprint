@@ -434,6 +434,13 @@ img {
   @include col(xl, 3);
 }
 
+.col-1-2-2-4 {
+  @include col(xs, 12);
+  @include col(md, 6);
+  @include col(xl, 6);
+  @include col(xxl, 3);
+}
+
 .col-2-3-6 {
   @include col(xs, 6);
   @include col(md, 4);
