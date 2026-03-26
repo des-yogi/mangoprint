@@ -7,4 +7,5 @@
 * https://des-yogi.github.io/mangoprint/shirt-printing
 * https://des-yogi.github.io/mangoprint/corporate
 * https://des-yogi.github.io/mangoprint/about
- 
+* https://des-yogi.github.io/mangoprint/article
+* https://des-yogi.github.io/mangoprint/contacts
