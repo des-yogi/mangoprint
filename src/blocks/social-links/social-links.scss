@@ -33,3 +33,16 @@
     }
   }
 }
+
+.contacts,
+.page-footer {
+
+  .social-links__link {
+    background-color: var(--white);
+
+    &:hover,
+    &:focus {
+      background-color: var(--orange-200);
+    }
+  }
+}

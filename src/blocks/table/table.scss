@@ -1,3 +1,4 @@
+table,
 .table {
 
   $block-name:                &; // #{$block-name}__element
@@ -6,7 +7,11 @@
   border-collapse: collapse;
   width: 100%;
   //border: 1px solid $border-color;
-  margin: 24px 0;
+  margin: 1em 0;
+
+  padding: 24px;
+  background-color: var(--white);
+  border-radius: $border-radius--30;
 
   caption {
     padding-top: 0.4em;
@@ -17,11 +22,38 @@
     color: var(--gray-900);
   }
 
+  tr {
+
+    &:first-child {
+
+      th {
+        padding-top: 24px;
+
+        @media (min-width: $screen-xl) {
+          padding-top: 32px;
+        }
+      }
+    }
+
+    &:last-child {
+
+      td {
+        padding-bottom: 24px;
+        border-bottom: none;
+
+        @media (min-width: $screen-xl) {
+          padding-bottom: 32px;
+        }
+      }
+    }
+  }
+
   td,
   th {
     padding: 16px 12px;
     vertical-align: top;
-    font-weight: 500;
+    font-weight: 400;
+    hyphens: auto;
     border-bottom: 1px solid var(--orange-100);
 
     &:not(:first-child) {
@@ -29,11 +61,20 @@
     }
 
     &:first-child {
-      padding-left: 0;
+      padding-left: 24px;
+
+      @media (min-width: $screen-xl) {
+        padding-left: 40px;
+      }
     }
 
     &:last-child {
-      padding-right: 0;
+      padding-right: 24px;
+      //text-align: right;
+
+      @media (min-width: $screen-xl) {
+        padding-right: 40px;
+      }
     }
   }
 

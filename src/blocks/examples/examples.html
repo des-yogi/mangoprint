@@ -1,0 +1,35 @@
+<!--DEV
+@ @include('blocks/examples/examples.html')
+-->
+
+<section class="margin-y  examples">
+  <div class="examples__header">
+    <h3 class="examples__title">Фото приклади технологій</h3>
+    <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus minima nam sint, beatae iure autem</p> -->
+  </div>
+
+  <div class="examples__gallery">
+
+    <div class="examples__gallery-item">
+      @@include('../../blocks/example-card/example-card.html', {
+        "img": "example-1",
+        "caption": "Футболка з шовкотрафаретним друком"
+      })
+    </div>
+
+    <div class="examples__gallery-item">
+      @@include('../../blocks/example-card/example-card.html', {
+        "img": "example-2",
+        "caption": "Худі з DTF принтом"
+      })
+    </div>
+
+    <div class="examples__gallery-item">
+      @@include('../../blocks/example-card/example-card.html', {
+        "img": "example-3",
+        "caption": "Корпоративний мерч з УФ DTF"
+      })
+    </div>
+
+  </div>
+</section>
