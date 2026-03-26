@@ -73,10 +73,11 @@
   },
   "dependencies": {
     "@fancyapps/ui": "^6.1.13",
-    "bootstrap": "^5.3.8",
-    "swiper": "^12.0.3",
     "autosize": "^6.0.1",
+    "bootstrap": "^5.3.8",
     "focus-visible": "^5.2.1",
-    "svg4everybody": "^2.1.9"
+    "imask": "^7.6.1",
+    "svg4everybody": "^2.1.9",
+    "swiper": "^12.0.3"
   }
 }

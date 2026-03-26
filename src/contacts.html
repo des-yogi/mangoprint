@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html class="no-js  page" lang="uk" prefix="og: https://ogp.me/ns#">
+
+<head>
+  <meta charset="utf-8">
+  <title>Контакти</title>
+  @@include('_include/page_head.html')
+</head>
+
+<body>
+<noscript>У вас вимкнено JavaScript. Приносимо свої вибачення, але це ускладнює використання даного сайту.</noscript>
+
+  <div class="page__inner">
+
+    <div class="page__content">
+
+      @@include('blocks/page-header-inner/page-header-inner.html', {
+        "pageTitle": "Контакти",
+        "intro": "Контакти Mango Print: замовте прорахунок вашого проєкту вже сьогодні"
+      })
+
+      <main class="main">
+
+        <div class="container  margin-y  contacts">
+          <div class="row  contacts__row">
+
+            <div class="contacts__col">
+              <div class="contacts__info">
+
+                <section class="contacts__item">
+                  <div class="contacts__item-header">
+                    <h2 class="h5  contacts__item-title">Контакти</h2>
+                  </div>
+                  <div class="contacts__item-body">
+                    <ul class="list-nostyled  contacts__list">
+                      <li class="contacts__list-item">
+                        <a href="tel:+380634535564" class="contacts__list-link">
+                          <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#phone"></use></svg>
+                          + 38 063 453 55 64
+                        </a>
+                      </li>
+                      <li class="contacts__list-item">
+                        <a href="mailto:mangoprintua@gmail.com" class="contacts__list-link">
+                          <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#at"></use></svg>
+                          mangoprintua@gmail.com
+                        </a>
+                      </li>
+                    </ul>
+
+                    @@include('blocks/social-links/social-links.html')
+                  </div>
+                </section>
+
+                <section class="contacts__item">
+                  <div class="contacts__item-header">
+                    <h2 class="h5  contacts__item-title">Адреса</h2>
+                  </div>
+                  <div class="contacts__item-body">
+                    <ul class="list-nostyled  contacts__list">
+                      <li class="contacts__list-item">
+                        <span class="contacts__list-link">
+                          <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#address"></use></svg>
+                          Юр. адреса: 08200, Київська обл., м.Ірпінь, вул.Західна 4, кв.88
+                        </span>
+                      </li>
+                      <li class="contacts__list-item">
+                        <span class="contacts__list-link  contacts__list-link--iconless">
+                          Виробництво: 03067, м.Київ, вул.Олекси Тихого 84
+                        </span>
+                      </li>
+                    </ul>
+                  </div>
+                </section>
+
+                <section class="contacts__item">
+                  <div class="contacts__item-header">
+                    <h2 class="h5  contacts__item-title">Часи роботи</h2>
+                  </div>
+                  <div class="contacts__item-body">
+                    <ul class="list-nostyled  contacts__list">
+                      <li class="contacts__list-item">
+                        <span class="contacts__list-link">
+                          <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#time"></use></svg>
+                          Пн–Пт:&ensp;9:00–22:00
+                        </span>
+                      </li>
+                      <li class="contacts__list-item">
+                        <span class="contacts__list-link  contacts__list-link--iconless">
+                          Сб–Нд:&ensp;9:00–20:00
+                        </span>
+                      </li>
+                    </ul>
+                  </div>
+                </section>
+
+                <section class="contacts__item  contacts__item--map">
+                  <h3 class="visually-hidden">Наш офіс на карті</h3>
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7185.575092110224!2d30.42363984249589!3d50.450703140691424!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4cd791dbd08c5%3A0xd0baee6bc11cac6!2z0LLRg9C70LjRhtGPINCe0LvQtdC60YHQuCDQotC40YXQvtCz0L4sIDg0LCDQmtC40ZfQsiwgMDIwMDA!5e0!3m2!1suk!2sua!4v1774461222823!5m2!1suk!2sua" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </section>
+
+              </div>
+            </div>
+
+            <div class="contacts__col">
+              <section class="contacts__item  contacts__item--form">
+                <div class="contacts__item-header">
+                  <h2 class="h5  contacts__item-title">Зв'язатися з нами</h2>
+                  <p>Залиште заявку — наш менеджер зв’яжеться з вами найближчим часом для уточнення деталей.</p>
+                </div>
+
+                @@include('blocks/contact-form/contact-form.html')
+
+              </section>
+            </div>
+
+          </div>
+        </div>
+
+      </main>
+
+    </div>
+
+    <div class="page__footer-wrapper">
+      @@include('blocks/page-footer/page-footer.html')
+    </div>
+
+  </div>
+
+  @@include('_include/page_bottom.html')
+
+</body>
+</html>

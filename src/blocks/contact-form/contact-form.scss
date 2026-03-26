@@ -1,0 +1,28 @@
+.contact-form {
+  $block-name:                &; // #{$block-name}__element
+
+  margin-top: 24px;
+
+  &__radio-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px 8px;
+    padding: 0;
+    margin: 0 0 24px;
+    border: none;
+
+    @media (min-width: $screen-md) {
+      justify-content: flex-start;
+    }
+
+    & > * {
+      flex: 1 1 100%;
+      margin: 0;
+
+      @media (min-width: $screen-md) {
+        flex: 0 1;
+        flex-basis: calc(50% - 8px);
+      }
+    }
+  }
+}

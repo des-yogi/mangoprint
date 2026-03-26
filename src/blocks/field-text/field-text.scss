@@ -3,7 +3,7 @@
   $block-name:                &; // #{$block-name}__element
 
   display: block;
-  margin-bottom: 32px;
+  margin-bottom: 8px;
 
   &__name {
     @include field-name;
@@ -14,19 +14,21 @@
   }
 
   &__input {
-    display: inline-block;
-    vertical-align: middle;
+    display: inline-flex;
+    align-items: center;
     width: 100%;
-    // height: 2.125em;
+    height: 56px;
     padding: $field-padding-vertical  $field-padding-horizontal;
     margin: 0;
-    line-height: $line-height;
-    font-size: 1em;
+    font-size: $font-size;
     font-family: inherit;
-    background-color: #fff;
-    border: 1px solid $border-color;
+    line-height: $line-height;
+    color: var(--gray-800);
+    background-color: var(--white);
+    border: 1px solid var(--orange-100);
     border-radius: $border-radius;
     appearance: textfield;
+    transition: $transition;
 
     &:focus {
       @include field-focus;
@@ -54,7 +56,7 @@
     }
 
     &::placeholder {
-      color: $text-muted;
+      color: var(--gray-600);
       opacity: 1;
     }
 
@@ -64,6 +66,14 @@
       height: auto;
       min-height: calc(#{$textarea-height} + 2px);
       resize: vertical;
+    }
+
+    &--required {
+      padding-right: 33px;
+      background-position: right 16px top 24px;
+      background-size: 8px;
+      background-repeat: no-repeat;
+      background-image: svg-load('../blocks/sprite-svg/svg/asterisk.svg');
     }
   }
 

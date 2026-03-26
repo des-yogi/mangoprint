@@ -1,0 +1,35 @@
+<!--DEV
+@ @include('blocks/example-card/example-card.html', {
+  "img": "example-1",
+  "caption": "Футболка з шовкотрафаретним друком"
+})
+-->
+
+<figure class="example-card">
+  <a href="img/@@img.jpg"
+     class="embed-responsive  embed-responsive--4-3  example-card__img"
+     data-fancybox
+     data-caption="@@caption">
+    <picture>
+      <source srcset="img/@@img.webp,
+                      img/@@img.webp 2x" media="(min-width: 1280px)" type="image/webp">
+      <source srcset="img/@@img.jpg,
+                      img/@@img.jpg 2x" media="(min-width: 1280px)">
+      <!-- 372x279, 585x439 2x -->
+      <source srcset="img/@@img.webp" media="(min-width: 1024px)" type="image/webp">
+      <source srcset="img/@@img.jpg" media="(min-width: 1024px)">
+      <!-- 1180x885 -->
+      <source srcset="img/@@img.webp" media="(min-width: 768px)" type="image/webp">
+      <source srcset="img/@@img.jpg" media="(min-width: 768px)">
+      <!-- 860x645 -->
+      <source srcset="img/@@img.webp" media="(min-width: 480px)" type="image/webp">
+      <source srcset="img/@@img.jpg" media="(min-width: 480px)">
+      <!-- 720x540 -->
+      <source srcset="img/@@img.webp" media="(min-width: 300px)" type="image/webp">
+      <source srcset="img/@@img.jpg" media="(min-width: 300px)">
+      <!-- 585x439 -->
+      <img src="img/@@img.jpg" alt="@@caption" width="524" height="393" loading="lazy">
+    </picture>
+  </a>
+  <figcaption class="example-card__caption">@@caption</figcaption>
+</figure>

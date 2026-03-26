@@ -1,0 +1,39 @@
+.examples {
+  $block-name:                &; // #{$block-name}__element
+
+  &__header {
+    margin-bottom: 24px;
+  }
+
+  &__title {
+    margin-top: 0;
+  }
+
+  &__gallery {
+    display: grid;
+    gap: 16px 8px;
+
+    @media (min-width: $screen-md) {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: auto;
+    }
+
+    @media (min-width: $screen-xl) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  &__gallery-item {
+
+    &:nth-child(3n+3) {
+
+      @media (min-width: $screen-md) and (max-width: $screen-xl - 1) {
+
+        &:not(:first-child) {
+          width: 100%;
+          grid-column: span 2;
+        }
+      }
+    }
+  }
+}

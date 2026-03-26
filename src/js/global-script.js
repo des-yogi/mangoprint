@@ -96,30 +96,16 @@ window.addEventListener('resize', () => {
 
 })();
 
-// Если на проекте jQuery
-// $( document ).ready(function() {
-//   // code
-// });
-
-// Изоляция без jQuery
-// (function(){
-//   // code
-// }());
-
-// На проекте нет jQuery, но хочется $( document ).ready...
-// function ready(fn) {
-//   if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading"){
-//     fn();
-//   } else {
-//     document.addEventListener('DOMContentLoaded', fn);
-//   }
-// }
-//
-// ready(function(){
-//   // code
-// });
-
-
+(function(){
+  const phoneElems = document.getElementsByClassName('phone-mask');
+  Array.prototype.forEach.call(phoneElems, function (item) {
+    const phoneMask = IMask(
+      item, {
+        mask: '+{38} (\\000) 000 00 00',
+        lazy: true, // make placeholder always visible
+    });
+  });
+}());
 
 // $(document).ready(function(){
 //   if(window.matchMedia('(min-width: 1366px)').matches){

@@ -1,0 +1,47 @@
+.example-card {
+  $block-name:                &; // #{$block-name}__element
+
+  margin: 0;
+
+  &__img {
+    background-color: var(--gray-50);
+    border-radius: $border-radius--30;
+
+    &:hover,
+    &:focus {
+
+      &::after {
+        opacity: 1;
+      }
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      right: 16px;
+      bottom: 16px;
+      width: 56px;
+      height: 56px;
+      background-color: var(--white);
+      border-radius: $border-radius;
+      background-position: center;
+      background-size: 24px;
+      background-repeat: no-repeat;
+      background-image: svg-load('../blocks/example-card/bg-img/lens-color.svg', stroke=#F1471D);
+      pointer-events: none;
+      user-select: none;
+      transition: $transition;
+      opacity: 0;
+    }
+
+    img {
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+
+  &__caption {
+    margin-top: 12px;
+    font-size: $font-size;
+  }
+}

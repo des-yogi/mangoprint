@@ -1,0 +1,27 @@
+.article {
+  $block-name:                &; // #{$block-name}__element
+
+  &__inner {
+    @include col(xs, 12);
+    @include col-offset(md, 1);
+    @include col(md, 10);
+    @include col-offset(xxl, 2);
+    @include col(xxl, 8);
+  }
+
+  &__content {
+
+    img {
+      display: block;
+      border-radius: $border-radius--30;
+    }
+
+    ol,
+    ul {
+
+      li + li {
+        margin-top: 0.5em;
+      }
+    }
+  }
+}
