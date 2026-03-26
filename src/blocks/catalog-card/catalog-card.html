@@ -1,0 +1,69 @@
+<!--DEV
+@ @include('blocks/catalog-card/catalog-card.html', {
+  "img": "catalog-img-1",
+  "title": "Жіноча футболка",
+  "descr": "Мавка лісова",
+  "oldPrice": "429",
+  "price": "350"
+})
+-->
+
+<article class="catalog-card">
+  <a href="#" class="embed-responsive  embed-responsive--2-3  catalog-card__img" tabindex="-1" aria-hidden="true">
+    <picture>
+      <source srcset="img/@@img.webp,
+                      img/@@img.webp 2x" media="(min-width: 1280px)" type="image/webp">
+      <source srcset="img/@@img.jpg,
+                      img/@@img.jpg 2x" media="(min-width: 1280px)">
+      <!-- 228x342, 345x518 2x -->
+      <source srcset="img/@@img.webp" media="(min-width: 768px)" type="image/webp">
+      <source srcset="img/@@img.jpg" media="(min-width: 768px)">
+      <!-- 405x608 -->
+      <source srcset="img/@@img.webp" media="(min-width: 480px)" type="image/webp">
+      <source srcset="img/@@img.jpg" media="(min-width: 480px)">
+      <!-- 300x450 -->
+      <source srcset="img/@@img.webp" media="(min-width: 300px)" type="image/webp">
+      <source srcset="img/@@img.jpg" media="(min-width: 300px)">
+      <!-- 240x360 -->
+      <img src="img/@@img.jpg" alt="Alt text" width="228" height="342" loading="lazy">
+    </picture>
+  </a>
+
+  <ul class="list-nostyled  catalog-card__colors" aria-label="Доступні кольори">
+    <li class="catalog-card__color">
+      <span class="visually-hidden">Білий</span>
+      <span class="catalog-card__color-circle" style="background-color: #fff;"></span>
+    </li>
+    <li class="catalog-card__color">
+      <span class="visually-hidden">Cірий</span>
+      <span class="catalog-card__color-circle" style="background-color: #8F8F8F;"></span>
+    </li>
+    <li class="catalog-card__color">
+      <span class="visually-hidden">Графіт</span>
+      <span class="catalog-card__color-circle" style="background-color: #6B6B6B;"></span>
+    </li>
+    <li class="catalog-card__color">
+      <span class="visually-hidden">Чорний</span>
+      <span class="catalog-card__color-circle" style="background-color: #1D1D1D;"></span>
+    </li>
+  </ul>
+
+  <div class="catalog-card__text">
+    <div class="catalog-card__header">
+      <h3 class="catalog-card__title"><a href="#">@@title</a></h3>
+      <p class="catalog-card__descr">@@descr</p>
+    </div>
+
+    <div class="catalog-card__footer">
+      <p class="h4  catalog-card__price">
+        <span class="catalog-card__old-price">@@oldPrice</span>
+        <span>@@price&thinsp;грн</span>
+      </p>
+      <a href="#" class="btn btn--adaptive  btn--adaptive--icon-only" tabindex="-1" aria-hidden="true">
+        <span class="btn__icon">
+          <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#arrow-right"></use></svg>
+        </span>
+      </a>
+    </div>
+  </div>
+</article>

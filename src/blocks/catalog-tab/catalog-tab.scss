@@ -1,0 +1,23 @@
+.catalog-tab {
+  $block-name:                &; // #{$block-name}__element
+
+  &__wrapper {
+    gap: 8px 0;
+  }
+
+  &__card-col {
+    @include col(xs, 6);
+    @include col(md, 4);
+    @include col(xl, 3);
+    @include col(xxl, 2);
+  }
+
+  .tab-content::after {
+    // нижний оверлей тут не нужен
+    display: none;
+  }
+
+  .tab-content__footer {
+    margin-top: 40px;
+  }
+}
