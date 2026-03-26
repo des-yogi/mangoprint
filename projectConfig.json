@@ -77,7 +77,9 @@
     "example-card": [],
     "article": [],
     "contacts": [],
-    "contact-form": []
+    "contact-form": [],
+    "catalog-tab": [],
+    "catalog-card": []
   },
   "addCssBefore": [
     "../../node_modules/bootstrap/scss/_functions",

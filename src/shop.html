@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html class="no-js  page" lang="uk" prefix="og: https://ogp.me/ns#">
+
+<head>
+  <meta charset="utf-8">
+  <title>Магазин</title>
+  @@include('_include/page_head.html')
+</head>
+
+<body>
+<noscript>У вас вимкнено JavaScript. Приносимо свої вибачення, але це ускладнює використання даного сайту.</noscript>
+
+  <div class="page__inner">
+
+    <div class="page__content">
+
+      @@include('blocks/page-header-inner/page-header-inner.html', {
+        "pageTitle": "Магазин",
+        "intro": "Одяг, з якого починається ваш мерч. Футболки, худі та аксесуари європейської якості. Купуйте «чисті» речі або замовляйте брендування під ключ"
+      })
+
+      <main class="main">
+
+        <article class="container  margin-y  print-technologies  catalog-tab">
+
+          <div class="row  print-technologies__header">
+            <div class="print-technologies__header-col">
+              <h2 class="print-technologies__title">Каталог текстилю</h2>
+              <div class="print-technologies__intro">
+                <p>Всі товари доступні для замовлення як «чисті» (без принту), так і з брендуванням. Від класичних футболок до теплих худі. Перемикайте категорії, щоб знайти основу, яка пасує саме вам</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="nav-tabs__wrapper">
+            <ul class="nav nav-tabs" id="catalogTab" role="tablist">
+              <li class="nav-item" role="presentation">
+                <button class="nav-link  active" id="catalogTab-1" data-bs-toggle="tab" data-bs-target="#catalogTabPane-1" type="button" role="tab" aria-controls="catalogTabPane-1" aria-selected="true">Усі</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="catalogTab-2" data-bs-toggle="tab" data-bs-target="#catalogTabPane-2" type="button" role="tab" aria-controls="catalogTabPane-2" aria-selected="false">Футболки</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="catalogTab-3" data-bs-toggle="tab" data-bs-target="#catalogTabPane-3" type="button" role="tab" aria-controls="catalogTabPane-3" aria-selected="false">Худі та Світшоти</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="catalogTab-4" data-bs-toggle="tab" data-bs-target="#catalogTabPane-4" type="button" role="tab" aria-controls="catalogTabPane-4" aria-selected="false">Головні убори</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="catalogTab-5" data-bs-toggle="tab" data-bs-target="#catalogTabPane-5" type="button" role="tab" aria-controls="catalogTabPane-5" aria-selected="false">Аксесуари</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="catalogTab-6" data-bs-toggle="tab" data-bs-target="#catalogTabPane-6" type="button" role="tab" aria-controls="catalogTabPane-6" aria-selected="false">Фліси та Жилети</button>
+              </li>
+            </ul>
+          </div>
+
+          <div id="catalogTabContent" class="tab-content  js-collapser"
+               data-lines="1"
+               data-line-item=".catalog-tab__card-col"
+               data-line-extra="0"
+               data-collapser-scope="closest:.catalog-tab">
+
+            <div class="tab-pane fade show active"
+                 id="catalogTabPane-1"
+                 role="tabpanel"
+                 aria-labelledby="catalogTab-1"
+                 tabindex="0">
+
+              <div class="row  catalog-tab__wrapper">
+
+                <div class="catalog-tab__card-col">
+                  @@include('blocks/catalog-card/catalog-card.html', {
+                    "img": "catalog-img-1",
+                    "title": "Жіноча футболка",
+                    "descr": "Мавка лісова",
+                    "oldPrice": "429",
+                    "price": "350"
+                  })
+                </div>
+
+                <div class="catalog-tab__card-col">
+                  @@include('blocks/catalog-card/catalog-card.html', {
+                    "img": "catalog-img-2",
+                    "title": "Жіноча футболка",
+                    "descr": "Barbie",
+                    "oldPrice": "",
+                    "price": "349"
+                  })
+                </div>
+
+                <div class="catalog-tab__card-col">
+                  @@include('blocks/catalog-card/catalog-card.html', {
+                    "img": "catalog-img-3",
+                    "title": "Жіноча футболка",
+                    "descr": "Be free",
+                    "oldPrice": "349",
+                    "price": "321"
+                  })
+                </div>
+
+                <div class="catalog-tab__card-col">
+                  @@include('blocks/catalog-card/catalog-card.html', {
+                    "img": "catalog-img-4",
+                    "title": "Жіноча футболка",
+                    "descr": "Leo love",
+                    "oldPrice": "",
+                    "price": "349"
+                  })
+                </div>
+
+                <div class="catalog-tab__card-col">
+                  @@include('blocks/catalog-card/catalog-card.html', {
+                    "img": "catalog-img-5",
+                    "title": "Жіноча футболка",
+                    "descr": "Best mom in the Galaxy",
+                    "oldPrice": "",
+                    "price": "350"
+                  })
+                </div>
+
+                <div class="catalog-tab__card-col">
+                  @@include('blocks/catalog-card/catalog-card.html', {
+                    "img": "catalog-img-6",
+                    "title": "Жіноча футболка",
+                    "descr": "Free the leopard",
+                    "oldPrice": "",
+                    "price": "350"
+                  })
+                </div>
+
+                <div class="catalog-tab__card-col">
+                  @@include('blocks/catalog-card/catalog-card.html', {
+                    "img": "catalog-img-1",
+                    "title": "Жіноча футболка",
+                    "descr": "Мавка лісова",
+                    "oldPrice": "429",
+                    "price": "350"
+                  })
+                </div>
+
+                <div class="catalog-tab__card-col">
+                  @@include('blocks/catalog-card/catalog-card.html', {
+                    "img": "catalog-img-2",
+                    "title": "Жіноча футболка",
+                    "descr": "Barbie",
+                    "oldPrice": "",
+                    "price": "349"
+                  })
+                </div>
+
+                <div class="catalog-tab__card-col">
+                  @@include('blocks/catalog-card/catalog-card.html', {
+                    "img": "catalog-img-3",
+                    "title": "Жіноча футболка",
+                    "descr": "Be free",
+                    "oldPrice": "349",
+                    "price": "321"
+                  })
+                </div>
+
+              </div>
+            </div>
+
+            <div class="tab-pane fade"
+                 id="catalogTabPane-2"
+                 role="tabpanel"
+                 aria-labelledby="catalogTab-2"
+                 tabindex="0">
+
+              <div class="row  catalog-tab__wrapper">
+
+                <div class="catalog-tab__card-col">
+                  @@include('blocks/catalog-card/catalog-card.html', {
+                    "img": "catalog-img-1",
+                    "title": "Жіноча футболка",
+                    "descr": "Мавка лісова",
+                    "oldPrice": "429",
+                    "price": "350"
+                  })
+                </div>
+
+                <div class="catalog-tab__card-col">
+                  @@include('blocks/catalog-card/catalog-card.html', {
+                    "img": "catalog-img-2",
+                    "title": "Жіноча футболка",
+                    "descr": "Barbie",
+                    "oldPrice": "",
+                    "price": "349"
+                  })
+                </div>
+
+                <div class="catalog-tab__card-col">
+                  @@include('blocks/catalog-card/catalog-card.html', {
+                    "img": "catalog-img-3",
+                    "title": "Жіноча футболка",
+                    "descr": "Be free",
+                    "oldPrice": "349",
+                    "price": "321"
+                  })
+                </div>
+
+                <div class="catalog-tab__card-col">
+                  @@include('blocks/catalog-card/catalog-card.html', {
+                    "img": "catalog-img-4",
+                    "title": "Жіноча футболка",
+                    "descr": "Leo love",
+                    "oldPrice": "",
+                    "price": "349"
+                  })
+                </div>
+
+                <div class="catalog-tab__card-col">
+                  @@include('blocks/catalog-card/catalog-card.html', {
+                    "img": "catalog-img-5",
+                    "title": "Жіноча футболка",
+                    "descr": "Best mom in the Galaxy",
+                    "oldPrice": "",
+                    "price": "350"
+                  })
+                </div>
+
+                <div class="catalog-tab__card-col">
+                  @@include('blocks/catalog-card/catalog-card.html', {
+                    "img": "catalog-img-6",
+                    "title": "Жіноча футболка",
+                    "descr": "Free the leopard",
+                    "oldPrice": "",
+                    "price": "350"
+                  })
+                </div>
+
+                <div class="catalog-tab__card-col">
+                  @@include('blocks/catalog-card/catalog-card.html', {
+                    "img": "catalog-img-1",
+                    "title": "Жіноча футболка",
+                    "descr": "Мавка лісова",
+                    "oldPrice": "429",
+                    "price": "350"
+                  })
+                </div>
+
+                <div class="catalog-tab__card-col">
+                  @@include('blocks/catalog-card/catalog-card.html', {
+                    "img": "catalog-img-2",
+                    "title": "Жіноча футболка",
+                    "descr": "Barbie",
+                    "oldPrice": "",
+                    "price": "349"
+                  })
+                </div>
+
+                <div class="catalog-tab__card-col">
+                  @@include('blocks/catalog-card/catalog-card.html', {
+                    "img": "catalog-img-3",
+                    "title": "Жіноча футболка",
+                    "descr": "Be free",
+                    "oldPrice": "349",
+                    "price": "321"
+                  })
+                </div>
+
+              </div>
+            </div>
+
+            <div class="tab-pane fade"
+                 id="catalogTabPane-3"
+                 role="tabpanel"
+                 aria-labelledby="catalogTab-3"
+                 tabindex="0">
+
+              <div class="row  catalog-tab__wrapper">
+
+                <div class="catalog-tab__card-col">
+                  @@include('blocks/catalog-card/catalog-card.html', {
+                    "img": "catalog-img-1",
+                    "title": "Жіноча футболка",
+                    "descr": "Мавка лісова",
+                    "oldPrice": "429",
+                    "price": "350"
+                  })
+                </div>
+
+                <div class="catalog-tab__card-col">
+                  @@include('blocks/catalog-card/catalog-card.html', {
+                    "img": "catalog-img-2",
+                    "title": "Жіноча футболка",
+                    "descr": "Barbie",
+                    "oldPrice": "",
+                    "price": "349"
+                  })
+                </div>
+
+                <div class="catalog-tab__card-col">
+                  @@include('blocks/catalog-card/catalog-card.html', {
+                    "img": "catalog-img-3",
+                    "title": "Жіноча футболка",
+                    "descr": "Be free",
+                    "oldPrice": "349",
+                    "price": "321"
+                  })
+                </div>
+
+                <div class="catalog-tab__card-col">
+                  @@include('blocks/catalog-card/catalog-card.html', {
+                    "img": "catalog-img-4",
+                    "title": "Жіноча футболка",
+                    "descr": "Leo love",
+                    "oldPrice": "",
+                    "price": "349"
+                  })
+                </div>
+
+                <div class="catalog-tab__card-col">
+                  @@include('blocks/catalog-card/catalog-card.html', {
+                    "img": "catalog-img-5",
+                    "title": "Жіноча футболка",
+                    "descr": "Best mom in the Galaxy",
+                    "oldPrice": "",
+                    "price": "350"
+                  })
+                </div>
+
+                <div class="catalog-tab__card-col">
+                  @@include('blocks/catalog-card/catalog-card.html', {
+                    "img": "catalog-img-6",
+                    "title": "Жіноча футболка",
+                    "descr": "Free the leopard",
+                    "oldPrice": "",
+                    "price": "350"
+                  })
+                </div>
+
+                <div class="catalog-tab__card-col">
+                  @@include('blocks/catalog-card/catalog-card.html', {
+                    "img": "catalog-img-1",
+                    "title": "Жіноча футболка",
+                    "descr": "Мавка лісова",
+                    "oldPrice": "429",
+                    "price": "350"
+                  })
+                </div>
+
+              </div>
+            </div>
+
+            <div class="tab-pane fade"
+                 id="catalogTabPane-4"
+                 role="tabpanel"
+                 aria-labelledby="catalogTab-4"
+                 tabindex="0">
+
+              <p>Lorem, ipsum dolor sit amet consectetur adipisicing, elit. Aperiam commodi dolores ab magni obcaecati deserunt laudantium unde pariatur dolorum asperiores, ad at blanditiis minus reprehenderit. Ipsum, cum porro provident animi quod unde esse blanditiis!</p>
+
+            </div>
+
+            <div class="tab-pane fade"
+                 id="catalogTabPane-5"
+                 role="tabpanel"
+                 aria-labelledby="catalogTab-5"
+                 tabindex="0">
+
+              <p>Lorem, ipsum dolor sit amet consectetur adipisicing, elit. Aperiam commodi dolores ab magni obcaecati deserunt laudantium unde pariatur dolorum asperiores, ad at blanditiis minus reprehenderit. Ipsum, cum porro provident animi quod unde esse blanditiis!</p>
+            </div>
+
+            <div class="tab-pane fade"
+                 id="catalogTabPane-6"
+                 role="tabpanel"
+                 aria-labelledby="catalogTab-6"
+                 tabindex="0">
+
+              <p>Lorem, ipsum dolor sit amet consectetur adipisicing, elit. Aperiam commodi dolores ab magni obcaecati deserunt laudantium unde pariatur dolorum asperiores, ad at blanditiis minus reprehenderit. Ipsum, cum porro provident animi quod unde esse blanditiis!</p>
+            </div>
+
+          </div>
+
+          <div class="tab-content__footer  js-collapser-footer">
+            <button class="btn  btn--light  js-collapser-toggle" type="button">
+              <span class="btn__text  js-collapser-toggle-text"
+                    data-show-text="Показати все"
+                    data-hide-text="Згорнути">
+                Показати все
+              </span>
+            </button>
+          </div>
+
+        </article>
+
+        <section class="container  margin-y  about-us">
+          <div class="row about-us__row">
+
+            <div class="about-us__text-col">
+              <div class="about-us__text">
+                <h2 class="about-us__title">Не знайшли потрібний колір або модель?</h2>
+                <div class="about-us__intro">
+                  <p>Наш склад налічує понад 5000 позицій. Залиште запит, і менеджер підбере аналоги або замовить ексклюзивну партію під ваш проект.</p>
+                  <ul>
+                    <li>Шовкографія: Найвигідніша ціна для тиражів від 20 шт.</li>
+                    <li>Машинна вишивка: Преміальний вигляд для поло, худі та флісів.</li>
+                    <li>DTF-друк: Повноколірні принти від 1 шт. за 24 години.</li>
+                  </ul>
+                </div>
+                <div class="about-us__controls">
+                  <button class="btn  btn--light" type="button">
+                    <span class="btn__text">Запитати менеджера</span>
+                  </button>
+                  <!-- <a href="#" class="btn  btn--light">
+                    <span class="btn__text">Вакансії</span>
+                  </a> -->
+                </div>
+              </div>
+            </div>
+
+            <div class="about-us__img-col">
+              <div class="embed-responsive embed-responsive--3-2  about-us__img">
+                <picture>
+                  <source srcset="img/about-us-img.webp,
+                                  img/about-us-img.webp 2x" media="(min-width: 1600px)" type="image/webp">
+                  <source srcset="img/about-us-img.jpg,
+                                  img/about-us-img.jpg 2x" media="(min-width: 1600px)">
+                  <!-- 800x533, 1200x800 2x -->
+                  <source srcset="img/about-us-img.webp,
+                                  img/about-us-img.webp 2x" media="(min-width: 1366px)" type="image/webp">
+                  <source srcset="img/about-us-img.jpg,
+                                  img/about-us-img.jpg 2x" media="(min-width: 1366px)">
+                  <!-- 690x460, 1035x690 2x -->
+                  <source srcset="img/about-us-img.webp,
+                                  img/about-us-img.webp 2x" media="(min-width: 1280px)" type="image/webp">
+                  <source srcset="img/about-us-img.jpg,
+                                  img/about-us-img.jpg 2x" media="(min-width: 1280px)">
+                  <!-- 640x427, 960x640 2x -->
+                  <source srcset="img/about-us-img.webp" media="(min-width: 1024px)" type="image/webp">
+                  <source srcset="img/about-us-img.jpg" media="(min-width: 1024px)">
+                  <!-- 1440x960 -->
+                  <source srcset="img/about-us-img.webp" media="(min-width: 768px)" type="image/webp">
+                  <source srcset="img/about-us-img.jpg" media="(min-width: 768px)">
+                  <!-- 1035x690 -->
+                  <source srcset="img/about-us-img.webp" media="(min-width: 480px)" type="image/webp">
+                  <source srcset="img/about-us-img.jpg" media="(min-width: 480px)">
+                  <!-- 690x460 -->
+                  <source srcset="img/about-us-img.webp" media="(min-width: 300px)" type="image/webp">
+                  <source srcset="img/about-us-img.jpg" media="(min-width: 300px)">
+                  <!-- 585x390 -->
+                  <img src="img/about-us-img.jpg" alt="Alt" width="800" height="533" loading="lazy">
+                </picture>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+        @@include('blocks/faq/faq.html')
+
+        <div class="text-2-block">
+          <div class="container  text-2-block__container">
+            <div class="row  text-2-block__row">
+              <div class="text-2-block__text-col">
+                <article class="text-2-block__text">
+                  <h2 class="text-2-block__title">Одяг під нанесення та корпоративний мерч: основи преміум якості</h2>
+                  <p>Якісний мерч починається з правильної основи. В інтернет-магазині Mango Print ми зібрали колекцію текстилю, який ідеально підходить для всіх видів брендування: шовкографії, машинної вишивки, термопереносу та DTF-друку. Ми розуміємо, що футболка з логотипом — це обличчя вашої компанії, тому пропонуємо лише перевірені моделі, які не кошлатяться, не втрачають форму після прання та приємні до тіла.</p>
+                  <p>Наш каталог включає широкий асортимент одягу для бізнесу, промо-акцій та створення власних брендів (Merch Store):</p>
+                  <ul>
+                    <li>Футболки: від легких промо-моделей (135 г/м²) до щільних преміум (190-200 г/м²).</li>
+                    <li>Худі та світшоти: теплі моделі з начосом, класичні реглани та оверсайз крої.</li>
+                    <li>Поло: елегантний вибір для уніформи персоналу та офісного стилю.</li>
+                    <li>Головні убори та аксесуари: кепки, тракери, еко-сумки (шопери).</li>
+                  </ul>
+                </article>
+              </div>
+
+              <div class="text-2-block__text-col">
+                <article class="text-2-block__text">
+                  <h2 class="text-2-block__title">Чому бізнес обирає текстиль від нас?</h2>
+                  <p>Ми працюємо безпосередньо з європейськими та американськими складами, що гарантує оригінальність продукції та стабільність поставок.</p>
+                  <ol>
+                    <li>Постійна наявність: Підтримуємо складські залишки популярних кольорів (чорний, білий, сірий, неві) у великих обсягах.</li>
+                    <li>Адаптація під друк: Всі товари в нашому магазині протестовані нашими технологами. Ми знаємо, як лягає фарба на кожну модель.</li>
+                    <li>Широка розмірна сітка: Від дитячих розмірів (Kids) до дорослих 3XL, 4XL та навіть 5XL в окремих моделях.</li>
+                    <li>Вигідний опт: Прозора цінова політика для рекламних агенцій, HR-менеджерів та роздрібних покупців.</li>
+                  </ol>
+                  <p>Купити футболки оптом у Києві з доставкою по Україні можна в декілька кліків. Обирайте колір, розмір та кількість, а ми подбаємо про швидку логістику та, за потреби, професійне нанесення вашого логотипа "під ключ".</p>
+                </article>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        @@include('blocks/write-us/write-us.html')
+
+      </main>
+
+    </div>
+
+    <div class="page__footer-wrapper">
+      @@include('blocks/page-footer/page-footer.html')
+    </div>
+
+  </div>
+
+  @@include('_include/page_bottom.html')
+
+</body>
+</html>

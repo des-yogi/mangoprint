@@ -58,6 +58,58 @@
     return toPxInt(root.dataset.heightThreshold, DEFAULT_HEIGHT_THRESHOLD);
   }
 
+  // Rows-based mode (catalog cards, etc.)
+  // data-lines="2" + data-line-item=".product-card"
+  function getLines(root) {
+    return toPxInt(root.dataset.lines, 0); // 0 => disabled
+  }
+  function getLineItemSelector(root) {
+    return String(root.dataset.lineItem || '').trim();
+  }
+  function getLineExtra(root) {
+    return toPxInt(root.dataset.lineExtra, 0);
+  }
+
+  /**
+   * Returns:
+   * - number > 0 : computed max-height for N rows, in px
+   * - 0 : "collapse not needed" (not enough rows)
+   * - null : rows-mode not enabled / cannot compute -> fallback to data-height
+   */
+  function computeLimitByRows(root) {
+    const lines = getLines(root);
+    const itemSel = getLineItemSelector(root);
+    if (!lines || lines < 1 || !itemSel) return null;
+
+    const items = Array.from(root.querySelectorAll(itemSel));
+    if (items.length === 0) return null;
+
+    // stabilize order
+    items.sort((a, b) => (a.offsetTop - b.offsetTop) || (a.offsetLeft - b.offsetLeft));
+
+    // collect distinct row tops (offsetTop is equal for items in same row)
+    const rowTops = [];
+    for (const el of items) {
+      const t = el.offsetTop;
+      if (rowTops.length === 0 || rowTops[rowTops.length - 1] !== t) rowTops.push(t);
+    }
+
+    // If number of rows <= requested lines => no need to collapse
+    if (rowTops.length <= lines) return 0;
+
+    const top0 = rowTops[0];
+    const topN = rowTops[lines]; // start of (lines + 1)-th row
+    const extra = getLineExtra(root);
+
+    return Math.max(0, (topN - top0) + extra);
+  }
+
+  function getEffectiveLimitHeight(root) {
+    const byRows = computeLimitByRows(root);
+    if (byRows === null) return getLimitHeight(root); // default height mode
+    return byRows; // may be 0 (no collapse needed) or >0 (computed)
+  }
+
   // Controls scope
   function getControlsScope(root) {
     const raw = String(root.dataset.collapserScope || '').trim();
@@ -218,8 +270,15 @@
   function applyState(root, { collapsed, animate }) {
     cleanupTransitionEnd(root);
 
-    const limit = getLimitHeight(root);
+    const limit = getEffectiveLimitHeight(root);
     applyTransitionSpeeds(root);
+
+    // If limit is 0 in rows-mode => nothing to collapse, force expanded (but do not overwrite state)
+    if (limit === 0) {
+      setFooterVisible(root, false);
+      forceExpandedNoClamp(root, { preserveState: true });
+      return;
+    }
 
     if (!animate) {
       setAnimating(root, false);
@@ -289,12 +348,15 @@
     }
   }
 
-  // Hard reset when there's nothing to collapse (fixes your screenshot case)
-  function forceExpandedNoClamp(root) {
+  // Hard reset when there's nothing to collapse
+  function forceExpandedNoClamp(root, { preserveState = false } = {}) {
     setAnimating(root, false);
     root.classList.remove(CLASS_COLLAPSED);
     root.style.maxHeight = 'none';
-    root.dataset.state = 'expanded';
+
+    // IMPORTANT: do not overwrite user state on auto refreshes (tabs/resizes)
+    if (!preserveState) root.dataset.state = 'expanded';
+
     setButtonText(root, true);
     setTogglerState(root, true);
   }
@@ -329,15 +391,22 @@
 
     applyTransitionSpeeds(root);
 
-    const limit = getLimitHeight(root);
-    const threshold = getHeightThreshold(root);
+    const limit = getEffectiveLimitHeight(root);
 
+    // rows-mode says "no collapse needed"
+    if (limit === 0) {
+      setFooterVisible(root, false);
+      forceExpandedNoClamp(root, { preserveState: true });
+      return;
+    }
+
+    const threshold = getHeightThreshold(root);
     const needsCollapse = computeNeedsCollapse(root, limit, threshold);
 
     if (!needsCollapse) {
-      // IMPORTANT: do not leave it in collapsed state
       setFooterVisible(root, false);
-      forceExpandedNoClamp(root);
+      // Do not overwrite state during auto refreshes (tabs etc.)
+      forceExpandedNoClamp(root, { preserveState: true });
       return;
     }
 
@@ -399,7 +468,10 @@
       const isCollapsed = root.classList.contains(CLASS_COLLAPSED);
       const nextCollapsed = !isCollapsed;
 
+      // click is explicit user intent -> update persisted state
       root.dataset.state = nextCollapsed ? 'collapsed' : 'expanded';
+
+      // collapse/expand with animation. Here preserveState is irrelevant.
       applyState(root, { collapsed: nextCollapsed, animate: true });
     });
 
