@@ -10,3 +10,4 @@
 * https://des-yogi.github.io/mangoprint/article
 * https://des-yogi.github.io/mangoprint/contacts
 * https://des-yogi.github.io/mangoprint/shop
+* https://des-yogi.github.io/mangoprint/delivery
