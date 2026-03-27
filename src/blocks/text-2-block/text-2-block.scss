@@ -38,8 +38,12 @@
     }
   }
 
-  //&__text {
-  //}
+  &__text {
+
+    li + li {
+      margin-top: 0.5em;
+    }
+  }
 
   &__title {
     margin-top: 0;

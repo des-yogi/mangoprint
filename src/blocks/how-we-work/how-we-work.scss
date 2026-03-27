@@ -130,7 +130,7 @@
     font-size: $font-size-sm;
     line-height: 1.5;
     hyphens: none;
-    //text-wrap: balance;
+    text-wrap: balance;
 
     @media (min-width: $screen-xl) {
       font-size: $font-size;

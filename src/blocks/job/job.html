@@ -1,0 +1,43 @@
+<!--DEV
+@ @include('blocks/job/job.html')
+-->
+
+<article class="container  margin-y  job">
+  <div class="row  job__header">
+    <div class="job__header-col">
+      <h2 class="job__title">Відкриті вакансії</h2>
+      <p>Обирай свою можливість приєднатися до команди</p>
+    </div>
+  </div>
+
+  <div class="job__body">
+    @@include('../../blocks/job-card/job-card.html', {
+      "position": "Менеджер з продажу",
+      "experience": "від 1 року",
+      "location": "Офіс / Гібрид",
+      "salary": "від <strong>25000</strong> грн до&nbsp;<strong>60000</strong> грн"
+    })
+
+    @@include('../../blocks/job-card/job-card.html', {
+      "position": "Оператор вишивальної машини",
+      "experience": "<strong>Бажано</strong> (але навчаємо)",
+      "location": "Виробництво (Київ)",
+      "salary": "від <strong>20000</strong> грн до&nbsp;<strong>30000</strong> грн"
+    })
+
+    @@include('../../blocks/job-card/job-card.html', {
+      "position": "Дизайнер-препресс (Підготовка макетів)",
+      "experience": "Впевнене володіння Ai, Ps",
+      "location": "Офіс",
+      "salary": "від <strong>22000</strong> грн до&nbsp;<strong>35000</strong> грн"
+    })
+
+    @@include('../../blocks/job-card/job-card.html', {
+      "position": "Помічник друкаря / Пакувальник",
+      "experience": "Без досвіду",
+      "location": "Виробництво",
+      "salary": "від <strong>18000</strong> грн до&nbsp;<strong>22000</strong> грн"
+    })
+  </div>
+</article>
+

@@ -1,0 +1,103 @@
+.job-card {
+  $block-name:                &; // #{$block-name}__element
+
+  padding: 16px;
+  background-color: var(--white);
+  border-radius: $border-radius--30;
+
+  @media (min-width: $screen-md) {
+    padding: 24px;
+  }
+
+  &__table {
+    table-layout: fixed;
+    padding: 0;
+    margin: 0;
+    background: none;
+
+    td {
+      vertical-align: baseline;
+      font-size: $font-size;
+      font-weight: 400;
+      hyphens: none;
+      word-break: normal;
+      line-height: 1.35;
+      color: var(--gray-900);
+
+      &#{$block-name}__position {
+        font-size: 20px;
+        font-weight: 500;
+      }
+
+      @media (max-width: $screen-md - 1) {
+        padding: 4px 0 !important;
+      }
+
+      @media (min-width: $screen-md) {
+        padding-top: 24px !important;
+        padding-bottom: 0 !important;
+        padding-right: 16px !important;
+        padding-left: 0 !important;
+
+        &:last-child {
+          padding-right: 0 !important;
+        }
+      }
+
+      &::before {
+        font-size: $font-size-sm;
+        font-weight: 500;
+        color: var(--gray-700);
+
+        @media (max-width: $screen-md - 1) {
+          margin-bottom: 4px;
+        }
+      }
+    }
+
+    th {
+
+      @media (min-width: $screen-md) {
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
+        padding-right: 16px !important;
+        padding-left: 0 !important;
+        border: none;
+
+        &:last-child {
+          padding-right: 0 !important;
+        }
+      }
+    }
+  }
+
+  &__footer {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 16px;
+    padding-top: 16px;
+    margin-top: 16px;
+    border-top: 1px solid var(--orange-200);
+
+    @media (min-width: $screen-md) {
+      flex-wrap: initial;
+    }
+
+    @media (min-width: $screen-xl) {
+      gap: 24px;
+      padding-top: 24px;
+      margin-top: 24px;
+    }
+
+    & > p {
+      flex: 1 1 auto;
+      margin: 0;
+    }
+
+    & > .btn {
+      flex: 0 0 auto;
+    }
+  }
+}

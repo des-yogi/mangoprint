@@ -1,0 +1,43 @@
+<!--DEV
+@ @include('blocks/job-card/job-card.html', {
+  "position": "Менеджер з продажу",
+  "experience": "від 1 року",
+  "location": "Офіс / Гібрид",
+  "salary": "від 25 000 грн до 60 000 грн"
+})
+
+
+-->
+
+<article class="job-card">
+  <h3 class="visually-hidden">Оголошення про вакансію</h3>
+
+  <table class="table-responsive  job-card__table">
+    <thead>
+      <tr>
+        <th>Вакансія</th>
+        <th>Досвід</th>
+        <th>Формат</th>
+        <th>Зарплата</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="job-card__position" data-label="Вакансія">@@position</td>
+        <td data-label="Досвід">@@experience</td>
+        <td data-label="Формат">@@location</td>
+        <td data-label="Зарплата">@@salary</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="job-card__footer">
+    <p>Обробка вхідних лідів, супровід корпоративних клієнтів, прорахунок вартості замовлень.</p>
+    <a href="#" class="btn">
+      <span class="btn__text">Детальніше</span>
+      <span class="btn__icon">
+        <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#arrow-right"></use></svg>
+      </span>
+    </a>
+  </div>
+</article>

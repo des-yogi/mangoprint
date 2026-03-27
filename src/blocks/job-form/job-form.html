@@ -1,0 +1,82 @@
+<!--DEV
+@ @include('blocks/job-form/job-form.html')
+-->
+
+<div class="job-form__wrapper">
+  <form class="contact-form  job-form" action="#" method="post">
+
+    <fieldset>
+      <legend class="visually-hidden">Контактна інформація</legend>
+
+      <label class="field-text">
+        <span class="visually-hidden">Ім'я</span>
+        <span class="field-text__input-wrap">
+          <input class="field-text__input  field-text__input--required" type="text" name="name" value="" placeholder="Ім'я">
+          <span class="field-text__help-text" data-error="name"></span>
+        </span>
+      </label>
+
+      <label class="field-text">
+        <span class="visually-hidden">Телефон</span>
+        <span class="field-text__input-wrap">
+          <input class="field-text__input  field-text__input--required  phone-mask" type="text" inputmode="tel" name="tel" value="" placeholder="+380…">
+          <span class="field-text__help-text" data-error="tel"></span>
+        </span>
+      </label>
+
+      <label class="field-text">
+        <span class="visually-hidden">Посилання на резюме \ портфоліо</span>
+        <span class="field-text__input-wrap">
+          <input class="field-text__input  field-text__input--required" type="text" name="cv-link" value="" placeholder="Посилання на резюме \ портфоліо">
+          <span class="field-text__help-text" data-error="cv-link"></span>
+        </span>
+      </label>
+
+      <label class="field-text">
+        <span class="visually-hidden">Бажана посада \ Сфера діяльності</span>
+        <span class="field-text__input-wrap">
+          <input class="field-text__input" type="text" name="position" value="" placeholder="Бажана посада \ Сфера діяльності">
+          <span class="field-text__help-text" data-error="position"></span>
+        </span>
+      </label>
+
+      <!-- <label class="field-text">
+        <span class="visually-hidden">E-mail</span>
+        <span class="field-text__input-wrap">
+          <input class="field-text__input" type="email" name="mail" value="" placeholder="E-mail">
+          <span class="field-text__help-text" data-error="mail"></span>
+        </span>
+      </label> -->
+
+      <label class="field-text">
+        <span class="visually-hidden">Кілька слів про себе, свій досвід та навички</span>
+        <span class="field-text__input-wrap">
+          <textarea class="field-text__input" name="message" placeholder="Розкажіть кілька слів про себе, свій досвід та навички..." rows="4"></textarea>
+          <span class="field-text__help-text" data-error="message"></span>
+        </span>
+      </label>
+    </fieldset>
+
+    <fieldset>
+      <legend class="visually-hidden">Згода на обробку даних із форми</legend>
+
+      <div class="field-actions  field-actions__agreement">
+        <!-- <div class="field-actions__text">* — обязательные поля</div> -->
+
+        <div class="field-checkbox" style="margin-bottom: 24px;">
+          <label class="field-checkbox__name">
+            <input class="field-checkbox__input" type="checkbox" name="agreement" value="">
+            <span class="field-checkbox__name-text">Натискаючи на кнопку ви погоджуєтесь на обробку персональних даних, отримання рекламних пропозицій. Погоджуєтесь з публічним <a href="#">договором оферти</a> та <a href="#">політикою конфіденційності</a></span>
+          </label>
+        </div>
+
+        <button class="btn" type="submit" name="submit">
+          <span class="btn__text">Надіслати заявку</span>
+          <span class="btn__icon">
+            <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#arrow-right"></use></svg>
+          </span>
+        </button>
+      </div>
+    </fieldset>
+  </form>
+</div>
