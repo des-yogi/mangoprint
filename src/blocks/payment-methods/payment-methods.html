@@ -1,0 +1,53 @@
+<!--DEV
+@ @include('blocks/payment-methods/payment-methods.html', {
+  "title": "Для юридичних осіб та ФОП"
+})
+-->
+
+<section class="payment-methods">
+  <div class="payment-methods__header">
+    <h3 class="h4  payment-methods__title">@@title</h3>
+    <p>Ми працюємо офіційно та надаємо повний пакет документів.</p>
+    <p>Миттєва оплата через захищений платіжний шлюз (LiqPay / WayForPay) без комісії.</p>
+  </div>
+
+  <ul class="list-nostyled  payment-methods__row">
+
+    <li class="payment-methods__inner-col">
+      <p class="payment-methods__line">
+        <svg width="26" height="26" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#check-round-26"></use></svg>
+        <span>Безготівковий розрахунок (без ПДВ)</span>
+      </p>
+    </li>
+
+    <li class="payment-methods__inner-col">
+      <p class="payment-methods__line">
+        <svg width="26" height="26" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#check-round-26"></use></svg>
+        <span>Безготівковий розрахунок (з ПДВ)</span>
+      </p>
+    </li>
+
+    <li class="payment-methods__inner-col">
+      <p class="payment-methods__line">
+        <svg width="26" height="26" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#document-26"></use></svg>
+        <span>Документообіг</span>
+      </p>
+      <p class="payment-methods__line-add">Обмін актами виконаних робіт через «Вчасно», «M.E.Doc» або у паперовому вигляді разом із товаром.</p>
+    </li>
+
+  </ul>
+
+  <div class="payment-methods__alert">
+    <p class="payment-methods__line">
+      <svg width="26" height="26" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#question-26"></use></svg>
+      <span>Важлива інформація про передоплату</span>
+    </p>
+    <div class="payment-methods__descr">
+      <p>Оскільки вся наша продукція виготовляється за індивідуальним замовленням (кастомний друк та вишивка), ми працюємо за передоплатою:</p>
+      <ul>
+        <li>100% передоплата для замовлень до 5000 грн</li>
+        <li>50% - 70% аванс для великих корпоративних тиражів (залишок оплачується перед відвантаженням)</li>
+      </ul>
+    </div>
+  </div>
+</section>
