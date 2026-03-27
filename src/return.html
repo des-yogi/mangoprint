@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html class="no-js  page" lang="uk" prefix="og: https://ogp.me/ns#">
+
+<head>
+  <meta charset="utf-8">
+  <title>Повернення товару</title>
+  @@include('_include/page_head.html')
+</head>
+
+<body>
+<noscript>У вас вимкнено JavaScript. Приносимо свої вибачення, але це ускладнює використання даного сайту.</noscript>
+
+  <div class="page__inner">
+
+    <div class="page__content">
+
+      <div class="page-header__wrapper">
+        @@include('blocks/top-bar/top-bar.html')
+
+        <header class="page-header  page-header--inner-gray"
+                style="">
+
+          <div class="page-header__main"
+               data-scroll="500"
+               data-sticky-duration="500"
+               data-sticky-top="8"
+               data-sticky-side="16">
+
+            @@include('blocks/logo/logo.html', {
+              "addClass": "logo--header"
+            })
+
+            @@include('blocks/main-nav/main-nav.html')
+
+            <div class="page-header__service">
+              <!-- phone-selector -->
+              <div class="dropdown  phone-selector  mob-hidden">
+                <button class="dropdown-toggle  phone-selector__toggler" type="button" data-bs-toggle="dropdown" data-bs-offset="2,18" aria-expanded="false">
+                  <span class="phone-selector__icon">
+                    <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#phone"></use></svg>
+                  </span>
+                  <span>+ 38 063 453 55 64</span>
+                </button>
+                <ul class="dropdown-menu  phone-selector__menu">
+                  <li>
+                    <a href="tel:+380634535564" class="dropdown-item  phone-selector__link">
+                      <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#phone"></use></svg>
+                      <span>+ 38 063 453 55 64</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="mailto:mangoprintua@gmail.com" class="dropdown-item  phone-selector__link">
+                      <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#at"></use></svg>
+                      <span>mangoprintua@gmail.com</span>
+                    </a>
+                  </li>
+                  <li>
+                    @@include('blocks/social-links/social-links.html')
+                  </li>
+                </ul>
+              </div>
+
+              <button class="btn  btn--light  btn--adaptive" aria-label="Пошук по сайту">
+                <span class="btn__icon">
+                  <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#lens"></use></svg>
+                </span>
+              </button>
+
+              <button class="btn  btn--adaptive  mob-hidden" aria-label="Отримати консультацію">
+                <span class="btn__text">Консультація</span>
+                <span class="btn__icon">
+                  <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#message"></use></svg>
+                </span>
+              </button>
+
+              @@include('blocks/burger/burger.html')
+
+            </div>
+          </div>
+
+          <div class="container  page-header__hero  page-header__hero--inner">
+            @@include('blocks/breadcrumbs/breadcrumbs.html')
+
+            <h1 class="page-header__title">Повернення товару</h1>
+            <p class="page-header__intro">Згідно із Законом України «Про захист прав споживачів» покупець має право обміняти товар на аналогічний протягом 14 днів, якщо куплений товар не підійшов за формою, габаритами, фасоном, кольором, розміром або з інших причин, і якщо збережено товарний вигляд, ярлики і розрахунковий документ, виданий продавцем разом із товаром. Виняток становлять товари, які не підлягають поверненню за Законом, їх перелік ви можете переглянути за <a href="#">посиланням</a>.</p>
+
+          </div>
+        </header>
+      </div>
+
+      <main class="main">
+
+        @@include('blocks/faq/faq.html')
+
+        <section class="container  margin-y">
+          <h2 class="visually-hidden">Додаткова інформація</h2>
+
+          <div class="row" style="gap: 8px 0;">
+
+            <div class="col-1-2-3">
+              <a href="#" class="link-card">
+                <div class="link-card__text">
+                  <p class="h4  link-card__title">Повернення товару</p>
+                  <p class="link-card__descr">Умови повернення та обміну продукції. Що робити у випадку виявлення браку та чому персоналізований товар не підлягає поверненню</p>
+                </div>
+                <div class="link-card__footer">
+                  <svg width="26" height="26" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#return-26"></use></svg>
+
+                  <span class="link-card__more">
+                    <span>Детальніше</span>
+                    <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#arrow-right"></use></svg>
+                  </span>
+                </div>
+              </a>
+            </div>
+
+            <div class="col-1-2-3">
+              <a href="#" class="link-card">
+                <div class="link-card__text">
+                  <p class="h4  link-card__title">Питання та відповіді</p>
+                  <p class="link-card__descr">Зібрали відповіді на найпопулярніші запитання: як підготувати макет, як доглядати за принтами та як обрати правильний розмір одягу</p>
+                </div>
+                <div class="link-card__footer">
+                  <svg width="26" height="26" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#question-26"></use></svg>
+
+                  <span class="link-card__more">
+                    <span>Детальніше</span>
+                    <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#arrow-right"></use></svg>
+                  </span>
+                </div>
+              </a>
+            </div>
+
+            <div class="col-1-2-3">
+              <a href="#" class="link-card">
+                <div class="link-card__text">
+                  <p class="h4  link-card__title">Договір оферти</p>
+                  <p class="link-card__descr">Офіційні правила користування сайтом та умови публічної оферти. Юридичні аспекти співпраці, права та обов'язки сторін під час замовлення</p>
+                </div>
+                <div class="link-card__footer">
+                  <svg width="26" height="26" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#document-26"></use></svg>
+
+                  <span class="link-card__more">
+                    <span>Детальніше</span>
+                    <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#arrow-right"></use></svg>
+                  </span>
+                </div>
+              </a>
+            </div>
+
+          </div>
+        </section>
+
+        @@include('blocks/write-us/write-us.html')
+
+      </main>
+
+    </div>
+
+    <div class="page__footer-wrapper">
+      @@include('blocks/page-footer/page-footer.html')
+    </div>
+
+  </div>
+
+  @@include('_include/page_bottom.html')
+
+</body>
+</html>
