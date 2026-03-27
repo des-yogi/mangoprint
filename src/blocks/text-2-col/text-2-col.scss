@@ -37,5 +37,9 @@
       column-gap: 48px;
       column-fill: balance;
     }
+
+    li + li {
+      margin-top: 0.5em;
+    }
   }
 }

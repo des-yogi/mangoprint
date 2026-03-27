@@ -82,7 +82,11 @@
     "catalog-card": [],
     "payment-methods": [],
     "delivery-options": [],
-    "delivery-card": []
+    "delivery-card": [],
+    "job": [],
+    "job-card": [],
+    "job-form": [],
+    "table-responsive": []
   },
   "addCssBefore": [
     "../../node_modules/bootstrap/scss/_functions",

@@ -1,0 +1,16 @@
+.job-form {
+  $block-name:                &; // #{$block-name}__element
+
+  margin-top: 0;
+
+  &__wrapper {
+    height: 100%;
+    padding: 16px;
+    background-color: var(--gray-50);
+    border-radius: $border-radius--30;
+
+    @media (min-width: $screen-md) {
+      padding: 40px;
+    }
+  }
+}
