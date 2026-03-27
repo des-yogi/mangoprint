@@ -535,6 +535,16 @@ img {
   border-radius: 8px;
 }
 
+.clear-bg {
+  position: static !important;
+  background: none !important;
+
+  &::before,
+  &::after {
+    display: none !important;
+  }
+}
+
 
 // background: svg-load('../blocks/phones-modal/bg-img/phone.svg', fill=$main-color, stroke=rgba(255, 255, 255, 0));
 // background-image: svg-load('../blocks/phones-modal/bg-img/phone.svg', fill=$main-color);
