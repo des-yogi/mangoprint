@@ -1,0 +1,138 @@
+.delivery-card {
+  $block-name:                &; // #{$block-name}__element
+
+  padding: 24px 16px;
+  background-color: var(--white);
+  border-radius: $border-radius--30;
+  overflow: hidden;
+
+  @media (min-width: $screen-md) {
+    padding: 24px;
+  }
+
+  &[data-extra] {
+    position: relative;
+
+    &::after {
+      content: attr(data-extra);
+      position: absolute;
+      top: 0;
+      right: 25px;
+      padding: 0 16px;
+      font-size: $font-size-sm;
+      font-weight: 500;
+      border-bottom-right-radius: 12px;
+      border-bottom-left-radius: 12px;
+      color: var(--white);
+      background-color: var(--orange-400);
+    }
+  }
+
+
+  &__header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 16px;
+    margin-bottom: 24px;
+  }
+
+  &__header-icon {
+    flex: 0 0 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    background-color: var(--orange-50);
+    border-radius: $border-radius--16;
+
+    svg {
+      width: 24px;
+      height: 24px;
+      stroke: var(--orange-400);
+    }
+  }
+
+  &__header-text {
+
+    p:not(#{$block-name}__header-title) {
+      font-size: $font-size;
+      color: var(--gray-700);
+    }
+  }
+
+  &__header-title {
+    margin: 0 0 4px;
+  }
+
+  //&__body {
+  //}
+
+  &__option {
+    display: flex;
+    align-items: flex-start;
+    gap: 26px;
+    padding-left: 12px;
+
+    & + & {
+      padding-top: 12px;
+      margin-top: 12px;
+      border-top: 1px solid var(--gray-100);
+    }
+
+    svg {
+      flex: 0 0 26px;
+      width: 26px;
+      height: 26px;
+      stroke: var(--orange-400);
+    }
+  }
+
+  &__option-text {
+
+    &:not(#{$block-name}__option-title) {
+      font-size: $font-size-sm;
+    }
+
+    & > *:not(:last-child) {
+      margin-bottom: 8px;
+    }
+  }
+
+  &__option-title {
+    margin: 0 0 8px;
+    font-size: $font-size;
+    font-weight: 500;
+    color: var(--gray-900);
+  }
+
+  &__footer {
+    padding-top: 12px;
+    padding-left: 14px;
+    margin-top: 12px;
+    border-top: 1px solid var(--gray-100);
+  }
+
+  &__footer-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 28px;
+    font-size: $font-size-sm;
+    color: var(--gray-600);
+
+    & + & {
+      margin-top: 8px;
+    }
+
+    svg {
+      flex: 0 0 22px;
+      width: 22px;
+      height: 22px;
+      stroke: currentColor;
+    }
+  }
+
+  //&__footer-info {
+  //}
+}

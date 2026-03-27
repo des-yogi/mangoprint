@@ -1,0 +1,141 @@
+<!--DEV
+@ @include('blocks/delivery-options/delivery-options.html')
+-->
+
+<article class="container  margin-y  delivery-options">
+  <div class="delivery-options__header">
+    <h2 class="delivery-options__title">Варіанти доставки</h2>
+    <!-- <p></p> -->
+  </div>
+
+  <ul class="list-nostyled  delivery-options__list">
+
+    <li class="delivery-card">
+      <div class="delivery-card__header">
+        <span class="delivery-card__header-icon">
+          <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#delivery-1"></use></svg>
+        </span>
+        <div class="delivery-card__header-text">
+          <p class="h4  delivery-card__header-title">Доставка поштою</p>
+          <p>По всій Україні</p>
+        </div>
+      </div>
+
+      <ul class="list-nostyled  delivery-card__body">
+        <li class="delivery-card__option">
+          <svg width="26" height="26" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#address"></use></svg>
+          <div class="delivery-card__option-text">
+            <p class="delivery-card__option-title">У відділення</p>
+            <p>Надійний спосіб отримати замовлення в будь-якому місті</p>
+          </div>
+        </li>
+
+        <li class="delivery-card__option">
+          <svg width="26" height="26" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#courier-26"></use></svg>
+          <div class="delivery-card__option-text">
+            <p class="delivery-card__option-title">Кур'єром</p>
+            <p>Адресна доставка до дверей вашого офісу або дому</p>
+          </div>
+        </li>
+      </ul>
+
+      <div class="delivery-card__footer">
+        <div class="delivery-card__footer-item">
+          <svg width="22" height="22" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#time-22"></use></svg>
+          <p class="delivery-card__footer-info">Терміни: 1 - 2 дні після готовності</p>
+        </div>
+
+        <div class="delivery-card__footer-item">
+          <svg width="22" height="22" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#payment-22"></use></svg>
+          <p class="delivery-card__footer-info">Оплата за тарифами перевізника</p>
+        </div>
+      </div>
+    </li>
+
+    <li class="delivery-card" data-extra="Безкоштовно">
+      <div class="delivery-card__header">
+        <span class="delivery-card__header-icon">
+          <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#delivery-2"></use></svg>
+        </span>
+        <div class="delivery-card__header-text">
+          <p class="h4  delivery-card__header-title">Самовивіз у Києві</p>
+          <p>Завітайте до нас</p>
+        </div>
+      </div>
+
+      <ul class="list-nostyled  delivery-card__body">
+        <li class="delivery-card__option">
+          <svg width="26" height="26" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#address"></use></svg>
+          <div class="delivery-card__option-text">
+            <p class="delivery-card__option-title">Адреса</p>
+            <p>м. Київ, вул. Олекси Тихого, 84</p>
+            <p>(5 хв від метро Шулявська)</p>
+          </div>
+        </li>
+
+        <li class="delivery-card__option">
+          <svg width="26" height="26" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#time"></use></svg>
+          <div class="delivery-card__option-text">
+            <p class="delivery-card__option-title">Графік роботи</p>
+            <p>Пн-Пт з 10:00 до 19:00</p>
+          </div>
+        </li>
+      </ul>
+
+      <div class="delivery-card__footer">
+        <div class="delivery-card__footer-item">
+          <svg width="22" height="22" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#bonus-22"></use></svg>
+          <p class="delivery-card__footer-info">Бонус: Смачна кава та можливість подивитися зразки тканин для наступних замовлень</p>
+        </div>
+
+        <!-- <div class="delivery-card__footer-item">
+          <svg width="22" height="22" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#payment-22"></use></svg>
+          <p class="delivery-card__footer-info">Оплата за тарифами перевізника</p>
+        </div> -->
+      </div>
+    </li>
+
+    <li class="delivery-card">
+      <div class="delivery-card__header">
+        <span class="delivery-card__header-icon">
+          <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#delivery-3"></use></svg>
+        </span>
+        <div class="delivery-card__header-text">
+          <p class="h4  delivery-card__header-title">Термінова доставка</p>
+          <p>Таксі по Києву</p>
+        </div>
+      </div>
+
+      <ul class="list-nostyled  delivery-card__body">
+        <li class="delivery-card__option">
+          <svg width="26" height="26" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#taxy-26"></use></svg>
+          <div class="delivery-card__option-text">
+            <p class="delivery-card__option-title">Потрібно «на вчора»?</p>
+            <p>Ми запакуємо та передамо ваше замовлення водію Uklon / Uber / Bolt. <br>Ви отримуєте мерч день у день, щойно він зійде з виробництва</p>
+          </div>
+        </li>
+
+        <!-- <li class="delivery-card__option">
+          <svg width="26" height="26" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#courier-26"></use></svg>
+          <div class="delivery-card__option-text">
+            <p class="delivery-card__option-title">Кур'єром</p>
+            <p>Адресна доставка до дверей вашого офісу або дому</p>
+          </div>
+        </li> -->
+      </ul>
+
+      <div class="delivery-card__footer">
+        <div class="delivery-card__footer-item">
+          <svg width="22" height="22" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#time-22"></use></svg>
+          <p class="delivery-card__footer-info">Терміни: 1 - 2 дні після готовності</p>
+        </div>
+
+        <div class="delivery-card__footer-item">
+          <svg width="22" height="22" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#payment-22"></use></svg>
+          <p class="delivery-card__footer-info">За тарифами служби таксі</p>
+        </div>
+      </div>
+    </li>
+
+  </ul>
+</article>

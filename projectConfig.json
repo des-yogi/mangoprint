@@ -79,7 +79,10 @@
     "contacts": [],
     "contact-form": [],
     "catalog-tab": [],
-    "catalog-card": []
+    "catalog-card": [],
+    "payment-methods": [],
+    "delivery-options": [],
+    "delivery-card": []
   },
   "addCssBefore": [
     "../../node_modules/bootstrap/scss/_functions",
