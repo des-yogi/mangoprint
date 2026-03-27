@@ -11,3 +11,6 @@
 * https://des-yogi.github.io/mangoprint/contacts
 * https://des-yogi.github.io/mangoprint/shop
 * https://des-yogi.github.io/mangoprint/delivery
+* https://des-yogi.github.io/mangoprint/faq
+* https://des-yogi.github.io/mangoprint/return
+* https://des-yogi.github.io/mangoprint/text
