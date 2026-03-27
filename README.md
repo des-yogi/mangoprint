@@ -14,3 +14,5 @@
 * https://des-yogi.github.io/mangoprint/faq
 * https://des-yogi.github.io/mangoprint/return
 * https://des-yogi.github.io/mangoprint/text
+* https://des-yogi.github.io/mangoprint/career
+* https://des-yogi.github.io/mangoprint/job-details
