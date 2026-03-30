@@ -1,0 +1,42 @@
+.search-modal {
+  $block-name:                &; // #{$block-name}__element
+
+  &__input-group {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    padding: 4px 0;
+
+    @media (max-width: $screen-md - 1) {
+      flex-direction: column;
+      align-items: initial;
+    }
+
+    .field-text {
+      flex: 1 1 auto;
+      margin: 0;
+    }
+
+    .btn {
+      flex: 0 0 auto;
+    }
+  }
+
+  .modal-header,
+  .modal-body,
+  .modal-footer {
+    padding-right: 20px !important;
+    padding-left: 20px !important;
+  }
+
+  .modal-header {
+    padding-top: 20px !important;
+    padding-bottom: 0;
+  }
+
+  .modal-footer {
+    padding-top: 0;
+    padding-bottom: 20px !important;
+  }
+}

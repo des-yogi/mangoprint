@@ -86,7 +86,10 @@
     "job": [],
     "job-card": [],
     "job-form": [],
-    "table-responsive": []
+    "table-responsive": [],
+    "error-404": [],
+    "search-modal": [],
+    "search-result": []
   },
   "addCssBefore": [
     "../../node_modules/bootstrap/scss/_functions",

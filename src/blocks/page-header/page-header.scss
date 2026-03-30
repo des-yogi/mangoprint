@@ -119,4 +119,9 @@
       justify-content: center;
     }
   }
+
+  &--tileless {
+    background-color: var(--orange-50);
+    background-image: none;
+  }
 }

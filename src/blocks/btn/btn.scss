@@ -195,7 +195,7 @@
       background-color: var(--orange-100);
 
       #{$block-name}__icon {
-        ccolor: var(--white);
+        color: var(--white);
         background-color: var(--orange-400);
         border-color: var(--white);
       }
@@ -211,6 +211,23 @@
       //   background-color: var(--orange-50);
       //   border-color: var(--orange-50);
       // }
+    }
+
+    &--icon-only {
+      width: 56px;
+      height: 56px;
+      color: var(--orange-400);
+
+      @media (max-width: $screen-md - 1) {
+        height: 44px;
+        width: 44px;
+      }
+
+      #{$block-name}__icon {
+        color: currentColor;
+        background-color: var(--orange-50);
+        border: none;
+      }
     }
   }
 
