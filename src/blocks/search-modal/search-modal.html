@@ -1,0 +1,49 @@
+<!--DEV
+@ @include('blocks/search-modal/search-modal.html')
+-->
+
+<div class="modal  search-modal  fade"
+     id="searchModal"
+     tabindex="-1"
+     role="dialog"
+     aria-labelledby="searchModalTitle"
+     aria-hidden="true">
+  <div class="modal-dialog  modal-dialog-centered  modal-dialog-scrollable" role="document">
+    <div class="modal-content">
+      <div class="modal-header  search-modal__header">
+        <h4 class="modal-title visually-hidden" id="searchModalTitle">Пошук по сайту</h4>
+        <!-- <button class="btn  btn--white  btn--white--icon-only" type="button" data-bs-dismiss="modal" aria-label="Закрити">
+          <span class="btn__icon">
+            <svg width="20" height="20" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#close-20"></use></svg>
+          </span>
+        </button> -->
+      </div>
+      <div class="modal-body  search-modal__body">
+
+        <form class="search-modal__form" action="#" method="post">
+
+          <div class="search-modal__input-group">
+
+            <label class="field-text">
+              <span class="visually-hidden">Поле пошуку</span>
+              <span class="field-text__input-wrap">
+                <input class="field-text__input" type="text" name="search" value="" placeholder="Пошук...">
+                <span class="field-text__help-text" data-error="search"></span>
+              </span>
+            </label>
+
+            <button class="btn" type="submit" name="search-submit">
+              <span class="btn__text">Знайти</span>
+              <span class="btn__icon">
+                <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#lens"></use></svg>
+              </span>
+            </button>
+          </div>
+
+        </form>
+      </div>
+
+      <div class="modal-footer  search-modal__footer"></div>
+    </div>
+  </div>
+</div>
