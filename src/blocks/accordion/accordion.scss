@@ -45,12 +45,14 @@
       box-shadow: none;
 
       #{$block-name}__icon {
-        background-color: var(--orange-100);
+        color: currentColor;
+        background-color: var(--orange-200);
       }
     }
 
     &.focus-visible {
-      box-shadow: 0 0 0 4px var(--orange-100);
+      color: currentColor;
+      box-shadow: 0 0 0 4px var(--orange-200);
     }
 
     &.collapsed {

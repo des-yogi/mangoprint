@@ -99,6 +99,7 @@
     "../../node_modules/bootstrap/scss/_nav",
     "../../node_modules/bootstrap/scss/_accordion",
     "../../node_modules/bootstrap/scss/_modal",
+    "../../node_modules/bootstrap/scss/_offcanvas",
     "./src/scss/variables.scss",
     "./src/scss/mixins.scss",
     "../../node_modules/@fancyapps/ui/dist/fancybox/fancybox.css",
