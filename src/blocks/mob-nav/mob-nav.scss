@@ -1,9 +1,161 @@
-// В этом файле должны быть стили для БЭМ-блока mob-nav, его элементов, 
-// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
-// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
-
 .mob-nav {
-
   $block-name:                &; // #{$block-name}__element
 
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  padding-top: 8px;
+
+  @media (min-width: $screen-xl) {
+    display: none !important;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 16px 8px 16px 12px;
+    color: var(--gray-900);
+    background-color: var(--white);
+    border-radius: $border-radius--30;
+    border: 1px solid var(--gray-150);
+    box-shadow: 0 250px 150px rgba(0, 0, 0, 0.02),
+                0 111px 111px rgba(0, 0, 0, 0.03),
+                0 28px 61px rgba(0, 0, 0, 0.03),
+                0 445px 178px rgba(0, 0, 0, 0.01),
+                0 250px 150px rgba(0, 0, 0, 0.02),
+                0 111px 111px rgba(0, 0, 0, 0.03),
+                0 28px 61px rgba(0, 0, 0, 0.03);
+
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+
+    @media (min-width: $screen-md) {
+      padding: 24px 40px;
+    }
+  }
+
+  &__list-lvl2,
+  &__list-lvl3 {
+    padding-top: 8px;
+  }
+
+  &__list-lvl3 {
+    height: 100%;
+  }
+
+  &__list-lvl2 {
+
+    &:has(#{$block-name}__list-lvl3) {
+
+      @media (max-width: $screen-md - 1) {
+        display: flex;
+        flex-direction: column;
+        gap: 16px 0;
+      }
+
+      @media (min-width: $screen-md) {
+        display: flex;
+        flex-wrap: wrap;
+        //align-items: flex-start;
+        justify-content: space-between;
+        gap: 24px 48px;
+      }
+
+      & > li {
+        position: relative;
+
+        @media (min-width: $screen-md) {
+          flex: 1 1;
+          flex-basis: calc(50% - 24px);
+          //display: flex;
+          //flex-direction: column;
+        }
+
+        &:not(:last-child) {
+
+          &::after {
+
+            @media (max-width: $screen-md - 1) {
+              content: "";
+              position: absolute;
+              bottom: -9px;
+              right: 0;
+              left: 0;
+              height: 1px;
+              background-color: var(--gray-150);
+            }
+          }
+        }
+
+        &:nth-child(odd) {
+
+          &::after {
+
+            @media (min-width: $screen-md) {
+              content: "";
+              position: absolute;
+              top: 0;
+              bottom: 0;
+              right: -23.5px;
+              width: 1px;
+              background-color: var(--gray-150);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  //&__item {
+  //}
+
+  &__item-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px 24px;
+    //margin-bottom: 8px;
+  }
+
+  &__link {
+    flex: 1 1 auto;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 0;
+    color: currentColor;
+    text-decoration: none !important;
+
+    &--lvl2 {
+      padding: 4px 0;
+    }
+  }
+
+  &__more {
+    flex: 0 0 44px;
+
+    //&:hover,
+    //&:focus {
+    //}
+
+    .accordion__icon {
+      background-color: var(--orange-50);
+    }
+  }
+
+  //&__inner {
+  //}
+
+  &__category {
+    margin: 8px 0 0;
+    font-size: $font-size-sm;
+    font-weight: 500;
+    color: var(--gray-500);
+
+    @media (min-width: $screen-md) {
+      margin-top: 0;
+    }
+  }
 }

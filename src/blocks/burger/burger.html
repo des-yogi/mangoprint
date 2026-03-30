@@ -1,7 +1,24 @@
 <!--DEV
 @ @include('blocks/burger/burger.html')
-<div class="burger"><span></span></div>
-<div class="burger  burger--close"><span></span></div>
+
+<button id="mob-nav-toggler"
+        class="burger  dt-hidden"
+        type="button"
+        data-bs-toggle="offcanvas"
+        data-bs-target="#mobNav"
+        aria-controls="mobNav">
+  <span></span>
+</button>
+
 -->
 
-<button id="mob-nav-toggler" class="burger  dt-hidden"><span></span></button>
+<button id="mob-nav-toggler"
+        class="burger  dt-hidden"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#mobNav"
+        aria-expanded="false"
+        aria-controls="mobNav"
+        >
+  <span></span>
+</button>
