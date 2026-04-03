@@ -33,10 +33,12 @@
     color: var(--white);
     background-color: var(--orange-600);
 
-    &__icon {
+    #{$block-name}__icon {
+      border-color: var(--orange-600);
 
       @media (min-width: $screen-xxl) {
         color: var(--orange-600);
+        border-color: currentColor;
       }
     }
   }
@@ -75,7 +77,7 @@
     color: var(--orange-400);
     background-color: var(--white);
     border-radius: $border-radius;
-    border: 2px solid var(--orange-400);
+    border: 2px solid currentColor;
     transition: $transition;
   }
 
@@ -102,12 +104,17 @@
           background-color: var(--orange-600);
           border-color: var(--orange-600);
         }
+
+        @media (min-width: $screen-xxl) {
+          border-color: var(--orange-600);
+        }
       }
     }
 
     #{$block-name}__icon {
       color: var(--white);
       background-color: var(--orange-400);
+      border-color: transparent;
 
       @media (min-width: $screen-xxl) {
         color: var(--orange-400);
@@ -117,6 +124,17 @@
     }
 
     &--icon-only {
+
+      &:hover,
+      &:focus {
+
+        #{$block-name}__icon {
+
+          @media (min-width: $screen-xxl) {
+            background-color: var(--orange-600);
+          }
+        }
+      }
 
       #{$block-name}__icon {
 
@@ -143,14 +161,14 @@
       #{$block-name}__icon {
         color: currentColor;
         background-color: var(--white);
-        border-color: var(--orange-200);
+        border-color: var(--orange-200) !important;
       }
     }
 
     #{$block-name}__icon {
       color: var(--orange-500);
       background-color: var(--white);
-      border-color: var(--orange-100);
+      border-color: var(--orange-50);
     }
 
     &.btn--adaptive {
@@ -195,9 +213,9 @@
       background-color: var(--orange-100);
 
       #{$block-name}__icon {
-        color: var(--white);
+        color: var(--white) !important;
         background-color: var(--orange-400);
-        border-color: var(--white);
+        border-color: var(--orange-100) !important;
       }
     }
 
@@ -223,9 +241,18 @@
         width: 44px;
       }
 
+      &:hover,
+      &:focus {
+
+        #{$block-name}__icon {
+          color: var(--orange-600) !important;
+          background-color: var(--orange-100);
+        }
+      }
+
       #{$block-name}__icon {
         color: currentColor;
-        background-color: var(--orange-50);
+        background-color: var(--white);
         border: none;
       }
     }
@@ -246,6 +273,7 @@
     }
 
     #{$block-name}__icon {
+      //border-color: var(--orange400);
 
       @media (max-width: $screen-md - 1) {
         height: 44px;
@@ -253,6 +281,4 @@
       }
     }
   }
-
-  &--small {}
 }
