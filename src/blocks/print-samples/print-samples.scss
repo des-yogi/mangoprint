@@ -52,7 +52,36 @@
   }
 
   &__item {
+    position: relative;
+    overflow: hidden;
     user-select: none;
+
+    &:hover,
+    &:focus {
+
+      &::after {
+        opacity: 1;
+      }
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      right: 16px;
+      bottom: 16px;
+      width: 56px;
+      height: 56px;
+      background-color: var(--white);
+      border-radius: $border-radius;
+      background-position: center;
+      background-size: 24px;
+      background-repeat: no-repeat;
+      background-image: svg-load('../blocks/example-card/bg-img/lens-color.svg', stroke=#F1471D);
+      pointer-events: none;
+      user-select: none;
+      transition: $transition;
+      opacity: 0;
+    }
 
     /* Базовые размеры */
     &--1x1 {

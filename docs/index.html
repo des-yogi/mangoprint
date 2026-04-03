@@ -482,7 +482,7 @@
                 </ul>
               </div>
 
-              <button class="btn  btn--light  btn--adaptive"
+              <button class="btn  btn--light  btn--adaptive  mob-hidden"
                       aria-label="Пошук по сайту"
                       data-bs-toggle="modal"
                       data-bs-target="#searchModal">
@@ -491,7 +491,7 @@
                 </span>
               </button>
 
-              <button class="btn  btn--adaptive  mob-hidden"
+              <button class="btn  btn--adaptive"
                       aria-label="Отримати консультацію"
                       data-bs-toggle="modal"
                       data-bs-target="#exampleModal">
@@ -520,7 +520,116 @@
                  aria-labelledby="mobNavLabel">
               <!-- <div class="offcanvas-header"></div> -->
               <h4 class="visually-hidden" id="mobNavLabel">Мобільне меню (навігація)</h4>
+
               <ul class="list-nostyled  accordion  mob-nav__list" id="mobNavList">
+
+                <li class="mob-nav__item">
+                  <div class="mob-nav__service">
+                    <div class="mob-nav__service-top">
+                      <div class="dropdown  phone-selector">
+                        <button class="dropdown-toggle  phone-selector__toggler" type="button" data-bs-toggle="dropdown" data-bs-offset="2,18" aria-expanded="false">
+                          <span class="phone-selector__icon">
+                            <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#phone"></use></svg>
+                          </span>
+                          <span>+ 38 063 453 55 64</span>
+                        </button>
+                        <ul class="dropdown-menu  phone-selector__menu">
+                          <li>
+                            <a href="tel:+380634535564" class="dropdown-item  phone-selector__link">
+                              <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#phone"></use></svg>
+                              <span>+ 38 063 453 55 64</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="mailto:mangoprintua@gmail.com" class="dropdown-item  phone-selector__link">
+                              <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#at"></use></svg>
+                              <span>mangoprintua@gmail.com</span>
+                            </a>
+                          </li>
+                          <li>
+
+                            <section class="social-links">
+                              <h3 class="visually-hidden">Соціальні мережі та месенджери</h3>
+
+                              <ul class="list-nostyled  social-links__list">
+                                <li class="social-links__item">
+                                  <a href="#" class="social-links__link" aria-label="Facebook" target="_blank" rel="nofollow noopener">
+                                    <svg width="20" height="20" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#facebook-20"></use></svg>
+                                  </a>
+                                </li>
+                                <li class="social-links__item">
+                                  <a href="#" class="social-links__link" aria-label="Instagram" target="_blank" rel="nofollow noopener">
+                                    <svg width="20" height="20" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#instagram-20"></use></svg>
+                                  </a>
+                                </li>
+                                <li class="social-links__item">
+                                  <a href="#" class="social-links__link" aria-label="Telegram" target="_blank" rel="nofollow noopener">
+                                    <svg width="20" height="20" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#telegram-20"></use></svg>
+                                  </a>
+                                </li>
+                              </ul>
+                            </section>
+
+                          </li>
+                        </ul>
+                      </div>
+
+                      <button class="btn  btn--light  btn--adaptive"
+                            aria-label="Пошук по сайту"
+                            data-bs-toggle="modal"
+                            data-bs-target="#searchModal">
+                        <span class="btn__icon">
+                          <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#lens"></use></svg>
+                        </span>
+                      </button>
+                    </div>
+
+                    <div class="mob-nav__service-middle">
+                      <button class="btn"
+                              aria-label="Отримати консультацію"
+                              data-bs-toggle="modal"
+                              data-bs-target="#exampleModal">
+                        <span class="btn__text">Консультація</span>
+                        <span class="btn__icon">
+                          <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#message"></use></svg>
+                        </span>
+                      </button>
+                    </div>
+
+                    <div class="mob-nav__service-bottom">
+                      <div class="dropdown  lang-switcher">
+                        <button class="top-bar__btn  dropdown-toggle"
+                                id="lang-switcher"
+                                type="button"
+                                data-bs-toggle="dropdown"
+                                aria-expanded="false"
+                                data-bs-offset="0,8"
+                                aria-label="Змінити мову">
+                          <span>Укр</span>
+                        </button>
+                        <ul class="dropdown-menu">
+                          <li class="active"><a class="dropdown-item" href="#">Укр</a></li>
+                          <li><a class="dropdown-item" href="#">Eng</a></li>
+                        </ul>
+                      </div>
+
+                      <!-- <a href="#" class="top-bar__btn">
+                        <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#user-circle"></use></svg>
+                        <span>Особистий кабінет</span>
+                      </a> -->
+
+                      <a href="#" class="top-bar__btn">
+                        <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#shop"></use></svg>
+                        <span>Магазин</span>
+                      </a>
+
+                      <a href="#" class="top-bar__btn">
+                        <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#basket"></use></svg>
+                        <span>Кошик <span>(2)</span></span>
+                      </a>
+                    </div>
+                  </div>
+                </li>
 
                 <li class="mob-nav__item">
                   <div class="mob-nav__item-header">
@@ -1012,10 +1121,9 @@
 
                       <a href="#" class="btn  btn--light">
                         <span class="btn__text">Переглянути кейси</span>
-
-                        <span class="btn__icon">
+                        <!-- <span class="btn__icon">
                           <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#arrow-right"></use></svg>
-                        </span>
+                        </span> -->
                       </a>
                     </div>
                   </div>
