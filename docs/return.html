@@ -34,7 +34,7 @@
 
     <div class="page__content">
 
-      <div class="page-header__wrapper">
+      <div class="page-header__wrapper">
 
         <div class="top-bar">
 
@@ -108,7 +108,7 @@
                data-scroll="500"
                data-sticky-duration="500"
                data-sticky-top="8"
-               data-sticky-side="16">
+               data-sticky-side="16">
 
             <a href="index.html" class="logo  logo--header" title="Mango print" aria-label="Mango print">
               <img src="img/mangoprint-logo.svg" alt="Mango print текст" width="259" height="62" loading="eager"
@@ -455,7 +455,7 @@
                       <span>mangoprintua@gmail.com</span>
                     </a>
                   </li>
-                  <li>
+                  <li>
 
                     <section class="social-links">
                       <h3 class="visually-hidden">Соціальні мережі та месенджери</h3>
@@ -494,7 +494,7 @@
                 <span class="btn__icon">
                   <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#message"></use></svg>
                 </span>
-              </button>
+              </button>
 
               <button id="mob-nav-toggler"
                       class="burger  dt-hidden"
@@ -509,9 +509,584 @@
 
 
             </div>
+
+            <nav class="collapse  mob-nav"
+                 id="mobNav"
+                 aria-labelledby="mobNavLabel">
+              <!-- <div class="offcanvas-header"></div> -->
+              <h4 class="visually-hidden" id="mobNavLabel">Мобільне меню (навігація)</h4>
+
+              <ul class="list-nostyled  accordion  mob-nav__list" id="mobNavList">
+
+                <li class="mob-nav__item">
+                  <div class="mob-nav__service">
+                    <div class="mob-nav__service-top">
+                      <div class="dropdown  phone-selector">
+                        <button class="dropdown-toggle  phone-selector__toggler" type="button" data-bs-toggle="dropdown" data-bs-offset="2,18" aria-expanded="false">
+                          <span class="phone-selector__icon">
+                            <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#phone"></use></svg>
+                          </span>
+                          <span>+ 38 063 453 55 64</span>
+                        </button>
+                        <ul class="dropdown-menu  phone-selector__menu">
+                          <li>
+                            <a href="tel:+380634535564" class="dropdown-item  phone-selector__link">
+                              <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#phone"></use></svg>
+                              <span>+ 38 063 453 55 64</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="mailto:mangoprintua@gmail.com" class="dropdown-item  phone-selector__link">
+                              <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#at"></use></svg>
+                              <span>mangoprintua@gmail.com</span>
+                            </a>
+                          </li>
+                          <li>
+
+                            <section class="social-links">
+                              <h3 class="visually-hidden">Соціальні мережі та месенджери</h3>
+
+                              <ul class="list-nostyled  social-links__list">
+                                <li class="social-links__item">
+                                  <a href="#" class="social-links__link" aria-label="Facebook" target="_blank" rel="nofollow noopener">
+                                    <svg width="20" height="20" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#facebook-20"></use></svg>
+                                  </a>
+                                </li>
+                                <li class="social-links__item">
+                                  <a href="#" class="social-links__link" aria-label="Instagram" target="_blank" rel="nofollow noopener">
+                                    <svg width="20" height="20" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#instagram-20"></use></svg>
+                                  </a>
+                                </li>
+                                <li class="social-links__item">
+                                  <a href="#" class="social-links__link" aria-label="Telegram" target="_blank" rel="nofollow noopener">
+                                    <svg width="20" height="20" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#telegram-20"></use></svg>
+                                  </a>
+                                </li>
+                              </ul>
+                            </section>
+
+                          </li>
+                        </ul>
+                      </div>
+
+                    </div>
+
+                    <div class="mob-nav__service-middle">
+                      <label class="field-text">
+                        <span class="field-text__name  visually-hidden">Пошук по сайту</span>
+                        <span class="field-text__input-wrap">
+                          <input class="field-text__input" type="search" name="search" placeholder="Пошук…">
+                          <!-- <span class="field-text__help-text">Пояснение</span> -->
+                        </span>
+                      </label>
+                    </div>
+
+                    <div class="mob-nav__service-bottom">
+                      <div class="dropdown  lang-switcher">
+                        <button class="top-bar__btn  dropdown-toggle"
+                                id="lang-switcher-mob"
+                                type="button"
+                                data-bs-toggle="dropdown"
+                                aria-expanded="false"
+                                data-bs-offset="0,8"
+                                aria-label="Змінити мову">
+                          <span>Укр</span>
+                        </button>
+                        <ul class="dropdown-menu">
+                          <li class="active"><a class="dropdown-item" href="#">Укр</a></li>
+                          <li><a class="dropdown-item" href="#">Eng</a></li>
+                        </ul>
+                      </div>
+
+                      <!-- <a href="#" class="top-bar__btn">
+                        <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#user-circle"></use></svg>
+                        <span>Особистий кабінет</span>
+                      </a> -->
+
+                      <a href="#" class="top-bar__btn">
+                        <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#shop"></use></svg>
+                        <span>Магазин</span>
+                      </a>
+
+                      <a href="#" class="top-bar__btn">
+                        <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#basket"></use></svg>
+                        <span>Кошик <span>(2)</span></span>
+                      </a>
+                    </div>
+                  </div>
+                </li>
+
+                <li class="mob-nav__item">
+                  <div class="mob-nav__item-header">
+                    <a href="#" class="mob-nav__link">Рішення</a>
+                    <button class="accordion-button collapsed  mob-nav__more"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#mobNavItem-1"
+                            aria-expanded="false"
+                            aria-controls="mobNavItem-1">
+                      <span class="accordion__icon"></span>
+                    </button>
+                  </div>
+                  <div class="accordion-collapse collapse  mob-nav__inner"
+                       id="mobNavItem-1"
+                       data-bs-parent="#mobNavList">
+                    <ul class="list-nostyled  mob-nav__list-lvl2">
+                      <li class="mob-nav__item  mob-nav__item--lvl2">
+                        <a href="#" class="mob-nav__link  mob-nav__link--lvl2">Корпоративний мерч</a>
+                      </li>
+                      <li class="mob-nav__item  mob-nav__item--lvl2">
+                        <a href="#" class="mob-nav__link  mob-nav__link--lvl2">Брендований одяг</a>
+                      </li>
+                      <li class="mob-nav__item  mob-nav__item--lvl2">
+                        <a href="#" class="mob-nav__link  mob-nav__link--lvl2">Welcome packs для HR</a>
+                      </li>
+                      <li class="mob-nav__item  mob-nav__item--lvl2">
+                        <a href="#" class="mob-nav__link  mob-nav__link--lvl2">Мерч для подій</a>
+                      </li>
+                      <li class="mob-nav__item  mob-nav__item--lvl2">
+                        <a href="#" class="mob-nav__link  mob-nav__link--lvl2">Уніформа для персоналу</a>
+                      </li>
+                      <li class="mob-nav__item  mob-nav__item--lvl2">
+                        <a href="#" class="mob-nav__link  mob-nav__link--lvl2">Рішення для HR</a>
+                      </li>
+                      <li class="mob-nav__item  mob-nav__item--lvl2">
+                        <a href="#" class="mob-nav__link  mob-nav__link--lvl2">Рішення для маркетологів</a>
+                      </li>
+                      <li class="mob-nav__item  mob-nav__item--lvl2">
+                        <a href="#" class="mob-nav__link  mob-nav__link--lvl2">Рішення для event-менеджерів</a>
+                      </li>
+                      <li class="mob-nav__item  mob-nav__item--lvl2">
+                        <a href="#" class="mob-nav__link  mob-nav__link--lvl2">Для власників бізнесу</a>
+                      </li>
+                      <li class="mob-nav__item  mob-nav__item--lvl2">
+                        <a href="#" class="mob-nav__link  mob-nav__link--lvl2">Всі пакетні рішення</a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+
+                <li class="mob-nav__item">
+                  <div class="mob-nav__item-header">
+                    <a href="#" class="mob-nav__link">Друк</a>
+                    <button class="accordion-button collapsed  mob-nav__more"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#mobNavItem-2"
+                            aria-expanded="false"
+                            aria-controls="mobNavItem-2">
+                      <span class="accordion__icon"></span>
+                    </button>
+                  </div>
+                  <div class="accordion-collapse collapse  mob-nav__inner"
+                       id="mobNavItem-2"
+                       data-bs-parent="#mobNavList">
+                    <ul class="list-nostyled  mob-nav__list-lvl2">
+
+                      <li class="mob-nav__item  mob-nav__item--lvl2">
+                        <p class="mob-nav__category">Технології друку</p>
+                        <ul class="list-nostyled  mob-nav__list-lvl3">
+                          <li class="mob-nav__item  mob-nav__item--lvl3">
+                            <a href="#" class="mob-nav__link  mob-nav__link--lvl2">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" stroke="#ef4823" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.18 10.5V12c0 4.97-8.18 8.25-8.18 10.5 0-2.25-8.18-5.53-8.18-10.5v-1.5m3.72-5.25h8.92c2.46 0 4.46 2 4.47 4.49v.02c0 .41-.32.74-.72.75H3.82a.74.74 0 0 1-.74-.73v-.02c0-2.48 1.99-4.5 4.45-4.5zm4.46 0V4.5c0-1.66 1.33-3 2.97-3"></path></svg>
+                              Шовкотрафаретний друк
+                            </a>
+                          </li>
+                          <li class="mob-nav__item  mob-nav__item--lvl3">
+                            <a href="#" class="mob-nav__link  mob-nav__link--lvl2">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" stroke="#ef4823" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.18 10.5V12c0 4.97-8.18 8.25-8.18 10.5 0-2.25-8.18-5.53-8.18-10.5v-1.5m3.72-5.25h8.92c2.46 0 4.46 2 4.47 4.49v.02c0 .41-.32.74-.72.75H3.82a.74.74 0 0 1-.74-.73v-.02c0-2.48 1.99-4.5 4.45-4.5zm4.46 0V4.5c0-1.66 1.33-3 2.97-3"></path></svg>
+                              Термоперенесення (DTF друк)
+                            </a>
+                          </li>
+                          <li class="mob-nav__item  mob-nav__item--lvl3">
+                            <a href="#" class="mob-nav__link  mob-nav__link--lvl2">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" stroke="#ef4823" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.18 10.5V12c0 4.97-8.18 8.25-8.18 10.5 0-2.25-8.18-5.53-8.18-10.5v-1.5m3.72-5.25h8.92c2.46 0 4.46 2 4.47 4.49v.02c0 .41-.32.74-.72.75H3.82a.74.74 0 0 1-.74-.73v-.02c0-2.48 1.99-4.5 4.45-4.5zm4.46 0V4.5c0-1.66 1.33-3 2.97-3"></path></svg>
+                              Термоперенесення (DTF друк)
+                              УФ DTF друк
+                            </a>
+                          </li>
+                        </ul>
+                      </li>
+
+                      <li class="mob-nav__item  mob-nav__item--lvl2">
+                        <p class="mob-nav__category">Друк на одязі</p>
+                        <ul class="list-nostyled  mob-nav__list-lvl3">
+                          <li class="mob-nav__item  mob-nav__item--lvl3">
+                            <a href="#" class="mob-nav__link  mob-nav__link--lvl2">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" stroke="#ef4823" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.18 10.5V12c0 4.97-8.18 8.25-8.18 10.5 0-2.25-8.18-5.53-8.18-10.5v-1.5m3.72-5.25h8.92c2.46 0 4.46 2 4.47 4.49v.02c0 .41-.32.74-.72.75H3.82a.74.74 0 0 1-.74-.73v-.02c0-2.48 1.99-4.5 4.45-4.5zm4.46 0V4.5c0-1.66 1.33-3 2.97-3"></path></svg>
+                              Друк на футболках
+                            </a>
+                          </li>
+                          <li class="mob-nav__item  mob-nav__item--lvl3">
+                            <a href="#" class="mob-nav__link  mob-nav__link--lvl2">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" stroke="#ef4823" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.18 10.5V12c0 4.97-8.18 8.25-8.18 10.5 0-2.25-8.18-5.53-8.18-10.5v-1.5m3.72-5.25h8.92c2.46 0 4.46 2 4.47 4.49v.02c0 .41-.32.74-.72.75H3.82a.74.74 0 0 1-.74-.73v-.02c0-2.48 1.99-4.5 4.45-4.5zm4.46 0V4.5c0-1.66 1.33-3 2.97-3"></path></svg>
+                              Друк на худі
+                            </a>
+                          </li>
+                          <li class="mob-nav__item  mob-nav__item--lvl3">
+                            <a href="#" class="mob-nav__link  mob-nav__link--lvl2">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" stroke="#ef4823" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.18 10.5V12c0 4.97-8.18 8.25-8.18 10.5 0-2.25-8.18-5.53-8.18-10.5v-1.5m3.72-5.25h8.92c2.46 0 4.46 2 4.47 4.49v.02c0 .41-.32.74-.72.75H3.82a.74.74 0 0 1-.74-.73v-.02c0-2.48 1.99-4.5 4.45-4.5zm4.46 0V4.5c0-1.66 1.33-3 2.97-3"></path></svg>
+                              Друк на світшотах
+                            </a>
+                          </li>
+                          <li class="mob-nav__item  mob-nav__item--lvl3">
+                            <a href="#" class="mob-nav__link  mob-nav__link--lvl2">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" stroke="#ef4823" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.18 10.5V12c0 4.97-8.18 8.25-8.18 10.5 0-2.25-8.18-5.53-8.18-10.5v-1.5m3.72-5.25h8.92c2.46 0 4.46 2 4.47 4.49v.02c0 .41-.32.74-.72.75H3.82a.74.74 0 0 1-.74-.73v-.02c0-2.48 1.99-4.5 4.45-4.5zm4.46 0V4.5c0-1.66 1.33-3 2.97-3"></path></svg>
+                              Друк на лонгслівах
+                            </a>
+                          </li>
+                          <li class="mob-nav__item  mob-nav__item--lvl3">
+                            <a href="#" class="mob-nav__link  mob-nav__link--lvl2">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" stroke="#ef4823" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.18 10.5V12c0 4.97-8.18 8.25-8.18 10.5 0-2.25-8.18-5.53-8.18-10.5v-1.5m3.72-5.25h8.92c2.46 0 4.46 2 4.47 4.49v.02c0 .41-.32.74-.72.75H3.82a.74.74 0 0 1-.74-.73v-.02c0-2.48 1.99-4.5 4.45-4.5zm4.46 0V4.5c0-1.66 1.33-3 2.97-3"></path></svg>
+                              Друк на поло
+                            </a>
+                          </li>
+                          <li class="mob-nav__item  mob-nav__item--lvl3">
+                            <a href="#" class="mob-nav__link  mob-nav__link--lvl2">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" stroke="#ef4823" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.18 10.5V12c0 4.97-8.18 8.25-8.18 10.5 0-2.25-8.18-5.53-8.18-10.5v-1.5m3.72-5.25h8.92c2.46 0 4.46 2 4.47 4.49v.02c0 .41-.32.74-.72.75H3.82a.74.74 0 0 1-.74-.73v-.02c0-2.48 1.99-4.5 4.45-4.5zm4.46 0V4.5c0-1.66 1.33-3 2.97-3"></path></svg>
+                              Друк на жилетах
+                            </a>
+                          </li>
+                          <li class="mob-nav__item  mob-nav__item--lvl3">
+                            <a href="#" class="mob-nav__link  mob-nav__link--lvl2">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" stroke="#ef4823" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.18 10.5V12c0 4.97-8.18 8.25-8.18 10.5 0-2.25-8.18-5.53-8.18-10.5v-1.5m3.72-5.25h8.92c2.46 0 4.46 2 4.47 4.49v.02c0 .41-.32.74-.72.75H3.82a.74.74 0 0 1-.74-.73v-.02c0-2.48 1.99-4.5 4.45-4.5zm4.46 0V4.5c0-1.66 1.33-3 2.97-3"></path></svg>
+                              Друк на флісках
+                            </a>
+                          </li>
+                          <li class="mob-nav__item  mob-nav__item--lvl3">
+                            <a href="#" class="mob-nav__link  mob-nav__link--lvl2">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" stroke="#ef4823" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.18 10.5V12c0 4.97-8.18 8.25-8.18 10.5 0-2.25-8.18-5.53-8.18-10.5v-1.5m3.72-5.25h8.92c2.46 0 4.46 2 4.47 4.49v.02c0 .41-.32.74-.72.75H3.82a.74.74 0 0 1-.74-.73v-.02c0-2.48 1.99-4.5 4.45-4.5zm4.46 0V4.5c0-1.66 1.33-3 2.97-3"></path></svg>
+                              Друк на спецодягу
+                            </a>
+                          </li>
+                        </ul>
+                      </li>
+
+                      <li class="mob-nav__item  mob-nav__item--lvl2">
+                        <p class="mob-nav__category">Аксесуари та текстиль</p>
+                        <ul class="list-nostyled  mob-nav__list-lvl3">
+                          <li class="mob-nav__item  mob-nav__item--lvl3">
+                            <a href="#" class="mob-nav__link  mob-nav__link--lvl2">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" stroke="#ef4823" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.18 10.5V12c0 4.97-8.18 8.25-8.18 10.5 0-2.25-8.18-5.53-8.18-10.5v-1.5m3.72-5.25h8.92c2.46 0 4.46 2 4.47 4.49v.02c0 .41-.32.74-.72.75H3.82a.74.74 0 0 1-.74-.73v-.02c0-2.48 1.99-4.5 4.45-4.5zm4.46 0V4.5c0-1.66 1.33-3 2.97-3"></path></svg>
+                              Друк на кепках
+                            </a>
+                          </li>
+                          <li class="mob-nav__item  mob-nav__item--lvl3">
+                            <a href="#" class="mob-nav__link  mob-nav__link--lvl2">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" stroke="#ef4823" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.18 10.5V12c0 4.97-8.18 8.25-8.18 10.5 0-2.25-8.18-5.53-8.18-10.5v-1.5m3.72-5.25h8.92c2.46 0 4.46 2 4.47 4.49v.02c0 .41-.32.74-.72.75H3.82a.74.74 0 0 1-.74-.73v-.02c0-2.48 1.99-4.5 4.45-4.5zm4.46 0V4.5c0-1.66 1.33-3 2.97-3"></path></svg>
+                              Друк на шоперах
+                            </a>
+                          </li>
+                          <li class="mob-nav__item  mob-nav__item--lvl3">
+                            <a href="#" class="mob-nav__link  mob-nav__link--lvl2">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" stroke="#ef4823" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.18 10.5V12c0 4.97-8.18 8.25-8.18 10.5 0-2.25-8.18-5.53-8.18-10.5v-1.5m3.72-5.25h8.92c2.46 0 4.46 2 4.47 4.49v.02c0 .41-.32.74-.72.75H3.82a.74.74 0 0 1-.74-.73v-.02c0-2.48 1.99-4.5 4.45-4.5zm4.46 0V4.5c0-1.66 1.33-3 2.97-3"></path></svg>
+                              Друк на сумках
+                            </a>
+                          </li>
+                          <li class="mob-nav__item  mob-nav__item--lvl3">
+                            <a href="#" class="mob-nav__link  mob-nav__link--lvl2">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" stroke="#ef4823" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.18 10.5V12c0 4.97-8.18 8.25-8.18 10.5 0-2.25-8.18-5.53-8.18-10.5v-1.5m3.72-5.25h8.92c2.46 0 4.46 2 4.47 4.49v.02c0 .41-.32.74-.72.75H3.82a.74.74 0 0 1-.74-.73v-.02c0-2.48 1.99-4.5 4.45-4.5zm4.46 0V4.5c0-1.66 1.33-3 2.97-3"></path></svg>
+                              Друк на фартухах
+                            </a>
+                          </li>
+                          <li class="mob-nav__item  mob-nav__item--lvl3">
+                            <a href="#" class="mob-nav__link  mob-nav__link--lvl2">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" stroke="#ef4823" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.18 10.5V12c0 4.97-8.18 8.25-8.18 10.5 0-2.25-8.18-5.53-8.18-10.5v-1.5m3.72-5.25h8.92c2.46 0 4.46 2 4.47 4.49v.02c0 .41-.32.74-.72.75H3.82a.74.74 0 0 1-.74-.73v-.02c0-2.48 1.99-4.5 4.45-4.5zm4.46 0V4.5c0-1.66 1.33-3 2.97-3"></path></svg>
+                              Друк на парасольках
+                            </a>
+                          </li>
+                          <li class="mob-nav__item  mob-nav__item--lvl3">
+                            <a href="#" class="mob-nav__link  mob-nav__link--lvl2">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" stroke="#ef4823" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.18 10.5V12c0 4.97-8.18 8.25-8.18 10.5 0-2.25-8.18-5.53-8.18-10.5v-1.5m3.72-5.25h8.92c2.46 0 4.46 2 4.47 4.49v.02c0 .41-.32.74-.72.75H3.82a.74.74 0 0 1-.74-.73v-.02c0-2.48 1.99-4.5 4.45-4.5zm4.46 0V4.5c0-1.66 1.33-3 2.97-3"></path></svg>
+                              Друк на шкарпетках
+                            </a>
+                          </li>
+                        </ul>
+                      </li>
+
+                      <li class="mob-nav__item  mob-nav__item--lvl2">
+                        <p class="mob-nav__category">Сувенірна продукція</p>
+                        <ul class="list-nostyled  mob-nav__list-lvl3">
+                          <li class="mob-nav__item  mob-nav__item--lvl3">
+                            <a href="#" class="mob-nav__link  mob-nav__link--lvl2">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" stroke="#ef4823" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.18 10.5V12c0 4.97-8.18 8.25-8.18 10.5 0-2.25-8.18-5.53-8.18-10.5v-1.5m3.72-5.25h8.92c2.46 0 4.46 2 4.47 4.49v.02c0 .41-.32.74-.72.75H3.82a.74.74 0 0 1-.74-.73v-.02c0-2.48 1.99-4.5 4.45-4.5zm4.46 0V4.5c0-1.66 1.33-3 2.97-3"></path></svg>
+                              Друк на павербанках
+                            </a>
+                          </li>
+                          <li class="mob-nav__item  mob-nav__item--lvl3">
+                            <a href="#" class="mob-nav__link  mob-nav__link--lvl2">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" stroke="#ef4823" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.18 10.5V12c0 4.97-8.18 8.25-8.18 10.5 0-2.25-8.18-5.53-8.18-10.5v-1.5m3.72-5.25h8.92c2.46 0 4.46 2 4.47 4.49v.02c0 .41-.32.74-.72.75H3.82a.74.74 0 0 1-.74-.73v-.02c0-2.48 1.99-4.5 4.45-4.5zm4.46 0V4.5c0-1.66 1.33-3 2.97-3"></path></svg>
+                              Друк на пляшках
+                            </a>
+                          </li>
+                          <li class="mob-nav__item  mob-nav__item--lvl3">
+                            <a href="#" class="mob-nav__link  mob-nav__link--lvl2">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" stroke="#ef4823" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.18 10.5V12c0 4.97-8.18 8.25-8.18 10.5 0-2.25-8.18-5.53-8.18-10.5v-1.5m3.72-5.25h8.92c2.46 0 4.46 2 4.47 4.49v.02c0 .41-.32.74-.72.75H3.82a.74.74 0 0 1-.74-.73v-.02c0-2.48 1.99-4.5 4.45-4.5zm4.46 0V4.5c0-1.66 1.33-3 2.97-3"></path></svg>
+                              Друк на роутерах
+                            </a>
+                          </li>
+                          <li class="mob-nav__item  mob-nav__item--lvl3">
+                            <a href="#" class="mob-nav__link  mob-nav__link--lvl2">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" stroke="#ef4823" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.18 10.5V12c0 4.97-8.18 8.25-8.18 10.5 0-2.25-8.18-5.53-8.18-10.5v-1.5m3.72-5.25h8.92c2.46 0 4.46 2 4.47 4.49v.02c0 .41-.32.74-.72.75H3.82a.74.74 0 0 1-.74-.73v-.02c0-2.48 1.99-4.5 4.45-4.5zm4.46 0V4.5c0-1.66 1.33-3 2.97-3"></path></svg>
+                              Друк на пластику
+                            </a>
+                          </li>
+                        </ul>
+                      </li>
+
+                    </ul>
+                  </div>
+                </li>
+
+                <li class="mob-nav__item">
+                  <div class="mob-nav__item-header">
+                    <a href="#" class="mob-nav__link">Вишивка</a>
+                    <button class="accordion-button collapsed  mob-nav__more"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#mobNavItem-3"
+                            aria-expanded="false"
+                            aria-controls="mobNavItem-3">
+                      <span class="accordion__icon"></span>
+                    </button>
+                  </div>
+                  <div class="accordion-collapse collapse  mob-nav__inner"
+                       id="mobNavItem-3"
+                       data-bs-parent="#mobNavList">
+                    <ul class="list-nostyled  mob-nav__list-lvl2">
+
+                      <li class="mob-nav__item  mob-nav__item--lvl2">
+                        <p class="mob-nav__category">Технології друку</p>
+                        <ul class="list-nostyled  mob-nav__list-lvl3">
+                          <li class="mob-nav__item  mob-nav__item--lvl3">
+                            <a href="#" class="mob-nav__link  mob-nav__link--lvl2">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" stroke="#ef4823" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.18 10.5V12c0 4.97-8.18 8.25-8.18 10.5 0-2.25-8.18-5.53-8.18-10.5v-1.5m3.72-5.25h8.92c2.46 0 4.46 2 4.47 4.49v.02c0 .41-.32.74-.72.75H3.82a.74.74 0 0 1-.74-.73v-.02c0-2.48 1.99-4.5 4.45-4.5zm4.46 0V4.5c0-1.66 1.33-3 2.97-3"></path></svg>
+                              Шовкотрафаретний друк
+                            </a>
+                          </li>
+                          <li class="mob-nav__item  mob-nav__item--lvl3">
+                            <a href="#" class="mob-nav__link  mob-nav__link--lvl2">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" stroke="#ef4823" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.18 10.5V12c0 4.97-8.18 8.25-8.18 10.5 0-2.25-8.18-5.53-8.18-10.5v-1.5m3.72-5.25h8.92c2.46 0 4.46 2 4.47 4.49v.02c0 .41-.32.74-.72.75H3.82a.74.74 0 0 1-.74-.73v-.02c0-2.48 1.99-4.5 4.45-4.5zm4.46 0V4.5c0-1.66 1.33-3 2.97-3"></path></svg>
+                              Термоперенесення (DTF друк)
+                            </a>
+                          </li>
+                          <li class="mob-nav__item  mob-nav__item--lvl3">
+                            <a href="#" class="mob-nav__link  mob-nav__link--lvl2">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" stroke="#ef4823" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.18 10.5V12c0 4.97-8.18 8.25-8.18 10.5 0-2.25-8.18-5.53-8.18-10.5v-1.5m3.72-5.25h8.92c2.46 0 4.46 2 4.47 4.49v.02c0 .41-.32.74-.72.75H3.82a.74.74 0 0 1-.74-.73v-.02c0-2.48 1.99-4.5 4.45-4.5zm4.46 0V4.5c0-1.66 1.33-3 2.97-3"></path></svg>
+                              Термоперенесення (DTF друк)
+                              УФ DTF друк
+                            </a>
+                          </li>
+                        </ul>
+                      </li>
+
+                      <li class="mob-nav__item  mob-nav__item--lvl2">
+                        <p class="mob-nav__category">Друк на одязі</p>
+                        <ul class="list-nostyled  mob-nav__list-lvl3">
+                          <li class="mob-nav__item  mob-nav__item--lvl3">
+                            <a href="#" class="mob-nav__link  mob-nav__link--lvl2">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" stroke="#ef4823" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.18 10.5V12c0 4.97-8.18 8.25-8.18 10.5 0-2.25-8.18-5.53-8.18-10.5v-1.5m3.72-5.25h8.92c2.46 0 4.46 2 4.47 4.49v.02c0 .41-.32.74-.72.75H3.82a.74.74 0 0 1-.74-.73v-.02c0-2.48 1.99-4.5 4.45-4.5zm4.46 0V4.5c0-1.66 1.33-3 2.97-3"></path></svg>
+                              Друк на футболках
+                            </a>
+                          </li>
+                          <li class="mob-nav__item  mob-nav__item--lvl3">
+                            <a href="#" class="mob-nav__link  mob-nav__link--lvl2">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" stroke="#ef4823" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.18 10.5V12c0 4.97-8.18 8.25-8.18 10.5 0-2.25-8.18-5.53-8.18-10.5v-1.5m3.72-5.25h8.92c2.46 0 4.46 2 4.47 4.49v.02c0 .41-.32.74-.72.75H3.82a.74.74 0 0 1-.74-.73v-.02c0-2.48 1.99-4.5 4.45-4.5zm4.46 0V4.5c0-1.66 1.33-3 2.97-3"></path></svg>
+                              Друк на худі
+                            </a>
+                          </li>
+                          <li class="mob-nav__item  mob-nav__item--lvl3">
+                            <a href="#" class="mob-nav__link  mob-nav__link--lvl2">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" stroke="#ef4823" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.18 10.5V12c0 4.97-8.18 8.25-8.18 10.5 0-2.25-8.18-5.53-8.18-10.5v-1.5m3.72-5.25h8.92c2.46 0 4.46 2 4.47 4.49v.02c0 .41-.32.74-.72.75H3.82a.74.74 0 0 1-.74-.73v-.02c0-2.48 1.99-4.5 4.45-4.5zm4.46 0V4.5c0-1.66 1.33-3 2.97-3"></path></svg>
+                              Друк на світшотах
+                            </a>
+                          </li>
+                          <li class="mob-nav__item  mob-nav__item--lvl3">
+                            <a href="#" class="mob-nav__link  mob-nav__link--lvl2">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" stroke="#ef4823" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.18 10.5V12c0 4.97-8.18 8.25-8.18 10.5 0-2.25-8.18-5.53-8.18-10.5v-1.5m3.72-5.25h8.92c2.46 0 4.46 2 4.47 4.49v.02c0 .41-.32.74-.72.75H3.82a.74.74 0 0 1-.74-.73v-.02c0-2.48 1.99-4.5 4.45-4.5zm4.46 0V4.5c0-1.66 1.33-3 2.97-3"></path></svg>
+                              Друк на лонгслівах
+                            </a>
+                          </li>
+                          <li class="mob-nav__item  mob-nav__item--lvl3">
+                            <a href="#" class="mob-nav__link  mob-nav__link--lvl2">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" stroke="#ef4823" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.18 10.5V12c0 4.97-8.18 8.25-8.18 10.5 0-2.25-8.18-5.53-8.18-10.5v-1.5m3.72-5.25h8.92c2.46 0 4.46 2 4.47 4.49v.02c0 .41-.32.74-.72.75H3.82a.74.74 0 0 1-.74-.73v-.02c0-2.48 1.99-4.5 4.45-4.5zm4.46 0V4.5c0-1.66 1.33-3 2.97-3"></path></svg>
+                              Друк на поло
+                            </a>
+                          </li>
+                          <li class="mob-nav__item  mob-nav__item--lvl3">
+                            <a href="#" class="mob-nav__link  mob-nav__link--lvl2">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" stroke="#ef4823" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.18 10.5V12c0 4.97-8.18 8.25-8.18 10.5 0-2.25-8.18-5.53-8.18-10.5v-1.5m3.72-5.25h8.92c2.46 0 4.46 2 4.47 4.49v.02c0 .41-.32.74-.72.75H3.82a.74.74 0 0 1-.74-.73v-.02c0-2.48 1.99-4.5 4.45-4.5zm4.46 0V4.5c0-1.66 1.33-3 2.97-3"></path></svg>
+                              Друк на жилетах
+                            </a>
+                          </li>
+                          <li class="mob-nav__item  mob-nav__item--lvl3">
+                            <a href="#" class="mob-nav__link  mob-nav__link--lvl2">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" stroke="#ef4823" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.18 10.5V12c0 4.97-8.18 8.25-8.18 10.5 0-2.25-8.18-5.53-8.18-10.5v-1.5m3.72-5.25h8.92c2.46 0 4.46 2 4.47 4.49v.02c0 .41-.32.74-.72.75H3.82a.74.74 0 0 1-.74-.73v-.02c0-2.48 1.99-4.5 4.45-4.5zm4.46 0V4.5c0-1.66 1.33-3 2.97-3"></path></svg>
+                              Друк на флісках
+                            </a>
+                          </li>
+                          <li class="mob-nav__item  mob-nav__item--lvl3">
+                            <a href="#" class="mob-nav__link  mob-nav__link--lvl2">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" stroke="#ef4823" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.18 10.5V12c0 4.97-8.18 8.25-8.18 10.5 0-2.25-8.18-5.53-8.18-10.5v-1.5m3.72-5.25h8.92c2.46 0 4.46 2 4.47 4.49v.02c0 .41-.32.74-.72.75H3.82a.74.74 0 0 1-.74-.73v-.02c0-2.48 1.99-4.5 4.45-4.5zm4.46 0V4.5c0-1.66 1.33-3 2.97-3"></path></svg>
+                              Друк на спецодягу
+                            </a>
+                          </li>
+                        </ul>
+                      </li>
+
+                      <li class="mob-nav__item  mob-nav__item--lvl2">
+                        <p class="mob-nav__category">Аксесуари та текстиль</p>
+                        <ul class="list-nostyled  mob-nav__list-lvl3">
+                          <li class="mob-nav__item  mob-nav__item--lvl3">
+                            <a href="#" class="mob-nav__link  mob-nav__link--lvl2">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" stroke="#ef4823" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.18 10.5V12c0 4.97-8.18 8.25-8.18 10.5 0-2.25-8.18-5.53-8.18-10.5v-1.5m3.72-5.25h8.92c2.46 0 4.46 2 4.47 4.49v.02c0 .41-.32.74-.72.75H3.82a.74.74 0 0 1-.74-.73v-.02c0-2.48 1.99-4.5 4.45-4.5zm4.46 0V4.5c0-1.66 1.33-3 2.97-3"></path></svg>
+                              Друк на кепках
+                            </a>
+                          </li>
+                          <li class="mob-nav__item  mob-nav__item--lvl3">
+                            <a href="#" class="mob-nav__link  mob-nav__link--lvl2">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" stroke="#ef4823" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.18 10.5V12c0 4.97-8.18 8.25-8.18 10.5 0-2.25-8.18-5.53-8.18-10.5v-1.5m3.72-5.25h8.92c2.46 0 4.46 2 4.47 4.49v.02c0 .41-.32.74-.72.75H3.82a.74.74 0 0 1-.74-.73v-.02c0-2.48 1.99-4.5 4.45-4.5zm4.46 0V4.5c0-1.66 1.33-3 2.97-3"></path></svg>
+                              Друк на шоперах
+                            </a>
+                          </li>
+                          <li class="mob-nav__item  mob-nav__item--lvl3">
+                            <a href="#" class="mob-nav__link  mob-nav__link--lvl2">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" stroke="#ef4823" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.18 10.5V12c0 4.97-8.18 8.25-8.18 10.5 0-2.25-8.18-5.53-8.18-10.5v-1.5m3.72-5.25h8.92c2.46 0 4.46 2 4.47 4.49v.02c0 .41-.32.74-.72.75H3.82a.74.74 0 0 1-.74-.73v-.02c0-2.48 1.99-4.5 4.45-4.5zm4.46 0V4.5c0-1.66 1.33-3 2.97-3"></path></svg>
+                              Друк на сумках
+                            </a>
+                          </li>
+                          <li class="mob-nav__item  mob-nav__item--lvl3">
+                            <a href="#" class="mob-nav__link  mob-nav__link--lvl2">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" stroke="#ef4823" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.18 10.5V12c0 4.97-8.18 8.25-8.18 10.5 0-2.25-8.18-5.53-8.18-10.5v-1.5m3.72-5.25h8.92c2.46 0 4.46 2 4.47 4.49v.02c0 .41-.32.74-.72.75H3.82a.74.74 0 0 1-.74-.73v-.02c0-2.48 1.99-4.5 4.45-4.5zm4.46 0V4.5c0-1.66 1.33-3 2.97-3"></path></svg>
+                              Друк на фартухах
+                            </a>
+                          </li>
+                          <li class="mob-nav__item  mob-nav__item--lvl3">
+                            <a href="#" class="mob-nav__link  mob-nav__link--lvl2">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" stroke="#ef4823" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.18 10.5V12c0 4.97-8.18 8.25-8.18 10.5 0-2.25-8.18-5.53-8.18-10.5v-1.5m3.72-5.25h8.92c2.46 0 4.46 2 4.47 4.49v.02c0 .41-.32.74-.72.75H3.82a.74.74 0 0 1-.74-.73v-.02c0-2.48 1.99-4.5 4.45-4.5zm4.46 0V4.5c0-1.66 1.33-3 2.97-3"></path></svg>
+                              Друк на парасольках
+                            </a>
+                          </li>
+                          <li class="mob-nav__item  mob-nav__item--lvl3">
+                            <a href="#" class="mob-nav__link  mob-nav__link--lvl2">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" stroke="#ef4823" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.18 10.5V12c0 4.97-8.18 8.25-8.18 10.5 0-2.25-8.18-5.53-8.18-10.5v-1.5m3.72-5.25h8.92c2.46 0 4.46 2 4.47 4.49v.02c0 .41-.32.74-.72.75H3.82a.74.74 0 0 1-.74-.73v-.02c0-2.48 1.99-4.5 4.45-4.5zm4.46 0V4.5c0-1.66 1.33-3 2.97-3"></path></svg>
+                              Друк на шкарпетках
+                            </a>
+                          </li>
+                        </ul>
+                      </li>
+
+                      <li class="mob-nav__item  mob-nav__item--lvl2">
+                        <p class="mob-nav__category">Сувенірна продукція</p>
+                        <ul class="list-nostyled  mob-nav__list-lvl3">
+                          <li class="mob-nav__item  mob-nav__item--lvl3">
+                            <a href="#" class="mob-nav__link  mob-nav__link--lvl2">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" stroke="#ef4823" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.18 10.5V12c0 4.97-8.18 8.25-8.18 10.5 0-2.25-8.18-5.53-8.18-10.5v-1.5m3.72-5.25h8.92c2.46 0 4.46 2 4.47 4.49v.02c0 .41-.32.74-.72.75H3.82a.74.74 0 0 1-.74-.73v-.02c0-2.48 1.99-4.5 4.45-4.5zm4.46 0V4.5c0-1.66 1.33-3 2.97-3"></path></svg>
+                              Друк на павербанках
+                            </a>
+                          </li>
+                          <li class="mob-nav__item  mob-nav__item--lvl3">
+                            <a href="#" class="mob-nav__link  mob-nav__link--lvl2">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" stroke="#ef4823" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.18 10.5V12c0 4.97-8.18 8.25-8.18 10.5 0-2.25-8.18-5.53-8.18-10.5v-1.5m3.72-5.25h8.92c2.46 0 4.46 2 4.47 4.49v.02c0 .41-.32.74-.72.75H3.82a.74.74 0 0 1-.74-.73v-.02c0-2.48 1.99-4.5 4.45-4.5zm4.46 0V4.5c0-1.66 1.33-3 2.97-3"></path></svg>
+                              Друк на пляшках
+                            </a>
+                          </li>
+                          <li class="mob-nav__item  mob-nav__item--lvl3">
+                            <a href="#" class="mob-nav__link  mob-nav__link--lvl2">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" stroke="#ef4823" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.18 10.5V12c0 4.97-8.18 8.25-8.18 10.5 0-2.25-8.18-5.53-8.18-10.5v-1.5m3.72-5.25h8.92c2.46 0 4.46 2 4.47 4.49v.02c0 .41-.32.74-.72.75H3.82a.74.74 0 0 1-.74-.73v-.02c0-2.48 1.99-4.5 4.45-4.5zm4.46 0V4.5c0-1.66 1.33-3 2.97-3"></path></svg>
+                              Друк на роутерах
+                            </a>
+                          </li>
+                          <li class="mob-nav__item  mob-nav__item--lvl3">
+                            <a href="#" class="mob-nav__link  mob-nav__link--lvl2">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" stroke="#ef4823" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.18 10.5V12c0 4.97-8.18 8.25-8.18 10.5 0-2.25-8.18-5.53-8.18-10.5v-1.5m3.72-5.25h8.92c2.46 0 4.46 2 4.47 4.49v.02c0 .41-.32.74-.72.75H3.82a.74.74 0 0 1-.74-.73v-.02c0-2.48 1.99-4.5 4.45-4.5zm4.46 0V4.5c0-1.66 1.33-3 2.97-3"></path></svg>
+                              Друк на пластику
+                            </a>
+                          </li>
+                        </ul>
+                      </li>
+
+                    </ul>
+                  </div>
+                </li>
+
+                <li class="mob-nav__item">
+                  <div class="mob-nav__item-header">
+                    <a href="#" class="mob-nav__link">Мерч</a>
+                    <!-- <button class="accordion-button collapsed  mob-nav__more"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#mobNavItem-1"
+                            aria-expanded="false"
+                            aria-controls="mobNavItem-1">
+                      <span class="accordion__icon"></span>
+                    </button> -->
+                  </div>
+                </li>
+
+                <li class="mob-nav__item">
+                  <div class="mob-nav__item-header">
+                    <a href="#" class="mob-nav__link">Портфоліо</a>
+                    <!-- <button class="accordion-button collapsed  mob-nav__more"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#mobNavItem-1"
+                            aria-expanded="false"
+                            aria-controls="mobNavItem-1">
+                      <span class="accordion__icon"></span>
+                    </button> -->
+                  </div>
+                </li>
+
+                <li class="mob-nav__item">
+                  <div class="mob-nav__item-header">
+                    <a href="#" class="mob-nav__link">Компанія</a>
+                    <button class="accordion-button collapsed  mob-nav__more"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#mobNavItem-4"
+                            aria-expanded="false"
+                            aria-controls="mobNavItem-4">
+                      <span class="accordion__icon"></span>
+                    </button>
+                  </div>
+                  <div class="accordion-collapse collapse  mob-nav__inner"
+                       id="mobNavItem-4"
+                       data-bs-parent="#mobNavList">
+                    <ul class="list-nostyled  mob-nav__list-lvl2">
+                      <li class="mob-nav__item  mob-nav__item--lvl2">
+                        <a href="#" class="mob-nav__link  mob-nav__link--lvl2">Блог</a>
+                      </li>
+                      <li class="mob-nav__item  mob-nav__item--lvl2">
+                        <a href="#" class="mob-nav__link  mob-nav__link--lvl2">Про нас</a>
+                      </li>
+                      <li class="mob-nav__item  mob-nav__item--lvl2">
+                        <a href="#" class="mob-nav__link  mob-nav__link--lvl2">Вакансії</a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+
+                <li class="mob-nav__item">
+                  <div class="mob-nav__item-header">
+                    <a href="#" class="mob-nav__link">Контакти</a>
+                    <!-- <button class="accordion-button collapsed  mob-nav__more"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#mobNavItem-1"
+                            aria-expanded="false"
+                            aria-controls="mobNavItem-1">
+                      <span class="accordion__icon"></span>
+                    </button> -->
+                  </div>
+                </li>
+
+              </ul>
+            </nav>
+
           </div>
 
-          <div class="container  page-header__hero  page-header__hero--inner">
+          <div class="container  page-header__hero  page-header__hero--inner">
 
             <nav class="breadcrumbs" aria-label="Навігація Хлібні крихти">
               <ol class="list-nostyled breadcrumbs__list" itemscope itemtype="https://schema.org/BreadcrumbList">
@@ -550,7 +1125,7 @@
         </header>
       </div>
 
-      <main class="main">
+      <main class="main">
 
         <section class="margin-y  faq" style="margin-bottom: 8px;">
           <!-- Для удаления бекграунда добавить класс "clear-bg" -->
@@ -660,7 +1235,7 @@
             </div>
 
           </div>
-        </section>
+        </section>
 
         <aside class="write-us">
           <div class="container  write-us__container">
@@ -685,7 +1260,7 @@
 
     </div>
 
-    <div class="page__footer-wrapper">
+    <div class="page__footer-wrapper">
 
       <footer class="page-footer">
         <div class="container  page-footer__container">
@@ -878,7 +1453,7 @@
 
     </div>
 
-  </div>
+  </div>
 
   <div class="modal  fade"
        id="exampleModal"

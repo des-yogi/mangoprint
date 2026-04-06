@@ -574,32 +574,22 @@
                         </ul>
                       </div>
 
-                      <button class="btn  btn--light  btn--adaptive"
-                            aria-label="Пошук по сайту"
-                            data-bs-toggle="modal"
-                            data-bs-target="#searchModal">
-                        <span class="btn__icon">
-                          <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#lens"></use></svg>
-                        </span>
-                      </button>
                     </div>
 
                     <div class="mob-nav__service-middle">
-                      <button class="btn"
-                              aria-label="Отримати консультацію"
-                              data-bs-toggle="modal"
-                              data-bs-target="#exampleModal">
-                        <span class="btn__text">Консультація</span>
-                        <span class="btn__icon">
-                          <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#message"></use></svg>
+                      <label class="field-text">
+                        <span class="field-text__name  visually-hidden">Пошук по сайту</span>
+                        <span class="field-text__input-wrap">
+                          <input class="field-text__input" type="search" name="search" placeholder="Пошук…">
+                          <!-- <span class="field-text__help-text">Пояснение</span> -->
                         </span>
-                      </button>
+                      </label>
                     </div>
 
                     <div class="mob-nav__service-bottom">
                       <div class="dropdown  lang-switcher">
                         <button class="top-bar__btn  dropdown-toggle"
-                                id="lang-switcher"
+                                id="lang-switcher-mob"
                                 type="button"
                                 data-bs-toggle="dropdown"
                                 aria-expanded="false"
