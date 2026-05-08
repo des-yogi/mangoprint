@@ -116,8 +116,11 @@
     }
 
     .breadcrumbs {
-      display: flex;
-      justify-content: center;
+
+      @media (min-width: $screen-lg) {
+        display: flex;
+        justify-content: center;
+      }
     }
   }
 

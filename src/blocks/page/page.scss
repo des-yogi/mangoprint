@@ -30,6 +30,8 @@
 
   &__content {
     flex-grow: 1;
+    position: relative;
+    z-index: 2;
   }
 
   &__footer-wrapper {
