@@ -60,8 +60,23 @@
 
   &__hero {
 
+    @media (max-width: 360px - 1) {
+      padding-left: 0;
+      padding-right: 0;
+    }
+
     &--inner {
       padding-bottom: 24px;
+    }
+
+    .btn {
+
+      .btn__text {
+
+        @media (max-width: 360px - 1) {
+          font-size: $font-size;
+        }
+      }
     }
   }
 

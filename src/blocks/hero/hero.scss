@@ -60,8 +60,10 @@
 
     & > * {
       flex: 0 1 auto;
+      min-width: 288px;
+      max-width: 100%;
 
-      @media (max-width: $screen-md - 1) {
+      @media (min-width: 360px) and (max-width: $screen-md - 1) {
         min-width: 293px;
       }
     }

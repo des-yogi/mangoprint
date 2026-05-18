@@ -238,9 +238,14 @@ img {
 .container {
   display: block;
   width: 100%;
-  padding-left: 12px;
-  padding-right: 12px;
+  padding-left: 10px;
+  padding-right: 10px;
   background: none;
+
+  @media (min-width: $screen-sm) {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
 
   @media (min-width: $screen-md) {
     padding-left: 40px;
@@ -347,7 +352,7 @@ img {
 
     &.active {
       color: var(--white);
-      background-color: var(--orange-400);
+      background-color: var(--orange-500);
     }
   }
 
@@ -547,13 +552,79 @@ img {
   }
 }
 
-  // OPTIONAL: mostly for future hooks; JS already applies inline styles to lock.
-  // Keeping class hooks is useful if you later want to blur background etc.
+// OPTIONAL: mostly for future hooks; JS already applies inline styles to lock.
+// Keeping class hooks is useful if you later want to blur background etc.
 
-  .is-scroll-locked {
-    // no-op by default
+.is-scroll-locked {
+  // no-op by default
+}
+
+@keyframes icon-wobble-then-spin {
+  /* 1 качание: 0%..21.25% */
+  0%       { transform: rotate(0deg); }
+  10.625%  { transform: rotate(-25deg); }
+  21.25%   { transform: rotate(0deg); }
+
+  /* 2: 21.25%..42.5% */
+  31.875%  { transform: rotate(-25deg); }
+  42.5%    { transform: rotate(0deg); }
+
+  /* 3: 42.5%..63.75% */
+  53.125%  { transform: rotate(-25deg); }
+  63.75%   { transform: rotate(0deg); }
+
+  /* 4: 63.75%..85% */
+  74.375%  { transform: rotate(-25deg); }
+  85%      { transform: rotate(0deg); }
+
+  /* полный оборот по часовой за последние 15% (85%..100%) */
+  100%     { transform: rotate(360deg); }
+}
+
+.animate-btn {
+
+  .btn__text {
+
+    @media (min-width: 1530px) {
+      display: inline-flex !important;
+    }
   }
 
+  &.btn.btn--adaptive .btn__icon {
+
+    @media (min-width: 1530px) {
+      // 1920 origin
+      color: var(--orange-500);
+      background-color: var(--white);
+      border-color: var(--orange-500);
+    }
+  }
+
+  &:hover,
+  &:focus {
+
+    &.btn.btn--adaptive .btn__icon {
+
+      @media (min-width: 1530px) {
+        // 1920 origin
+        color: var(--orange-600);
+        background-color: var(--white);
+        border-color: var(--orange-600);
+      }
+    }
+
+    svg {
+      animation-play-state: paused;
+    }
+  }
+
+  svg {
+    transform-origin: 50% 50%;
+    transform-box: fill-box;
+    animation: icon-wobble-then-spin 5s ease-out infinite;
+    will-change: transform;
+  }
+}
 
 // background: svg-load('../blocks/phones-modal/bg-img/phone.svg', fill=$main-color, stroke=rgba(255, 255, 255, 0));
 // background-image: svg-load('../blocks/phones-modal/bg-img/phone.svg', fill=$main-color);
@@ -570,3 +641,4 @@ img {
 
 // @media (min-width: $screen-md) {}
 // @media (max-width: $screen-md - 1) {}
+
