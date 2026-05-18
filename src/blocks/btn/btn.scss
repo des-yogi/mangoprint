@@ -19,7 +19,7 @@
   text-decoration: none;
   text-transform: none;
   color: var(--white);
-  background-color: var(--orange-400);
+  background-color: var(--orange-500);
   background-image: none;
   border-radius: $border-radius;
   border: none;
@@ -74,7 +74,7 @@
     justify-content: center;
     width: 56px;
     height: 100%;
-    color: var(--orange-400);
+    color: var(--orange-500);
     background-color: var(--white);
     border-radius: $border-radius;
     border: 2px solid currentColor;
@@ -113,13 +113,14 @@
 
     #{$block-name}__icon {
       color: var(--white);
-      background-color: var(--orange-400);
+      background-color: var(--orange-500);
       border-color: transparent;
 
       @media (min-width: $screen-xxl) {
-        color: var(--orange-400);
+        // 1920 origin
+        color: var(--orange-500);
         background-color: var(--white);
-        border-color: var(--orange-400);
+        border-color: var(--orange-500);
       }
     }
 
@@ -140,7 +141,7 @@
 
         @media (min-width: $screen-xxl) {
           color: var(--white);
-          background-color: var(--orange-400);
+          background-color: var(--orange-500);
         }
       }
     }
@@ -150,7 +151,7 @@
 
   &--light {
     font-weight: 500;
-    color: var(--orange-500);
+    color: var(--orange-600);
     background-color: var(--orange-50);
 
     &:hover,
@@ -166,7 +167,7 @@
     }
 
     #{$block-name}__icon {
-      color: var(--orange-500);
+      color: var(--orange-600);
       background-color: var(--white);
       border-color: var(--orange-50);
     }
@@ -188,12 +189,12 @@
       }
 
       #{$block-name}__icon {
-        color: var(--orange-500);
+        color: var(--orange-600);
         background-color: var(--orange-50);
         border-color: var(--orange-50);
 
         @media (min-width: $screen-xxl) {
-          color: var(--orange-500);
+          color: var(--orange-600);
           background-color: var(--orange-50);
           border-color: var(--orange-50);
         }
@@ -214,14 +215,14 @@
 
       #{$block-name}__icon {
         color: var(--white) !important;
-        background-color: var(--orange-400);
+        background-color: var(--orange-500);
         border-color: var(--orange-100) !important;
       }
     }
 
     #{$block-name}__icon {
       color: var(--white);
-      background-color: var(--orange-400);
+      background-color: var(--orange-500);
       border-color: var(--white);
 
       // @media (min-width: $screen-xxl) {
@@ -234,7 +235,7 @@
     &--icon-only {
       width: 56px;
       height: 56px;
-      color: var(--orange-400);
+      color: var(--orange-500);
 
       @media (max-width: $screen-md - 1) {
         height: 44px;
