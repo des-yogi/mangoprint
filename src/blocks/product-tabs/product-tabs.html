@@ -1,0 +1,80 @@
+<!--DEV
+@ @include('blocks/product-tabs/product-tabs.html')
+-->
+
+<section class="product-tabs">
+  <h2 class="visually-hidden">Додаткова інформація про товар для споживача</h2>
+
+  <div class="nav-tabs__wrapper">
+    <ul class="nav nav-tabs" id="addInfoTab" role="tablist">
+      <li class="nav-item" role="presentation">
+        <button class="nav-link active" id="addInfoTab-1" data-bs-toggle="tab" data-bs-target="#addInfoTabPane-1" type="button" role="tab" aria-controls="addInfoTabPane-1" aria-selected="true">Опис</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="addInfoTab-2" data-bs-toggle="tab" data-bs-target="#addInfoTabPane-2" type="button" role="tab" aria-controls="addInfoTabPane-2" aria-selected="false" tabindex="-1">Характеристики</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="addInfoTab-3" data-bs-toggle="tab" data-bs-target="#addInfoTabPane-3" type="button" role="tab" aria-controls="addInfoTabPane-3" aria-selected="false" tabindex="-1">Догляд</button>
+      </li>
+    </ul>
+  </div>
+
+  <div id="addInfoTabContent" class="tab-content">
+
+    <div class="tab-pane fade active show" id="addInfoTabPane-1" role="tabpanel" aria-labelledby="addInfoTab-1" tabindex="0">
+
+      <div class="product-tabs__text">
+        <p>Виходьте на старт 32-го «Пробігу під каштанами» у брендованій футболці!Mango Print з кожного замовлення передає 15% на допомогу маленьким українським серцям, яким допомагають у Центрі дитячої кардіології та кардіохірургі. Якісний мерч починається з правильної основи. В інтернет-магазині Mango Print ми зібрали колекцію текстилю, який ідеально підходить для всіх видів брендування: шовкографії, машинної вишивки, термопереносу та DTF-друку. Ми розуміємо, що футболка з логотипом — це обличчя вашої компанії, тому пропонуємо лише перевірені моделі, які не кошлатяться, не втрачають форму після прання та приємні до тіла.</p>
+        <p>Наш каталог включає широкий асортимент одягу для бізнесу, промо-акцій та створення власних брендів (Merch Store):</p>
+        <ul>
+          <li>Футболки: від легких промо-моделей (135 г/м²) до щільних преміум (190-200 г/м²).</li>
+          <li>Худі та світшоти: теплі моделі з начосом, класичні реглани та оверсайз крої.</li>
+          <li>Поло: елегантний вибір для уніформи персоналу та офісного стилю.</li>
+          <li>Головні убори та аксесуари: кепки, тракери, еко-сумки (шопери).</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="tab-pane fade" id="addInfoTabPane-2" role="tabpanel" aria-labelledby="addInfoTab-2" tabindex="0">
+
+      <div class="product-tabs__table  table-mobile-scroll">
+        <table>
+          <thead>
+            <tr>
+              <th>Матеріал</th>
+              <th>Метод друку</th>
+              <th>Щільність</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>100% бавовна</td>
+              <td>шовкотрафарет, ДТФ, термотрансфер</td>
+              <td>153 г/м2</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+
+    <div class="tab-pane fade" id="addInfoTabPane-3" role="tabpanel" aria-labelledby="addInfoTab-3" tabindex="0">
+
+      <div class="product-tabs__text">
+        <p>Вишивка на тонкому трикотажі (щільністю менше 150–160 г/м²) — це делікатний процес. Оскільки тканина легка та еластична, вона може деформуватися під вагою стібків. Щоб результат виглядав естетично, ми дотримуємося кількох правил:</p>
+        <ul>
+          <li><strong>Стабілізація:</strong> Ми обов'язково використовуємо спеціальні підкладні матеріали (флізелін), які тримають форму тканини під час і після вишивки.</li>
+          <li><strong>Дизайн:</strong> Для тонких футболок краще обирати невеликі, контурні або «розріджені» малюнки. Масивні, повністю зашиті логотипи («шевронного» типу) можуть обтяжувати тканину, створюючи ефект «бульбашки».</li>
+          <li><strong>Догляд:</strong> Вишивка на тонкій тканині потребує дбайливого прання (бажано в сітці та при низьких температурах), щоб уникнути зайвого розтягування волокон навколо малюнка.</li>
+          <li><strong>Порада:</strong> Якщо ви плануєте робити велику та щільну вишивку, ми рекомендуємо обирати футболки середньої або високої щільності (від 180 г/м²). Це гарантує, що виріб збереже ідеальний вигляд навіть після багатьох циклів прання.</li>
+        </ul>
+      </div>
+
+      @@include('../../blocks/care/care.html')
+
+    </div>
+
+  </div>
+
+</section>

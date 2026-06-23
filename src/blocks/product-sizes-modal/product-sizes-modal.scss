@@ -1,0 +1,53 @@
+.product-sizes-modal {
+  $block-name:                &; // #{$block-name}__element
+
+  .modal-dialog {
+
+    @media (min-width: 1440px) {
+      max-width: 1064px;
+    }
+  }
+
+  .modal-content {
+    background-color: $body-bg;
+  }
+
+  &__body {
+    //overflow-y: auto;
+  }
+
+  &__row {
+    gap: 24px 0;
+    container-type: inline-size;
+  }
+
+  &__table-col {
+    @include col(xs, 12);
+    @include col(xl, 8);
+
+    @media (min-width: $screen-xl) {
+      padding-right: 20px;
+    }
+  }
+
+  &__care-col {
+    @include col(xs, 12);
+    @include col(xl, 4);
+  }
+
+  &__table {
+    padding: 16px !important;
+    margin: 0;
+    background-color: var(--white);
+    border-radius: $border-radius--30;
+  }
+
+  &__warning {
+    font-size: $font-size-sm;
+    font-weight: 500;
+
+    span {
+      color: var(--orange-400);
+    }
+  }
+}

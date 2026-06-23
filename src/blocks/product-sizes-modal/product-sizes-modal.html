@@ -1,0 +1,94 @@
+<!--DEV
+@ @include('blocks/product-sizes-modal/product-sizes-modal.html')
+-->
+
+<div class="modal  fade  product-sizes-modal"
+     id="sizesModal"
+     tabindex="-1"
+     role="dialog"
+     aria-labelledby="sizesModalTitle"
+     aria-hidden="true">
+  <div class="modal-dialog  modal-dialog-centered  modal-dialog-scrollable" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title" id="sizesModalTitle">Таблиця розмірів</h3>
+        <button class="btn  btn--white  btn--white--icon-only" type="button" data-bs-dismiss="modal" aria-label="Закрити">
+          <span class="btn__icon">
+            <svg width="20" height="20" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#close-20"></use></svg>
+          </span>
+        </button>
+      </div>
+      <div class="modal-body  product-sizes-modal__body">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas earum debitis harum iure, accusamus magnam perspiciatis quos ipsum dolorem ipsam, quasi suscipit deserunt totam!</p>
+
+        <div class="row  product-sizes-modal__row">
+
+          <div class="product-sizes-modal__table-col">
+            <div class="table-mobile-scroll  product-sizes-modal__table">
+              <table style="table-layout: fixed;">
+                <thead>
+                  <tr>
+                    <th>Розмір</th>
+                    <th>Ширина</th>
+                    <th>Довжина</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>XS</td>
+                    <td>46</td>
+                    <td>68</td>
+                  </tr>
+                  <tr>
+                    <td>S</td>
+                    <td>50</td>
+                    <td>69</td>
+                  </tr>
+                  <tr>
+                    <td>M</td>
+                    <td>53</td>
+                    <td>71</td>
+                  </tr>
+                  <tr>
+                    <td>L</td>
+                    <td>53</td>
+                    <td>71</td>
+                  </tr>
+                  <tr>
+                    <td>XL</td>
+                    <td>53</td>
+                    <td>71</td>
+                  </tr>
+                  <tr>
+                    <td>2XL</td>
+                    <td>53</td>
+                    <td>71</td>
+                  </tr>
+                  <tr>
+                    <td>3XL</td>
+                    <td>53</td>
+                    <td>71</td>
+                  </tr>
+                  <tr>
+                    <td>4XL</td>
+                    <td>53</td>
+                    <td>71</td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <p class="product-sizes-modal__warning"><span>*</span> значення в сантиметрах, припустима похибка +/- 2см.</p>
+            </div>
+          </div>
+
+          <div class="product-sizes-modal__care-col">
+            @@include('../../blocks/care/care.html')
+          </div>
+
+        </div>
+      </div>
+
+      <div class="modal-footer"></div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,153 @@
+<!--DEV
+@ @include('blocks/product-details/product-details.html')
+-->
+
+<div class="product-details">
+
+  <div class="product-details__service">
+    <p class="product-details__category">Жіноча футболка</p>
+    <p class="product-details__prod-code">
+      Артикул: <span>5125125-4124-S</span>
+    </p>
+    <p class="product-details__availability-status">
+      <span class="product-details__badge  product-details__badge--available">Є в наявності</span>
+    </p>
+  </div>
+
+  <header class="product-details__header">
+    <h1 class="product-details__title">Best mom in the Galaxy</h1>
+  </header>
+
+  <form class="product-details__form" action="#" method="post">
+
+    <div class="product-details__line">
+
+      <p class="product-details__option">
+        <span class="product-details__option-name">Виробник:</span>
+        <span class="product-details__option-value">Brand Galaxy</span>
+      </p>
+
+      <section class="product-details__option">
+        <h2 class="product-details__option-name">Колір:</h2>
+
+        <div class="product-details__colors">
+          <div class="product-details__color">
+            <input id="whiteColor" class="product-details__color-value" type="radio" name="prod_color" value="white" checked>
+            <label for="whiteColor"
+                   class="product-details__color-name"
+                   style="background-color: #ffffff;">
+              <span class="visually-hidden">White</span>
+            </label>
+          </div>
+
+          <div class="product-details__color">
+            <input id="grayColor" class="product-details__color-value" type="radio" name="prod_color" value="gray">
+            <label for="grayColor"
+                   class="product-details__color-name"
+                   style="background-color: #898989;">
+              <span class="visually-hidden">Gray</span>
+            </label>
+          </div>
+
+          <div class="product-details__color">
+            <input id="blueColor" class="product-details__color-value" type="radio" name="prod_color" value="blue">
+            <label for="blueColor"
+                   class="product-details__color-name"
+                   style="background-color: #0000FF;">
+              <span class="visually-hidden">Blue</span>
+            </label>
+          </div>
+
+          <div class="product-details__color">
+            <input id="greenColor" class="product-details__color-value" type="radio" name="prod_color" value="green">
+            <label for="greenColor"
+                   class="product-details__color-name"
+                   style="background-color: #008000;">
+              <span class="visually-hidden">Green</span>
+            </label>
+          </div>
+
+          <div class="product-details__color">
+            <input id="redColor" class="product-details__color-value" type="radio" name="prod_color" value="red">
+            <label for="redColor"
+                   class="product-details__color-name"
+                   style="background-color: #FF0000;">
+              <span class="visually-hidden">Red</span>
+            </label>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <div class="product-details__line  product-details__line--fullwidth">
+      <section class="product-details__sizes-wrapper">
+        <h2 class="product-details__option-name">Розмір:</h2>
+
+        @@include('../../blocks/product-sizes-btn/product-sizes-btn.html')
+
+        <div class="product-details__sizes">
+          <div class="product-details__size">
+            <input class="visually-hidden" id="size-xs" type="radio" name="size" value="size-xs">
+            <label for="size-xs" class="product-details__sizes-lbl">xs</label>
+          </div>
+
+          <div class="product-details__size">
+            <input class="visually-hidden" id="size-s" type="radio" name="size" value="size-s" disabled>
+            <label for="size-s" class="product-details__sizes-lbl">s</label>
+          </div>
+
+          <div class="product-details__size">
+            <input class="visually-hidden" id="size-m" type="radio" name="size" value="size-m">
+            <label for="size-m" class="product-details__sizes-lbl">m</label>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <div class="product-details__line">
+      <p class="product-details__option">
+        <span class="product-details__option-name">Кому:</span>
+        <span class="product-details__option-value">Жіноча</span>
+      </p>
+
+      <p class="product-details__option">
+        <span class="product-details__option-name">Матеріал:</span>
+        <span class="product-details__option-value">Бавовна</span>
+      </p>
+    </div>
+
+    <section class="product-details__line  product-details__line--fullwidth">
+      <h2 class="product-details__option-name">Скорочений опис</h2>
+
+      <p class="product-details__short-descr">Виходьте на старт 32-го «Пробігу під каштанами» у брендованій футболці!Mango Print з кожного замовлення передає 15% на допомогу маленьким українським серцям, яким допомагають у Центрі дитячої кардіології та кардіохірургі...</p>
+
+      <a href="#addInfoTab"
+         class="text-link  js-tab-link"
+         data-tab="addInfoTab-1"
+         >
+        <span>Детальніше</span>
+        <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#arrow-right"></use></svg>
+      </a>
+    </section>
+
+    <section class="product-details__line  product-details__line--fullwidth">
+      <h2 class="product-details__option-name">Характеристики</h2>
+
+      <p class="product-details__short-descr">Матеріал: 100% бавовна / Метод друку: шовкотрафарет, ДТФ, термотрансфер / Щільність 153 г/м2</p>
+
+      <a href="#addInfoTab"
+         class="text-link  js-tab-link"
+         data-tab="addInfoTab-2"
+         >
+        <span>Всі характеристики</span>
+        <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#arrow-right"></use></svg>
+      </a>
+    </section>
+
+    <div class="product-details__line  product-details__line--fullwidth">
+      @@include('../../blocks/product-trade/product-trade.html')
+    </div>
+
+  </form>
+
+</div>

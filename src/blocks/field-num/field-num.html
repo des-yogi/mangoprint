@@ -1,0 +1,15 @@
+<!--DEV
+@ @include('blocks/field-num/field-num.html')
+-->
+
+<div class="field-num">
+  <span class="visually-hidden  field-num__name">Кількість</span>
+  <span class="field-num__input-wrap">
+    <span class="field-num__input-and-btns">
+      <button class="btn  btn--light  field-num__btn field-num__btn--minus" type="button" aria-label="minus"></button>
+      <input class="field-num__input" type="number" value="1" name="quantity" max="10" min="1" step="1">
+      <button class="btn  btn--light  field-num__btn field-num__btn--plus" type="button" aria-label="plus"></button>
+    </span>
+    <span class="field-num__help-text"></span>
+  </span>
+</div>
