@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html class="no-js  page" lang="uk" prefix="og: https://ogp.me/ns#">
+
+<head>
+  <meta charset="utf-8">
+  <title>Сторінка товару</title>
+  @@include('_include/page_head.html')
+</head>
+
+<body>
+<noscript>У вас вимкнено JavaScript. Приносимо свої вибачення, але це ускладнює використання даного сайту.</noscript>
+
+  <div class="page__inner">
+
+    <div class="page__content">
+
+      <div class="page-header__wrapper">
+        @@include('blocks/top-bar/top-bar.html')
+
+        <header class="page-header  page-header--inner-product">
+
+          <div class="page-header__main"
+               data-scroll="500"
+               data-sticky-duration="500"
+               data-sticky-top="8"
+               data-sticky-side="16">
+
+            @@include('blocks/logo/logo.html', {
+              "addClass": "logo--header"
+            })
+
+            @@include('blocks/main-nav/main-nav.html')
+
+            <div class="page-header__service">
+              <!-- phone-selector -->
+              <div class="dropdown  phone-selector  mob-hidden">
+                <button class="dropdown-toggle  phone-selector__toggler" type="button" data-bs-toggle="dropdown" data-bs-offset="2,18" aria-expanded="false">
+                  <span class="phone-selector__icon">
+                    <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#phone"></use></svg>
+                  </span>
+                  <span>+ 38 063 453 55 64</span>
+                </button>
+                <ul class="dropdown-menu  phone-selector__menu">
+                  <li>
+                    <a href="tel:+380634535564" class="dropdown-item  phone-selector__link">
+                      <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#phone"></use></svg>
+                      <span>+ 38 063 453 55 64</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="mailto:mangoprintua@gmail.com" class="dropdown-item  phone-selector__link">
+                      <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#at"></use></svg>
+                      <span>mangoprintua@gmail.com</span>
+                    </a>
+                  </li>
+                  <li>
+                    @@include('blocks/social-links/social-links.html')
+                  </li>
+                </ul>
+              </div>
+
+              <button class="btn  btn--light  btn--adaptive" aria-label="Пошук по сайту">
+                <span class="btn__icon">
+                  <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#lens"></use></svg>
+                </span>
+              </button>
+
+              <button class="btn  btn--adaptive  mob-hidden" aria-label="Отримати консультацію">
+                <span class="btn__text">Консультація</span>
+                <span class="btn__icon">
+                  <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#message"></use></svg>
+                </span>
+              </button>
+
+              @@include('blocks/burger/burger.html')
+
+            </div>
+
+            @@include('blocks/mob-nav/mob-nav.html')
+          </div>
+
+          <div class="container  page-header__hero  page-header__hero--product">
+            @@include('blocks/breadcrumbs/breadcrumbs.html')
+
+            <!-- <h1 class="page-header__title">@@pageTitle</h1>
+            <p class="page-header__intro">@@intro</p> -->
+
+          </div>
+        </header>
+      </div>
+
+      <main class="main">
+
+        <article class="container  product">
+          <div class="row  product__row">
+
+            <div class="product__slider-col">
+              @@include('blocks/product-slider/product-slider.html')
+            </div>
+
+            <div class="product__details-col">
+              @@include('blocks/product-details/product-details.html')
+            </div>
+
+            <div class="product__tabs-col">
+              @@include('blocks/product-tabs/product-tabs.html')
+            </div>
+
+          </div>
+        </article>
+
+        @@include('blocks/faq/faq.html')
+
+        <div class="text-2-block">
+          <div class="container  text-2-block__container">
+            <div class="row  text-2-block__row">
+              <div class="text-2-block__text-col">
+                <article class="text-2-block__text">
+                  <h2 class="text-2-block__title">Одяг під нанесення та корпоративний мерч: основи преміум якості</h2>
+                  <p>Якісний мерч починається з правильної основи. В інтернет-магазині Mango Print ми зібрали колекцію текстилю, який ідеально підходить для всіх видів брендування: шовкографії, машинної вишивки, термопереносу та DTF-друку. Ми розуміємо, що футболка з логотипом — це обличчя вашої компанії, тому пропонуємо лише перевірені моделі, які не кошлатяться, не втрачають форму після прання та приємні до тіла.</p>
+                  <p>Наш каталог включає широкий асортимент одягу для бізнесу, промо-акцій та створення власних брендів (Merch Store):</p>
+                  <ul>
+                    <li>Футболки: від легких промо-моделей (135 г/м²) до щільних преміум (190-200 г/м²).</li>
+                    <li>Худі та світшоти: теплі моделі з начосом, класичні реглани та оверсайз крої.</li>
+                    <li>Поло: елегантний вибір для уніформи персоналу та офісного стилю.</li>
+                    <li>Головні убори та аксесуари: кепки, тракери, еко-сумки (шопери).</li>
+                  </ul>
+                </article>
+              </div>
+
+              <div class="text-2-block__text-col">
+                <article class="text-2-block__text">
+                  <h2 class="text-2-block__title">Чому бізнес обирає текстиль від нас?</h2>
+                  <p>Ми працюємо безпосередньо з європейськими та американськими складами, що гарантує оригінальність продукції та стабільність поставок.</p>
+                  <ol>
+                    <li>Постійна наявність: Підтримуємо складські залишки популярних кольорів (чорний, білий, сірий, неві) у великих обсягах.</li>
+                    <li>Адаптація під друк: Всі товари в нашому магазині протестовані нашими технологами. Ми знаємо, як лягає фарба на кожну модель.</li>
+                    <li>Широка розмірна сітка: Від дитячих розмірів (Kids) до дорослих 3XL, 4XL та навіть 5XL в окремих моделях.</li>
+                    <li>Вигідний опт: Прозора цінова політика для рекламних агенцій, HR-менеджерів та роздрібних покупців.</li>
+                  </ol>
+                  <p>Купити футболки оптом у Києві з доставкою по Україні можна в декілька кліків. Обирайте колір, розмір та кількість, а ми подбаємо про швидку логістику та, за потреби, професійне нанесення вашого логотипа "під ключ".</p>
+                </article>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        @@include('blocks/write-us/write-us.html')
+
+      </main>
+
+    </div>
+
+    <div class="page__footer-wrapper">
+      @@include('blocks/page-footer/page-footer.html')
+    </div>
+
+  </div>
+
+  @@include('blocks/product-sizes-modal/product-sizes-modal.html')
+
+  @@include('_include/page_bottom.html')
+
+</body>
+</html>

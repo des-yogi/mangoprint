@@ -1,0 +1,32 @@
+.product {
+  $block-name:                &; // #{$block-name}__element
+
+  margin: 8px 0 72px;
+
+  @media (min-width: $screen-xl) {
+    margin-bottom: 96px;
+  }
+
+  &__row {
+    gap: 8px 0;
+  }
+
+  &__slider-col {
+    @include col(xs, 12);
+    @include col(xl, 4);
+    @include col(xxl, 5);
+    //order: -1;
+  }
+
+  &__details-col {
+    @include col(xs, 12);
+    //@include col-offset(xl, 4);
+    @include col(xl, 8);
+    //@include col-offset(xxl, 5);
+    @include col(xxl, 7);
+  }
+
+  &__tabs-col {
+    @include col(xs, 12);
+  }
+}

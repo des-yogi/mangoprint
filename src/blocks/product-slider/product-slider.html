@@ -1,0 +1,106 @@
+<!--DEV
+@ @include('blocks/product-slider/product-slider.html')
+-->
+
+<section class="product-slider">
+  <h2 class="visually-hidden">Зображення товару (додати назву)</h2>
+
+  <div class="product-slider__thumbs-wrapper">
+    <div class="swiper-button-prev  product-slider__btn  product-slider__btn--prev">
+      <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#arrow-right"></use></svg>
+    </div>
+
+    <div class="swiper  product-slider__thumbs">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide  product-slider__thumb">
+          <img src="img/catalog-img-1.jpg" alt="" width="44" height="44" loading="eager">
+        </div>
+        <div class="swiper-slide  product-slider__thumb">
+          <img src="img/catalog-img-1.jpg" alt="" width="44" height="44" loading="eager">
+        </div>
+        <div class="swiper-slide  product-slider__thumb">
+          <img src="img/catalog-img-1.jpg" alt="" width="44" height="44" loading="eager">
+        </div>
+      </div>
+    </div>
+
+    <div class="swiper-button-next  product-slider__btn  product-slider__btn--next">
+      <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#arrow-right"></use></svg>
+    </div>
+  </div>
+
+  <div class="product-slider__main-wrapper">
+    <div class="swiper  product-slider__main">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <a href="img/catalog-img-1-big.jpg" class="product-slider__img" data-fancybox="product">
+            <picture>
+              <source srcset="img/catalog-img-1.webp,
+                              img/catalog-img-1.webp 2x" media="(min-width: 1440px)" type="image/webp">
+              <source srcset="img/catalog-img-1.jpg,
+                              img/catalog-img-1.jpg 2x" media="(min-width: 1440px)">
+              <!-- 500x750, 750x1125 2x -->
+              <source srcset="img/catalog-img-1.webp,
+                              img/catalog-img-1.webp 2x" media="(min-width: 1280px)" type="image/webp">
+              <source srcset="img/catalog-img-1.jpg,
+                              img/catalog-img-1.jpg 2x" media="(min-width: 1280px)">
+              <!-- 350x525, 525x788 2x -->
+              <source srcset="img/catalog-img-1.webp" media="(min-width: 300px)" type="image/webp">
+              <source srcset="img/catalog-img-1.jpg" media="(min-width: 300px)">
+              <!-- 300x450 -->
+              <img src="img/catalog-img-1.jpg" alt="Alt text" width="300" height="450" loading="eager">
+              <!-- для первого слайда loading="eager" &
+                <div class="swiper-lazy-preloader"></div>
+                для остальных только loading="eager" -->
+            </picture>
+          </a>
+        </div>
+
+        <div class="swiper-slide">
+          <a href="img/catalog-img-1-big.jpg" class="product-slider__img" data-fancybox="product">
+            <picture>
+              <source srcset="img/catalog-img-1.webp,
+                              img/catalog-img-1.webp 2x" media="(min-width: 1440px)" type="image/webp">
+              <source srcset="img/catalog-img-1.jpg,
+                              img/catalog-img-1.jpg 2x" media="(min-width: 1440px)">
+              <!-- 500x750, 750x1125 2x -->
+              <source srcset="img/catalog-img-1.webp,
+                              img/catalog-img-1.webp 2x" media="(min-width: 1280px)" type="image/webp">
+              <source srcset="img/catalog-img-1.jpg,
+                              img/catalog-img-1.jpg 2x" media="(min-width: 1280px)">
+              <!-- 350x525, 525x788 2x -->
+              <source srcset="img/catalog-img-1.webp" media="(min-width: 300px)" type="image/webp">
+              <source srcset="img/catalog-img-1.jpg" media="(min-width: 300px)">
+              <!-- 300x450 -->
+              <img src="img/catalog-img-1.jpg" alt="Alt text" width="300" height="450" loading="lazy">
+            </picture>
+            <div class="swiper-lazy-preloader"></div>
+          </a>
+        </div>
+
+        <div class="swiper-slide">
+          <a href="img/catalog-img-1-big.jpg" class="product-slider__img" data-fancybox="product">
+            <picture>
+              <source srcset="img/catalog-img-1.webp,
+                              img/catalog-img-1.webp 2x" media="(min-width: 1440px)" type="image/webp">
+              <source srcset="img/catalog-img-1.jpg,
+                              img/catalog-img-1.jpg 2x" media="(min-width: 1440px)">
+              <!-- 500x750, 750x1125 2x -->
+              <source srcset="img/catalog-img-1.webp,
+                              img/catalog-img-1.webp 2x" media="(min-width: 1280px)" type="image/webp">
+              <source srcset="img/catalog-img-1.jpg,
+                              img/catalog-img-1.jpg 2x" media="(min-width: 1280px)">
+              <!-- 350x525, 525x788 2x -->
+              <source srcset="img/catalog-img-1.webp" media="(min-width: 300px)" type="image/webp">
+              <source srcset="img/catalog-img-1.jpg" media="(min-width: 300px)">
+              <!-- 300x450 -->
+              <img src="img/catalog-img-1.jpg" alt="Alt text" width="300" height="450" loading="lazy">
+            </picture>
+            <div class="swiper-lazy-preloader"></div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>

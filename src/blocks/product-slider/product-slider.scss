@@ -1,0 +1,138 @@
+.product-slider {
+  $block-name:                &; // #{$block-name}__element
+
+  display: flex;
+  gap: 0 8px;
+  max-width: 100%;
+  height: 100%;
+  padding: 16px;
+  background-color: var(--white);
+  border-radius: $border-radius--30;
+  overflow-x: hidden;
+
+  @media (min-width: $screen-md) {
+    padding: 24px;
+  }
+
+  @media (min-width: $screen-xxl) {
+    padding: 40px;
+  }
+
+  &__thumbs-wrapper {
+    flex: 0 0 44px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    //justify-content: center;
+    gap: 16px;
+  }
+
+  &__thumb {
+    width: 44px;
+    height: 44px;
+    background-color: var(--white);
+    border-radius: $border-radius--16;
+    border: 1px solid transparent;
+    cursor: pointer;
+    overflow: hidden;
+    opacity: 0.5;
+    user-select: none;
+
+    &.swiper-slide-thumb-active {
+      border: 1px solid var(--orange-400);
+      opacity: 1;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      object-position: center;
+    }
+  }
+
+  &__main-wrapper {
+    //flex: 1 1;
+    width: calc(100% - 44px - 8px);
+
+    .swiper-slide {
+      user-select: none;
+
+      a {
+        outline: none;
+      }
+    }
+  }
+
+  &__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: static;
+    width: 44px;
+    height: 44px;
+    margin: 0 !important;
+    background-color: var(--orange-50);
+    border-radius: $border-radius--16;
+
+    &:hover,
+    &:focus {
+      background-color: var(--orange-200);
+
+      svg {
+        stroke: var(--orange-600);
+      }
+    }
+
+    &.swiper-button-disabled {
+      background-color: var(--gray-50);
+
+      svg {
+        stroke: var(--gray-500);
+      }
+    }
+
+    svg {
+      flex: 0 0 24px;
+      width: 24px;
+      height: 24px;
+      stroke: var(--orange-500);
+    }
+
+    &--prev {
+
+      svg {
+        transform: rotate(-90deg);
+      }
+    }
+
+    &--next {
+
+      svg {
+        transform: rotate(90deg);
+      }
+    }
+  }
+
+  &__img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    max-width: 198px;
+    margin: 0 auto;
+    overflow: hidden;
+
+    @media (min-width: $screen-xl) {
+      max-width: 500px;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      aspect-ratio: 2 / 3;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+}

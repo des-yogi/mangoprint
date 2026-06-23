@@ -69,6 +69,18 @@
       padding-bottom: 24px;
     }
 
+    &--product {
+      padding-bottom: 20px;
+
+      @media (min-width: $screen-md) {
+        padding-bottom: 36px;
+      }
+
+      .breadcrumbs {
+        margin-bottom: 0;
+      }
+    }
+
     .btn {
 
       .btn__text {
@@ -137,6 +149,10 @@
         justify-content: center;
       }
     }
+  }
+
+  &--inner-product {
+    background-color: var(--gray-50);
   }
 
   &--tileless {

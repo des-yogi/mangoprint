@@ -1,0 +1,25 @@
+<!--DEV
+@ @include('blocks/product-trade/product-trade.html')
+-->
+
+<section class="product-trade">
+  <h2 class="visually-hidden">Додавання товару до кошика</h2>
+
+  <div class="product-trade__inner">
+
+    <p class="product-trade__price">
+      233
+      <span class="product-trade__currency">грн.</span>
+    </p>
+
+    @@include('../../blocks/field-num/field-num.html')
+
+    <button class="btn  product-trade__basket-btn" type="button">
+      <span class="btn__text">В кошик</span>
+      <span class="btn__icon">
+        <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#basket"></use></svg>
+      </span>
+    </button>
+
+  </div>
+</section>

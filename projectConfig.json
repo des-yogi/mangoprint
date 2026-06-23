@@ -89,7 +89,18 @@
     "table-responsive": [],
     "error-404": [],
     "search-modal": [],
-    "search-result": []
+    "search-result": [],
+    "product": [],
+    "product-slider": [],
+    "product-tabs": [],
+    "product-details": [],
+    "product-color": [],
+    "product-sizes-btn": [],
+    "product-sizes-modal": [],
+    "product-sizes": [],
+    "product-trade": [],
+    "field-num": [],
+    "care": []
   },
   "addCssBefore": [
     "../../node_modules/bootstrap/scss/_functions",
