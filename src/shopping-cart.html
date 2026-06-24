@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html class="no-js  page" lang="uk" prefix="og: https://ogp.me/ns#">
+
+<head>
+  <meta charset="utf-8">
+  <title>Кошик</title>
+  @@include('_include/page_head.html')
+</head>
+
+<body>
+<noscript>У вас вимкнено JavaScript. Приносимо свої вибачення, але це ускладнює використання даного сайту.</noscript>
+
+  <div class="page__inner">
+
+    <div class="page__content">
+
+      @@include('blocks/page-header-inner/page-header-inner.html', {
+        "pageTitle": "Кошик <span>(3 товари)</span>",
+        "intro": ""
+      })
+
+      <main class="main">
+
+        <div class="container  shopping-cart__wrapper">
+
+          <div class="row  shopping-cart__row">
+
+            <section class="shopping-cart__products-col">
+              <h2 class="visually-hidden">Перелік товарів у кошику</h2>
+
+              <form class="shopping-cart__prod-form" action="#" method="post">
+                <ul class="list-nostyled  shopping-cart__list">
+
+                  <li class="shopping-cart__list-item">
+                    @@include('blocks/cart-item/cart-item.html', {
+                      "title": "Best mom in the Galaxy",
+                      "prodCode": "5125125-4124-S",
+                      "price": "300"
+                    })
+                  </li>
+
+                  <li class="shopping-cart__list-item">
+                    @@include('blocks/cart-item/cart-item.html', {
+                      "title": "Super Dad in the Universe",
+                      "prodCode": "5125125-4124-M",
+                      "price": "350"
+                    })
+                  </li>
+
+                  <li class="shopping-cart__list-item">
+                    @@include('blocks/cart-item/cart-item.html', {
+                      "title": "Coolest Parent Ever",
+                      "prodCode": "5125125-4124-L",
+                      "price": "370"
+                    })
+                  </li>
+
+                </ul>
+              </form>
+            </section>
+
+            <div class="shopping-cart__aside-col">
+              <aside class="shopping-cart__summary">
+                <h2 class="shopping-cart__summary-title">Сума замовлення</h2>
+
+                @@include('blocks/cart-discount/cart-discount.html')
+
+                @@include('blocks/cart-checkout/cart-checkout.html')
+
+              </aside>
+            </div>
+
+          </div>
+
+        </div>
+
+      </main>
+
+    </div>
+
+    <div class="page__footer-wrapper">
+      @@include('blocks/page-footer/page-footer.html')
+    </div>
+
+  </div>
+
+  @@include('_include/page_bottom.html')
+
+</body>
+</html>

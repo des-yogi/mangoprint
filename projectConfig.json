@@ -100,7 +100,12 @@
     "product-sizes": [],
     "product-trade": [],
     "field-num": [],
-    "care": []
+    "care": [],
+    "shopping-cart-empty": [],
+    "shopping-cart": [],
+    "cart-item": [],
+    "cart-discount": [],
+    "cart-checkout": []
   },
   "addCssBefore": [
     "../../node_modules/bootstrap/scss/_functions",

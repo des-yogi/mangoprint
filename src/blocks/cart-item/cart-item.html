@@ -1,0 +1,83 @@
+<!--DEV
+@ @include('blocks/cart-item/cart-item.html', {
+  "title": "Best mom in the Galaxy",
+  "prodCode": "5125125-4124-S",
+  "price": "300"
+})
+-->
+
+<article class="cart-item">
+  <div class="cart-item__row">
+
+    <div class="cart-item__img-col">
+      <a href="#" class="embed-responsive  embed-responsive--2-3  cart-item__img">
+        <picture>
+          <source srcset="img/merch-1.webp,
+                          img/merch-1.webp 2x" media="(min-width: 768px)" type="image/webp">
+          <source srcset="img/merch-1.jpg,
+                          img/merch-1.jpg 2x" media="(min-width: 768px)">
+          <!-- 115x172, 180x270 2x -->
+          <source srcset="img/merch-1.webp" type="image/webp">
+          <source srcset="img/merch-1.jpg">
+          <!-- 40x60 -->
+          <img src="img/merch-1.jpg"
+               alt="Prod descr"
+               width="115"
+               height="172"
+               loading="eager">
+        </picture>
+      </a>
+    </div>
+
+    <div class="cart-item__text-col">
+      <div class="cart-item__text">
+        <header class="cart-item__header">
+          <div class="cart-item__header-text">
+            <p class="cart-item__prod-code">Артикул: @@prodCode</p>
+            <h3 class="cart-item__title"><a href="#">@@title</a></h3>
+          </div>
+          <div class="cart-item__remove">
+            <button class="btn  btn--white  btn--white--icon-only">
+              <span class="visually-hidden">Видалити цей товар</span>
+              <span class="btn__icon">
+                <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#remove"></use></svg>
+              </span>
+            </button>
+          </div>
+        </header>
+
+        <ul class="list-nostyled  cart-item__option-list">
+          <li class="cart-item__option-item">
+            <span class="cart-item__option-name">Виробник:</span>
+            <span class="cart-item__option-value">Brand Galaxy</span>
+          </li>
+          <li class="cart-item__option-item">
+            <span class="cart-item__option-name">Колір:</span>
+            <span class="cart-item__option-value  cart-item__option-value--color"
+                  style="background-color: var(--black);">
+              <span class="visually-hidden">Чорний</span>
+            </span>
+          </li>
+          <li class="cart-item__option-item">
+            <span class="cart-item__option-name">Кому:</span>
+            <span class="cart-item__option-value">Чоловічий</span>
+          </li>
+          <li class="cart-item__option-item">
+            <span class="cart-item__option-name">Матеріал:</span>
+            <span class="cart-item__option-value">Бавовна</span>
+          </li>
+        </ul>
+
+        <div class="cart-item__quantity-amount">
+          @@include('../../blocks/field-num/field-num.html')
+
+          <p class="cart-item__price">
+            @@price
+            <span class="cart-item__currency">грн.</span>
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</article>

@@ -1,0 +1,44 @@
+<!--DEV
+@ @include('blocks/cart-checkout/cart-checkout.html')
+-->
+
+<section class="cart-checkout">
+  <h3 class="visually-hidden">Підсумки замовлення</h3>
+
+  <form class="cart-checkout__form" action="#" method="post">
+
+    <table class="cart-checkout__summary-table">
+      <tbody>
+        <tr>
+          <th>Сума товарів</td>
+          <td>2290 грн</td>
+        </tr>
+        <tr>
+          <th>Доставка</td>
+          <td>Безкоштовно</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <th>Разом</td>
+          <td>2290 грн</td>
+        </tr>
+      </tfoot>
+    </table>
+
+    <button class="btn  cart-checkout__submit" type="submit" name="submit">
+      <span class="btn__text">Перейти до оплати</span>
+      <span class="btn__icon">
+        <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#arrow-right"></use></svg>
+      </span>
+    </button>
+  </form>
+
+  <div class="cart-checkout__add-info">
+    <ul class="list-nostyled  cart-checkout__bonus-list">
+      <li class="cart-checkout__bonus-item">Безкоштовна доставка від 1500 грн</li>
+      <li class="cart-checkout__bonus-item">Гарантія якості друку</li>
+      <li class="cart-checkout__bonus-item">Оплата картою або при отриманні</li>
+    </ul>
+  </div>
+</section>

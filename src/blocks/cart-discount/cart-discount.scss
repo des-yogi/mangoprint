@@ -1,0 +1,29 @@
+.cart-discount {
+  $block-name:                &; // #{$block-name}__element
+
+  margin-bottom: 24px;
+
+  //&__form {
+  //}
+
+  &__form-inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 16px;
+  }
+
+  &__promo-field {
+    flex: 1 1 auto;
+    margin: 0;
+  }
+
+  &__submit {
+    flex: 0 0 auto;
+
+    @media (max-width: $screen-md - 1) {
+      flex: 1 1 100%;
+      width: 100%;
+    }
+  }
+}

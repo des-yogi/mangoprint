@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html class="no-js  page" lang="uk" prefix="og: https://ogp.me/ns#">
+
+<head>
+  <meta charset="utf-8">
+  <title>Кошик</title>
+  @@include('_include/page_head.html')
+</head>
+
+<body>
+<noscript>У вас вимкнено JavaScript. Приносимо свої вибачення, але це ускладнює використання даного сайту.</noscript>
+
+  <div class="page__inner">
+
+    <div class="page__content">
+
+      @@include('blocks/page-header-inner/page-header-inner.html', {
+        "pageTitle": "Кошик",
+        "intro": ""
+      })
+
+      <main class="main">
+
+        <div class="container  shopping-cart__wrapper">
+
+          @@include('blocks/shopping-cart-empty/shopping-cart-empty.html')
+
+          <section class="shopping-cart__more-goods">
+            <h2 class="visually-hidden">Похожие товары</h2>
+
+            <div class="shopping-cart__more-header">
+              <p class="h3  shopping-cart__faux-title">Можливо, вас зацікавить</p>
+
+              <button class="btn btn--light" type="button">
+                <span class="btn__text">Показати ще</span>
+              </button>
+            </div>
+
+            <div class="row  catalog-tab__wrapper">
+              <div class="catalog-tab__card-col">
+                @@include('blocks/catalog-card/catalog-card.html', {
+                  "img": "catalog-img-1",
+                  "title": "Жіноча футболка",
+                  "descr": "Мавка лісова",
+                  "oldPrice": "429",
+                  "price": "350"
+                })
+              </div>
+
+              <div class="catalog-tab__card-col">
+                @@include('blocks/catalog-card/catalog-card.html', {
+                  "img": "catalog-img-2",
+                  "title": "Жіноча футболка",
+                  "descr": "Barbie",
+                  "oldPrice": "",
+                  "price": "349"
+                })
+              </div>
+
+              <div class="catalog-tab__card-col">
+                @@include('blocks/catalog-card/catalog-card.html', {
+                  "img": "catalog-img-3",
+                  "title": "Жіноча футболка",
+                  "descr": "Be free",
+                  "oldPrice": "349",
+                  "price": "321"
+                })
+              </div>
+
+              <div class="catalog-tab__card-col">
+                @@include('blocks/catalog-card/catalog-card.html', {
+                  "img": "catalog-img-4",
+                  "title": "Жіноча футболка",
+                  "descr": "Leo love",
+                  "oldPrice": "",
+                  "price": "349"
+                })
+              </div>
+
+              <div class="catalog-tab__card-col">
+                @@include('blocks/catalog-card/catalog-card.html', {
+                  "img": "catalog-img-5",
+                  "title": "Жіноча футболка",
+                  "descr": "Best mom in the Galaxy",
+                  "oldPrice": "",
+                  "price": "350"
+                })
+              </div>
+
+              <div class="catalog-tab__card-col">
+                @@include('blocks/catalog-card/catalog-card.html', {
+                  "img": "catalog-img-6",
+                  "title": "Жіноча футболка",
+                  "descr": "Free the leopard",
+                  "oldPrice": "",
+                  "price": "350"
+                })
+              </div>
+
+              <div class="catalog-tab__card-col">
+                @@include('blocks/catalog-card/catalog-card.html', {
+                  "img": "catalog-img-1",
+                  "title": "Жіноча футболка",
+                  "descr": "Мавка лісова",
+                  "oldPrice": "429",
+                  "price": "350"
+                })
+              </div>
+
+              <div class="catalog-tab__card-col">
+                @@include('blocks/catalog-card/catalog-card.html', {
+                  "img": "catalog-img-2",
+                  "title": "Жіноча футболка",
+                  "descr": "Barbie",
+                  "oldPrice": "",
+                  "price": "349"
+                })
+              </div>
+
+              <div class="catalog-tab__card-col">
+                @@include('blocks/catalog-card/catalog-card.html', {
+                  "img": "catalog-img-3",
+                  "title": "Жіноча футболка",
+                  "descr": "Be free",
+                  "oldPrice": "349",
+                  "price": "321"
+                })
+              </div>
+            </div>
+
+          </section>
+        </div>
+
+      </main>
+
+    </div>
+
+    <div class="page__footer-wrapper">
+      @@include('blocks/page-footer/page-footer.html')
+    </div>
+
+  </div>
+
+  @@include('_include/page_bottom.html')
+
+</body>
+</html>

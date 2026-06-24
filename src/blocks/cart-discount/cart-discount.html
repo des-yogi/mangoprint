@@ -1,0 +1,22 @@
+<!--DEV
+@ @include('blocks/cart-discount/cart-discount.html')
+-->
+
+<section class="cart-discount">
+  <h3 class="visually-hidden">Форма для введення промокоду</h3>
+
+  <form class="cart-discount__form" action="#" method="post">
+    <div class="cart-discount__form-inner">
+      <label class="field-text  cart-discount__promo-field">
+        <span class="field-text__name  visually-hidden">Ваш Промокод</span>
+        <span class="field-text__input-wrap">
+          <input class="field-text__input" type="text" name="promocode" value="" placeholder="Промокод">
+          <span class="field-text__help-text"></span>
+        </span>
+      </label>
+      <button class="btn  btn--light  cart-discount__submit" type="sumbit" name="submit">
+        <span class="btn__text">Застосувати</span>
+      </button>
+    </div>
+  </form>
+</section>
