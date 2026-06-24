@@ -9,8 +9,10 @@
 * https://des-yogi.github.io/mangoprint/about
 * https://des-yogi.github.io/mangoprint/article
 * https://des-yogi.github.io/mangoprint/contacts
-* https://des-yogi.github.io/mangoprint/shop
 * https://des-yogi.github.io/mangoprint/product
+* https://des-yogi.github.io/mangoprint/shop
+* https://des-yogi.github.io/mangoprint/shopping-cart
+* https://des-yogi.github.io/mangoprint/shopping-cart-empty
 * https://des-yogi.github.io/mangoprint/delivery
 * https://des-yogi.github.io/mangoprint/faq
 * https://des-yogi.github.io/mangoprint/return
