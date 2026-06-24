@@ -94,6 +94,11 @@
 
   &__title {
     margin-top: 0;
+
+    & > span {
+      font-size: 24px;
+      font-weight: 400;
+    }
   }
 
   &__intro {
