@@ -1,0 +1,18 @@
+.order-error {
+  $block-name:                &; // #{$block-name}__element
+
+  &__add-info {
+    padding: 24px 16px;
+    margin-top: 40px;
+    background-color: var(--white);
+    border-radius: $border-radius--40;
+
+    @media (min-width: $screen-md) {
+      padding: 40px;
+    }
+
+    & > *:first-child {
+      margin-top: 0;
+    }
+  }
+}

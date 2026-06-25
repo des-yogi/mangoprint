@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html class="no-js  page" lang="uk" prefix="og: https://ogp.me/ns#">
+
+<head>
+  <meta charset="utf-8">
+  <title>Помилка замовлення</title>
+  @@include('_include/page_head.html')
+</head>
+
+<body>
+<noscript>У вас вимкнено JavaScript. Приносимо свої вибачення, але це ускладнює використання даного сайту.</noscript>
+
+  <div class="page__inner">
+
+    <div class="page__content">
+
+      @@include('blocks/page-header-inner/page-header-inner.html', {
+        "pageTitle": "Помилка замовлення",
+        "intro": ""
+      })
+
+      <main class="main">
+
+        <div class="container  shopping-cart__wrapper  order-error">
+
+          <section class="shopping-cart-empty">
+
+            <div class="shopping-cart-empty__icon">
+              <span>
+                <img src="img/error.svg" alt="" width="44" height="44" loading="eager">
+              </span>
+            </div>
+
+            <div class="shopping-cart-empty__text">
+              <h2 class="shopping-cart-empty__title">Вибачте, але щось пішло не так :(</h2>
+              <div class="shopping-cart-empty__promo">
+                <p>Під час обробки замовлення виникла помилка. Будь ласка, спробуйте ще раз або зверніться до нашої підтримки. Якщо кошти були списані, вони повернуться на вашу картку протягом 3–5 робочих днів.</p>
+              </div>
+            </div>
+
+            <div class="shopping-cart-empty__controls">
+              <a href="#" class="btn">
+                <span class="btn__text">Спробувати знову</span>
+              </a>
+
+              <a href="#" class="btn  btn--light">
+                <span class="btn__text">Написати в підтримку</span>
+              </a>
+            </div>
+
+          </section>
+
+          <section class="order-error__add-info">
+            <h3>Що могло піти не так?</h3>
+
+            <ul>
+              <li>Недостатньо коштів на картці</li>
+              <li>Картку заблоковано банком для онлайн-платежів</li>
+              <li>Невірно введено CVV-код або термін дії</li>
+              <li>Проблема з з'єднанням під час підтвердження 3D-Secure тощо…</li>
+            </ul>
+          </section>
+
+        </div>
+
+      </main>
+
+    </div>
+
+    <div class="page__footer-wrapper">
+      @@include('blocks/page-footer/page-footer.html')
+    </div>
+
+  </div>
+
+  @@include('_include/page_bottom.html')
+
+</body>
+</html>

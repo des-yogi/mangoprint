@@ -106,7 +106,9 @@
     "cart-item": [],
     "cart-discount": [],
     "cart-checkout": [],
-    "checkout-form": []
+    "checkout-form": [],
+    "order-confirmed": [],
+    "order-error": []
   },
   "addCssBefore": [
     "../../node_modules/bootstrap/scss/_functions",
