@@ -1,0 +1,233 @@
+.checkout-form {
+  $block-name:                &; // #{$block-name}__element
+
+  //&__steps-col {
+  //}
+
+  // .shopping-cart__summary {
+  //   position: sticky;
+  //   top: 96px;
+  // }
+
+  &__section {
+    display: block;
+    padding: 24px 16px;
+    background-color: var(--white);
+    border-radius: $border-radius--40;
+
+    @media (min-width: $screen-md) {
+      padding: 40px;
+    }
+
+    & + & {
+      margin-top: 8px;
+    }
+  }
+
+  &__legend {
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+    margin: 0 0 16px;
+
+    span {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 28px;
+      height: 28px;
+      font-size: $font-size;
+      font-weight: 500;
+      line-height: inherit;
+      border-radius: 50%;
+      color: var(--orange-400);
+      background-color: var(--orange-50);
+    }
+  }
+
+  &__delivery-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  &__contacts-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 16px;
+
+    & > * {
+      flex: 1;
+      flex-basis: 100%;
+      margin-bottom: 0;
+
+      @media (min-width: $screen-md) {
+        flex-basis: calc(50% - 8px);
+      }
+    }
+  }
+
+  &__option-label {
+    display: flex;
+    //flex-wrap: wrap;
+    align-items: center;
+    //justify-content: space-between;
+    gap: 16px;
+    padding: 8px 16px;
+    background-color: var(--white);
+    border: 1px solid var(--gray-150);
+    border-radius: $border-radius;
+    cursor: pointer;
+  }
+
+  &__option-inner {
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px 16px;
+    //justify-content: space-between;
+  }
+
+  &__faux-radio {
+    flex: 0 0 24px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 24px;
+    height: 24px;
+    background-color: var(--white);
+    border-radius: 50%;
+    border: 1px solid var(--orange-100);
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 5px;
+      left: 5px;
+      width: 12px;
+      height: 12px;
+      background-color: var(--orange-400);
+      border-radius: 50%;
+      opacity: 0;
+    }
+  }
+
+  &__input-name {
+    margin-right: auto;
+    font-size: $font-size;
+    font-weight: 500;
+    color: var(--gray-900);
+  }
+
+  &__add-info {
+    display: block;
+    font-size: $font-size-sm;
+    font-weight: 400;
+    color: var(--gray-700);
+  }
+
+  &__delivery-price {
+    font-size: $font-size;
+    font-weight: 500;
+    color: var(--gray-900);
+  }
+
+  &__extra-option {
+    max-height: 0;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+    transition-behavior: allow-discrete;
+    pointer-events: none;
+  }
+
+  &__option-input {
+
+    &:focus + #{$block-name}__option-label {
+      @include field-focus;
+    }
+
+    &:focus + #{$block-name}__option-label,
+    &:checked + #{$block-name}__option-label {
+      background-color: var(--orange-50);
+      border-color: var(--orange-400);
+
+      #{$block-name}__faux-radio {
+        border-color: var(--orange-400);
+
+        &::after {
+          opacity: 1;
+        }
+      }
+    }
+
+    &:focus + #{$block-name}__option-label,
+    &:checked ~ #{$block-name}__extra-option {
+      max-height: 200px; // следить за высотой контента, д.б. >= реальной высоте блока (! особо мобила !)
+      opacity: 1;
+      pointer-events: auto;
+
+      #{$block-name}__contacts-wrapper {
+        margin-top: 16px;
+      }
+    }
+  }
+
+  &__order-details {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding-bottom: 24px;
+    margin-bottom: 24px;
+    border-bottom: 1px solid var(--gray-150);
+  }
+
+  &__order-details-item {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    //justify-content: space-between;
+    gap: 16px;
+  }
+
+  &__order-img {
+    flex: 0;
+    flex-basis: 40px;
+    width: 40px;
+    height: 60px;
+    overflow: hidden;
+
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      object-position: center;
+    }
+  }
+
+  &__order-name {
+    flex: 0;
+    flex-basis: max-content;
+    margin: 0 auto 0 0;
+    font-size: $font-size-sm;
+    font-weight: 500;
+    color: var(--gray-900);
+  }
+
+  &__order-descr {
+    display: block;
+    font-size: inherit;
+    font-weight: 400;
+    color: var(--gray-700);
+  }
+
+  &__order-price-sum {
+    font-size: $font-size-sm;
+    font-weight: 500;
+    color: var(--gray-900);
+  }
+}

@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html class="no-js  page" lang="uk" prefix="og: https://ogp.me/ns#">
+
+<head>
+  <meta charset="utf-8">
+  <title>Оформлення замовлення</title>
+  @@include('_include/page_head.html')
+</head>
+
+<body>
+<noscript>У вас вимкнено JavaScript. Приносимо свої вибачення, але це ускладнює використання даного сайту.</noscript>
+
+  <div class="page__inner">
+
+    <div class="page__content">
+
+      @@include('blocks/page-header-inner/page-header-inner.html', {
+        "pageTitle": "Оформлення замовлення",
+        "intro": ""
+      })
+
+      <main class="main">
+
+        <div class="container  shopping-cart__wrapper">
+
+          <form class="checkout-form" action="#" method="post">
+
+            <div class="row  shopping-cart__row">
+
+              <div class="shopping-cart__products-col  checkout-form__steps-col">
+
+                <div class="checkout-form__section">
+                  <fieldset class="checkout-form__fieldset">
+
+                    <legend class="h4  checkout-form__legend">
+                      <span>1</span>Контактні дані
+                    </legend>
+
+                    <div class="checkout-form__contacts-wrapper">
+                      <label class="field-text">
+                        <span class="field-text__name  visually-hidden">Ім'я</span>
+                        <span class="field-text__input-wrap">
+                          <input class="field-text__input  field-text__input--required" type="text" name="name" value="" placeholder="Ім'я">
+                          <span class="field-text__help-text"></span>
+                        </span>
+                      </label>
+                      <label class="field-text">
+                        <span class="field-text__name  visually-hidden">Прізвище</span>
+                        <span class="field-text__input-wrap">
+                          <input class="field-text__input  field-text__input--required" type="text" name="surname" value="" placeholder="Прізвище">
+                          <span class="field-text__help-text"></span>
+                        </span>
+                      </label>
+
+                      <label class="field-text">
+                        <span class="field-text__name  visually-hidden">Телефон</span>
+                        <span class="field-text__input-wrap">
+                          <input class="field-text__input  field-text__input--required  phone-mask" type="tel" name="tel" value="" placeholder="+38 (___) ___ __ __">
+                          <span class="field-text__help-text"></span>
+                        </span>
+                      </label>
+                      <label class="field-text">
+                        <span class="field-text__name  visually-hidden">E-mail</span>
+                        <span class="field-text__input-wrap">
+                          <input class="field-text__input" type="email" name="mail" value="" placeholder="E-mail">
+                          <span class="field-text__help-text"></span>
+                        </span>
+                      </label>
+                    </div>
+
+                  </fieldset>
+                </div>
+
+                <div class="checkout-form__section">
+                  <fieldset class="checkout-form__fieldset">
+
+                    <legend class="h4  checkout-form__legend">
+                      <span>2</span>Доставка
+                    </legend>
+
+                    <ul class="list-nostyled  checkout-form__delivery-list">
+
+                      <li class="checkout-form__delivery-item">
+                        <input id="delivery-1" class="visually-hidden  checkout-form__option-input" type="radio" name="delivery" value="">
+                        <label for="delivery-1" class="checkout-form__option-label">
+                          <span class="checkout-form__faux-radio"></span>
+
+                          <span class="checkout-form__option-inner">
+                            <span class="checkout-form__input-name">
+                              Нова Пошта — у відділення
+                              <span class="checkout-form__add-info">1–2 робочих дні</span>
+                            </span>
+
+                            <span class="checkout-form__delivery-price">80 грн</span>
+                          </span>
+                        </label>
+
+                        <div class="checkout-form__extra-option">
+                          <div class="checkout-form__contacts-wrapper">
+                            <div class="field-select">
+                              <span class="field-select__select-wrap">
+                                <label for="city" class="visually-hidden">Виберіть населений пункт</label>
+                                <select id="city" class="field-select__select  field-select__select--required" name="city">
+                                  <option value="" label="Населений пункт:"></option>
+                                  <option value="value1">Київ</option>
+                                  <option value="value2">Одеса</option>
+                                  <option value="value3">Харків</option>
+                                  <option value="value4">Дніпро</option>
+                                </select>
+                                <!-- <small class="field-select__help-text error"></small> -->
+                              </span>
+                            </div>
+
+                            <label class="field-text">
+                              <span class="field-text__name  visually-hidden">Номер відділення</span>
+                              <span class="field-text__input-wrap">
+                                <input class="field-text__input  field-text__input--required" type="text" inputmode="numeric" name="np-num" value="" placeholder="Номер відділення">
+                                <span class="field-text__help-text"></span>
+                              </span>
+                            </label>
+                          </div>
+                        </div>
+                      </li>
+
+                      <li class="checkout-form__delivery-item">
+                        <input id="delivery-2" class="visually-hidden  checkout-form__option-input" type="radio" name="delivery" value="">
+                        <label for="delivery-2" class="checkout-form__option-label">
+                          <span class="checkout-form__faux-radio"></span>
+
+                          <span class="checkout-form__option-inner">
+                            <span class="checkout-form__input-name">
+                              Нова Пошта — Кур'єр
+                              <span class="checkout-form__add-info">1–2 робочих дні</span>
+                            </span>
+
+                            <span class="checkout-form__delivery-price">120 грн</span>
+                          </span>
+                        </label>
+
+                        <div class="checkout-form__extra-option">
+                          <div class="checkout-form__contacts-wrapper">
+                            <div class="field-select">
+                              <span class="field-select__select-wrap">
+                                <label for="city2" class="visually-hidden">Виберіть населений пункт</label>
+                                <select id="city2" class="field-select__select  field-select__select--required" name="city-address">
+                                  <option value="" label="Населений пункт:"></option>
+                                  <option value="value1">Київ</option>
+                                  <option value="value2">Одеса</option>
+                                  <option value="value3">Харків</option>
+                                  <option value="value4">Дніпро</option>
+                                </select>
+                                <!-- <small class="field-select__help-text error"></small> -->
+                              </span>
+                            </div>
+
+                            <label class="field-text">
+                              <span class="field-text__name  visually-hidden">Адреса доставки</span>
+                              <span class="field-text__input-wrap">
+                                <input class="field-text__input  field-text__input--required" type="text" name="np-address" value="" placeholder="Адреса доставки">
+                                <span class="field-text__help-text"></span>
+                              </span>
+                            </label>
+                          </div>
+                        </div>
+                      </li>
+
+                      <li class="checkout-form__delivery-item">
+                        <input id="delivery-3" class="visually-hidden  checkout-form__option-input" type="radio" name="delivery" value="">
+                        <label for="delivery-3" class="checkout-form__option-label">
+                          <span class="checkout-form__faux-radio"></span>
+
+                          <span class="checkout-form__option-inner">
+                            <span class="checkout-form__input-name">
+                              Самовивіз з офісу (Київ)
+                              <span class="checkout-form__add-info">вул. Січових Стрільців, 83</span>
+                            </span>
+
+                            <span class="checkout-form__delivery-price">Безкоштовно</span>
+                          </span>
+                        </label>
+                      </li>
+
+                    </ul>
+
+                  </fieldset>
+                </div>
+
+                <div class="checkout-form__section">
+                  <fieldset class="checkout-form__fieldset">
+
+                    <legend class="h4  checkout-form__legend">
+                      <span>3</span>Спосіб оплати
+                    </legend>
+
+                    <ul class="list-nostyled  checkout-form__delivery-list">
+
+                      <li class="checkout-form__delivery-item">
+                        <input id="payment-1" class="visually-hidden  checkout-form__option-input" type="radio" name="payment" value="">
+                        <label for="payment-1" class="checkout-form__option-label">
+                          <span class="checkout-form__faux-radio"></span>
+
+                          <span class="checkout-form__option-inner">
+                            <span class="checkout-form__input-name">
+                              Картою онлайн
+                              <span class="checkout-form__add-info">Visa, Mastercard</span>
+                            </span>
+
+                            <span class="checkout-form__delivery-price"></span>
+                          </span>
+                        </label>
+                      </li>
+
+                      <li class="checkout-form__delivery-item">
+                        <input id="payment-2" class="visually-hidden  checkout-form__option-input" type="radio" name="payment" value="">
+                        <label for="payment-2" class="checkout-form__option-label">
+                          <span class="checkout-form__faux-radio"></span>
+
+                          <span class="checkout-form__option-inner">
+                            <span class="checkout-form__input-name">
+                              Apple Pay / Google Pay
+                              <span class="checkout-form__add-info">Швидка оплата</span>
+                            </span>
+
+                            <span class="checkout-form__delivery-price"></span>
+                          </span>
+                        </label>
+                      </li>
+
+                      <li class="checkout-form__delivery-item">
+                        <input id="payment-3" class="visually-hidden  checkout-form__option-input" type="radio" name="payment" value="">
+                        <label for="payment-3" class="checkout-form__option-label">
+                          <span class="checkout-form__faux-radio"></span>
+
+                          <span class="checkout-form__option-inner">
+                            <span class="checkout-form__input-name">
+                              Оплата при отриманні
+                              <span class="checkout-form__add-info">Готівкою або карткою</span>
+                            </span>
+
+                            <span class="checkout-form__delivery-price"></span>
+                          </span>
+                        </label>
+                      </li>
+
+                    </ul>
+
+                  </fieldset>
+                </div>
+
+                <div class="checkout-form__section">
+                  <fieldset class="checkout-form__fieldset">
+
+                    <legend class="h4  checkout-form__legend">
+                      <span>4</span>Коментар до замовлення
+                    </legend>
+
+                    <label class="field-text">
+                      <span class="field-text__name  visually-hidden">Вміст коментаря</span>
+                      <span class="field-text__input-wrap">
+                        <textarea class="field-text__input" rows="4" name="message" placeholder="Побажання чи деталі для менеджера…"></textarea>
+                        <span class="field-text__help-text"></span>
+                      </span>
+                    </label>
+                  </fieldset>
+                </div>
+
+              </div>
+
+              <div class="shopping-cart__aside-col">
+                <aside class="shopping-cart__summary">
+                  <h2 class="shopping-cart__summary-title">Ваше замовлення</h2>
+
+                  <section class="cart-checkout">
+                    <h3 class="visually-hidden">Склад та сума замовлення</h3>
+
+                    <div class="cart-checkout__form">
+
+                      <ul class="list-nostyled  checkout-form__order-details">
+                        <li class="checkout-form__order-details-item">
+                          <div class="checkout-form__order-img">
+                            <picture>
+                              <source srcset="img/merch-1.webp,
+                                              img/merch-1.webp 2x" type="image/webp">
+                              <source srcset="img/merch-1.jpg,
+                                              img/merch-1.jpg 2x">
+                              <img src="img/merch-1.jpg" alt="Prod descr" width="40" height="60">
+                            </picture>
+                          </div>
+                          <p class="checkout-form__order-name">
+                            Best mom in the Galaxy
+                            <span class="checkout-form__order-descr">Чорний · M · 2 шт</span>
+                          </p>
+                          <p class="checkout-form__order-price-sum">600 грн</p>
+                        </li>
+
+                        <li class="checkout-form__order-details-item">
+                          <div class="checkout-form__order-img">
+                            <picture>
+                              <source srcset="img/merch-2.webp,
+                                              img/merch-2.webp 2x" type="image/webp">
+                              <source srcset="img/merch-2.jpg,
+                                              img/merch-2.jpg 2x">
+                              <img src="img/merch-2.jpg" alt="Prod descr" width="40" height="60">
+                            </picture>
+                          </div>
+                          <p class="checkout-form__order-name">
+                            Худі базове Premium
+                            <span class="checkout-form__order-descr">Сірий · L · 1 шт</span>
+                          </p>
+                          <p class="checkout-form__order-price-sum">850 грн</p>
+                        </li>
+
+                        <li class="checkout-form__order-details-item">
+                          <div class="checkout-form__order-img">
+                            <picture>
+                              <source srcset="img/merch-6.webp,
+                                              img/merch-6.webp 2x" type="image/webp">
+                              <source srcset="img/merch-6.jpg,
+                                              img/merch-6.jpg 2x">
+                              <img src="img/merch-6.jpg" alt="Prod descr" width="40" height="60">
+                            </picture>
+                          </div>
+                          <p class="checkout-form__order-name">
+                            Кепка з логотипом
+                            <span class="checkout-form__order-descr">Білий · One Size · 3 шт</span>
+                          </p>
+                          <p class="checkout-form__order-price-sum">840 грн</p>
+                        </li>
+                      </ul>
+
+                      <table class="cart-checkout__summary-table">
+                        <tbody>
+                          <tr>
+                            <th>Сума товарів</th>
+                            <td>2290 грн</td>
+                          </tr>
+                          <tr>
+                            <th>Доставка</th>
+                            <td>Безкоштовно</td>
+                          </tr>
+                        </tbody>
+                        <tfoot>
+                          <tr>
+                            <th>Разом</th>
+                            <td>2290 грн</td>
+                          </tr>
+                        </tfoot>
+                      </table>
+
+                      <div class="checkout-form__agreement">
+                        <button class="btn  cart-checkout__submit" type="submit" name="submit">
+                          <span class="btn__text">Підтвердіть замовлення</span>
+                          <span class="btn__icon">
+                            <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#arrow-right"></use></svg>
+                          </span>
+                        </button>
+
+                        <div class="field-checkbox" style="margin-top: 24px;">
+                          <label class="field-checkbox__name">
+                            <input class="field-checkbox__input" type="checkbox" name="agreement" value="" checked>
+                            <span class="field-checkbox__name-text">Я погоджуюсь з <a href="#">умовами обробки персональних даних</a>.</span>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- <div class="cart-checkout__add-info">
+                      <ul class="list-nostyled  cart-checkout__bonus-list">
+                        <li class="cart-checkout__bonus-item">Безкоштовна доставка від 1500 грн</li>
+                        <li class="cart-checkout__bonus-item">Гарантія якості друку</li>
+                        <li class="cart-checkout__bonus-item">Оплата картою або при отриманні</li>
+                      </ul>
+                    </div> -->
+                  </section>
+
+                </aside>
+              </div>
+
+            </div>
+
+          </form>
+
+        </div>
+
+      </main>
+
+    </div>
+
+    <div class="page__footer-wrapper">
+      @@include('blocks/page-footer/page-footer.html')
+    </div>
+
+  </div>
+
+  @@include('_include/page_bottom.html')
+
+</body>
+</html>
