@@ -14,6 +14,8 @@
 * https://des-yogi.github.io/mangoprint/shopping-cart
 * https://des-yogi.github.io/mangoprint/shopping-cart-checkout
 * https://des-yogi.github.io/mangoprint/shopping-cart-empty
+* https://des-yogi.github.io/mangoprint/order-confirmed
+* https://des-yogi.github.io/mangoprint/order-failed
 * https://des-yogi.github.io/mangoprint/delivery
 * https://des-yogi.github.io/mangoprint/faq
 * https://des-yogi.github.io/mangoprint/return
