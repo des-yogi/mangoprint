@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html class="no-js  page" lang="uk" prefix="og: https://ogp.me/ns#">
+
+<head>
+  <meta charset="utf-8">
+  <title>Замовлення підтверджено</title>
+  @@include('_include/page_head.html')
+</head>
+
+<body>
+<noscript>У вас вимкнено JavaScript. Приносимо свої вибачення, але це ускладнює використання даного сайту.</noscript>
+
+  <div class="page__inner">
+
+    <div class="page__content">
+
+      @@include('blocks/page-header-inner/page-header-inner.html', {
+        "pageTitle": "Замовлення підтверджено",
+        "intro": ""
+      })
+
+      <main class="main">
+
+        <div class="container  shopping-cart__wrapper  order-confirmed">
+
+          <section class="shopping-cart-empty">
+
+            <div class="shopping-cart-empty__icon">
+              <span>
+                <img src="img/confirmed.svg" alt="Basket" width="44" height="44" loading="eager">
+              </span>
+            </div>
+
+            <div class="shopping-cart-empty__text">
+              <h2 class="shopping-cart-empty__title">Заявку підтверджено!</h2>
+              <div class="shopping-cart-empty__promo">
+                <p>Ваше замовлення прийнято в роботу. Менеджер зв'яжеться з вами протягом 30 хвилин для уточнення деталей.</p>
+              </div>
+            </div>
+
+            <div class="order-confirmed__order-number">
+              <p>Номер замовлення <span>MP-2026-08412</span></p>
+            </div>
+
+            <div class="shopping-cart-empty__controls">
+              <a href="#" class="btn">
+                <span class="btn__text">Продовжити покупки</span>
+              </a>
+
+              <a href="index.html" class="btn  btn--light">
+                <span class="btn__text">На головну</span>
+              </a>
+            </div>
+
+          </section>
+
+          <ul class="list-nostyled  how-we-work__steps  order-confirmed__steps">
+            <li class="how-we-work__step">
+              <div class="h3  how-we-work__num"><span>1</span></div>
+              <div class="how-we-work__text">
+                <p class="h4  how-we-work__step-title">Підтвердження</p>
+                <p class="how-we-work__step-descr">Менеджер передзвонить вам для підтвердження деталей</p>
+              </div>
+            </li>
+            <li class="how-we-work__step">
+              <div class="h3  how-we-work__num"><span>2</span></div>
+              <div class="how-we-work__text">
+                <p class="h4  how-we-work__step-title">Виробництво</p>
+                <p class="how-we-work__step-descr">Друк та оформлення займе 3–5 робочих днів</p>
+              </div>
+            </li>
+            <li class="how-we-work__step">
+              <div class="h3  how-we-work__num"><span>3</span></div>
+              <div class="how-we-work__text">
+                <p class="h4  how-we-work__step-title">Доставка</p>
+                <p class="how-we-work__step-descr">Відправимо Новою Поштою з трекінгом замовлення</p>
+              </div>
+            </li>
+          </ul>
+
+        </div>
+
+      </main>
+
+    </div>
+
+    <div class="page__footer-wrapper">
+      @@include('blocks/page-footer/page-footer.html')
+    </div>
+
+  </div>
+
+  @@include('_include/page_bottom.html')
+
+</body>
+</html>
