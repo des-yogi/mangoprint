@@ -108,7 +108,8 @@
     "cart-checkout": [],
     "checkout-form": [],
     "order-confirmed": [],
-    "order-error": []
+    "order-error": [],
+    "messengers": []
   },
   "addCssBefore": [
     "../../node_modules/bootstrap/scss/_functions",

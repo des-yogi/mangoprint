@@ -1,39 +1,42 @@
 <!--DEV
-@ @include('blocks/social-links/social-links.html')
+@ @include('blocks/social-links/social-links.html', {
+  "size": "20",
+  "addClass": "social-links--big-icon"
+})
 -->
 
-<section class="social-links">
+<section class="social-links  @@addClass">
   <h3 class="visually-hidden">Соціальні мережі та месенджери</h3>
 
   <ul class="list-nostyled  social-links__list">
     <li class="social-links__item">
       <a href="#" class="social-links__link" aria-label="Facebook" target="_blank" rel="nofollow noopener">
-        <svg width="20" height="20" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#facebook-20"></use></svg>
+        <svg width="@@size" height="@@size" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#facebook-20"></use></svg>
       </a>
     </li>
     <li class="social-links__item">
       <a href="#" class="social-links__link" aria-label="Instagram" target="_blank" rel="nofollow noopener">
-        <svg width="20" height="20" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#instagram-20"></use></svg>
+        <svg width="@@size" height="@@size" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#instagram-20"></use></svg>
       </a>
     </li>
     <li class="social-links__item">
       <a href="#" class="social-links__link" aria-label="Telegram" target="_blank" rel="nofollow noopener">
-        <svg width="20" height="20" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#telegram-20"></use></svg>
+        <svg width="@@size" height="@@size" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#telegram-20"></use></svg>
       </a>
     </li>
     <li class="social-links__item">
       <a href="#" class="social-links__link" aria-label="TikTok" target="_blank" rel="nofollow noopener">
-        <svg width="20" height="20" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#tiktok-20"></use></svg>
+        <svg width="@@size" height="@@size" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#tiktok-20"></use></svg>
       </a>
     </li>
     <li class="social-links__item">
       <a href="#" class="social-links__link" aria-label="Youtube" target="_blank" rel="nofollow noopener">
-        <svg width="20" height="20" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#youtube-20"></use></svg>
+        <svg width="@@size" height="@@size" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#youtube-20"></use></svg>
       </a>
     </li>
     <li class="social-links__item">
       <a href="#" class="social-links__link" aria-label="Linkedin" target="_blank" rel="nofollow noopener">
-        <svg width="20" height="20" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#linkedin-20"></use></svg>
+        <svg width="@@size" height="@@size" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#linkedin-20"></use></svg>
       </a>
     </li>
   </ul>

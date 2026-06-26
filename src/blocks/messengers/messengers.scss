@@ -1,4 +1,4 @@
-.social-links {
+.messengers {
   $block-name:                &; // #{$block-name}__element
 
   &__list {
@@ -9,7 +9,10 @@
   }
 
   &__item {
-    flex: 0 0 44px;
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 12px;
   }
 
   &__link {
@@ -34,7 +37,18 @@
     }
   }
 
+  &__decr {
+    display: block;
+    font-size: $font-size;
+    white-space: nowrap;
+    color: var(--gray-900);
+  }
+
   &--big-icon {
+
+    #{$block-name}__list {
+      gap: 12px 24px;
+    }
 
     #{$block-name}__item {
       flex: 0 0 56px;
@@ -55,7 +69,7 @@
 .contacts,
 .page-footer {
 
-  .social-links__link {
+  .messengers__link {
     background-color: var(--white);
 
     &:hover,

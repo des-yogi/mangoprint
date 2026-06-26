@@ -29,8 +29,9 @@
 
                 <section class="contacts__item">
                   <div class="contacts__item-header">
-                    <h2 class="h5  contacts__item-title">Контакти</h2>
+                    <h2 class="h6  contacts__item-title">Контакти</h2>
                   </div>
+
                   <div class="contacts__item-body">
                     <ul class="list-nostyled  contacts__list">
                       <li class="contacts__list-item">
@@ -46,57 +47,86 @@
                         </a>
                       </li>
                     </ul>
-
-                    @@include('blocks/social-links/social-links.html')
                   </div>
+
+                  @@include('blocks/messengers/messengers.html', {
+                    "size": "24",
+                    "addClass": "messengers--big-icon"
+                  })
+                </section>
+
+                <section class="contacts__link-wrapper">
+                  <h2 class="visually-hidden">Посилання на ресурси, що завантажуються</h2>
+
+                  <a href="#" class="btn  btn--light" download>
+                    <span class="btn__text">Завантажити реквізити</span>
+                    <span class="btn__icon">
+                      <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#download"></use></svg>
+                    </span>
+                  </a>
+
+                  <a href="#" class="btn  btn--light" download>
+                    <span class="btn__text">Презентація компанії</span>
+                    <span class="btn__icon">
+                      <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#download"></use></svg>
+                    </span>
+                  </a>
                 </section>
 
                 <section class="contacts__item">
                   <div class="contacts__item-header">
-                    <h2 class="h5  contacts__item-title">Адреса</h2>
+                    <h2 class="h6  contacts__item-title">Ми у соціальних мережах</h2>
                   </div>
-                  <div class="contacts__item-body">
-                    <ul class="list-nostyled  contacts__list">
-                      <li class="contacts__list-item">
-                        <span class="contacts__list-link">
-                          <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#address"></use></svg>
-                          Юр. адреса: 08200, Київська обл., м.Ірпінь, вул.Західна 4, кв.88
-                        </span>
-                      </li>
-                      <li class="contacts__list-item">
-                        <span class="contacts__list-link  contacts__list-link--iconless">
-                          Виробництво: 03067, м.Київ, вул.Олекси Тихого 84
-                        </span>
-                      </li>
-                    </ul>
-                  </div>
+
+                  @@include('blocks/social-links/social-links.html', {
+                    "size": "24",
+                    "addClass": "social-links--big-icon"
+                  })
                 </section>
 
-                <section class="contacts__item">
-                  <div class="contacts__item-header">
-                    <h2 class="h5  contacts__item-title">Часи роботи</h2>
-                  </div>
-                  <div class="contacts__item-body">
-                    <ul class="list-nostyled  contacts__list">
-                      <li class="contacts__list-item">
-                        <span class="contacts__list-link">
-                          <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#time"></use></svg>
-                          Пн–Пт:&ensp;9:00–22:00
-                        </span>
-                      </li>
-                      <li class="contacts__list-item">
-                        <span class="contacts__list-link  contacts__list-link--iconless">
-                          Сб–Нд:&ensp;9:00–20:00
-                        </span>
-                      </li>
-                    </ul>
-                  </div>
-                </section>
+                <div class="contacts__item  contacts__item--sections">
+                  <section class="contacts__inner-section">
+                    <div class="contacts__item-header">
+                      <h2 class="h6  contacts__item-title">Адреса</h2>
+                    </div>
+                    <div class="contacts__item-body">
+                      <ul class="list-nostyled  contacts__list">
+                        <li class="contacts__list-item">
+                          <span class="contacts__list-link">
+                            <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#address"></use></svg>
+                            Юр. адреса: 08200, Київська обл., м.Ірпінь, вул.Західна 4, кв.88
+                          </span>
+                        </li>
+                        <li class="contacts__list-item">
+                          <span class="contacts__list-link  contacts__list-link--iconless">
+                            Виробництво: 03067, м.Київ, вул.Олекси Тихого 84
+                          </span>
+                        </li>
+                      </ul>
+                    </div>
+                  </section>
 
-                <section class="contacts__item  contacts__item--map">
-                  <h3 class="visually-hidden">Наш офіс на карті</h3>
-                  <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7185.575092110224!2d30.42363984249589!3d50.450703140691424!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4cd791dbd08c5%3A0xd0baee6bc11cac6!2z0LLRg9C70LjRhtGPINCe0LvQtdC60YHQuCDQotC40YXQvtCz0L4sIDg0LCDQmtC40ZfQsiwgMDIwMDA!5e0!3m2!1suk!2sua!4v1774461222823!5m2!1suk!2sua" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                </section>
+                  <section class="contacts__inner-section">
+                    <div class="contacts__item-header">
+                      <h2 class="h6  contacts__item-title">Часи роботи</h2>
+                    </div>
+                    <div class="contacts__item-body">
+                      <ul class="list-nostyled  contacts__list">
+                        <li class="contacts__list-item">
+                          <span class="contacts__list-link">
+                            <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#time"></use></svg>
+                            Пн–Пт:&ensp;9:00–22:00
+                          </span>
+                        </li>
+                        <li class="contacts__list-item">
+                          <span class="contacts__list-link  contacts__list-link--iconless">
+                            Сб–Нд:&ensp;9:00–20:00
+                          </span>
+                        </li>
+                      </ul>
+                    </div>
+                  </section>
+                </div>
 
               </div>
             </div>
@@ -104,7 +134,7 @@
             <div class="contacts__col">
               <section class="contacts__item  contacts__item--form">
                 <div class="contacts__item-header">
-                  <h2 class="h5  contacts__item-title">Зв'язатися з нами</h2>
+                  <h2 class="h6  contacts__item-title">Зв'язатися з нами</h2>
                   <p>Залиште заявку — наш менеджер зв’яжеться з вами найближчим часом для уточнення деталей.</p>
                 </div>
 
@@ -114,6 +144,11 @@
             </div>
 
           </div>
+
+          <section class="contacts__map">
+            <h3 class="visually-hidden">Наш офіс на карті</h3>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7185.575092110224!2d30.42363984249589!3d50.450703140691424!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4cd791dbd08c5%3A0xd0baee6bc11cac6!2z0LLRg9C70LjRhtGPINCe0LvQtdC60YHQuCDQotC40YXQvtCz0L4sIDg0LCDQmtC40ZfQsiwgMDIwMDA!5e0!3m2!1suk!2sua!4v1774461222823!5m2!1suk!2sua" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </section>
         </div>
 
       </main>
