@@ -1,0 +1,41 @@
+<!--DEV
+@ @include('blocks/messengers/messengers.html', {
+  "size": "24",
+  "addClass": "messengers--big-icon"
+})
+-->
+
+<section class="messengers  @@addClass">
+  <h3 class="visually-hidden">Месенджери</h3>
+
+  <ul class="list-nostyled  messengers__list">
+    <li class="messengers__item">
+      <a href="#" class="messengers__link" target="_blank" rel="nofollow noopener" aria-labelledby="tg-cap">
+        <svg width="@@size" height="@@size" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#telegram-20"></use></svg>
+      </a>
+      <span id="tg-cap" class="messengers__decr">Telegram</span>
+    </li>
+
+    <li class="messengers__item">
+      <a href="#" class="messengers__link" target="_blank" rel="nofollow noopener" aria-labelledby="vb-cap">
+        <svg width="@@size" height="@@size" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#viber-20"></use></svg>
+      </a>
+      <span id="vb-cap" class="messengers__decr">Viber</span>
+    </li>
+
+    <li class="messengers__item">
+      <a href="#" class="messengers__link" target="_blank" rel="nofollow noopener" aria-labelledby="mess-cap">
+        <svg width="@@size" height="@@size" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#messenger-20"></use></svg>
+      </a>
+      <span id="mess-cap" class="messengers__decr">Messenger</span>
+    </li>
+
+    <li class="messengers__item">
+      <a href="#" class="messengers__link" target="_blank" rel="nofollow noopener" aria-labelledby="wapp-cap">
+        <svg width="@@size" height="@@size" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#whatsapp-20"></use></svg>
+      </a>
+      <span id="wapp-cap" class="messengers__decr">WhatsApp</span>
+    </li>
+
+  </ul>
+</section>
