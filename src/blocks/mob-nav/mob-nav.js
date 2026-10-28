@@ -1,16 +1,3 @@
-/*(function() {
-  // Добавление/удаление модификаторов при клике на переключение видимости
-  var toggler = document.getElementById('mob-nav-toggler');
-  if (toggler) {
-    toggler.addEventListener('click', mobNavVisibleToggle);
-
-    function mobNavVisibleToggle(e) {
-      e.preventDefault();
-      toggler.classList.toggle('burger--close');
-    }
-  }
-}());*/
-
 /**
  * Mobile menu scroll area sizing for long menus inside fixed `.page-header__main`.
  *
@@ -186,13 +173,20 @@
     document.body.style.width = '';
     document.body.style.paddingRight = '';
 
-    // Restore scroll position
-    window.scrollTo(0, savedScrollY);
+    // Restore scroll position instantly (ignores `scroll-behavior: smooth` on <html>)
+    window.scrollTo({ top: savedScrollY, left: 0, behavior: 'instant' });
   }
 
-  // Bootstrap collapse events
-  collapseEl.addEventListener('shown.bs.collapse', lock);
-  collapseEl.addEventListener('hidden.bs.collapse', unlock);
+  // Bootstrap collapse events (ignore events bubbling from nested collapses)
+  collapseEl.addEventListener('shown.bs.collapse', (e) => {
+    if (e.target !== collapseEl) return;
+    lock();
+  });
+
+  collapseEl.addEventListener('hidden.bs.collapse', (e) => {
+    if (e.target !== collapseEl) return;
+    unlock();
+  });
 
   // Safety: if state changes without events (rare), sync on load
   if (collapseEl.classList.contains('show')) lock();
